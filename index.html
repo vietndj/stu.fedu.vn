@@ -340,7 +340,7 @@
         <!-- Drawer Header -->
         <div class="px-6 py-4 bg-slate-900 text-white flex items-center justify-between">
           <div class="flex items-center gap-3">
-            <img id="drawerAvatar" class="w-10 h-10 rounded-full object-cover border-2 border-white/20" src="" alt="" />
+            <img id="drawerAvatar" class="w-10 h-10 rounded-full object-cover border-2 border-white/20" src="" alt="" onerror="this.onerror=null;this.src='assets/avatar_vietnd.png';" />
             <div>
               <h2 id="drawerName" class="text-base font-extrabold tracking-tight">Học Viên</h2>
               <p id="drawerSub" class="text-xs text-slate-400">Chi tiết bối cảnh tư vấn & tư liệu</p>
@@ -605,7 +605,7 @@
         <span>•</span>
         <span>Khóa Học Làm Video & Xây Dựng Kênh Thực Chiến</span>
       </div>
-      <div>Cập nhật lúc: <span class="font-mono text-slate-600">17/09/2026 22:23:05</span></div>
+      <div>Cập nhật lúc: <span class="font-mono text-slate-600">17/09/2026 22:28:09</span></div>
     </div>
   </footer>
 
@@ -1175,6 +1175,7 @@
                     src="${avatar}" 
                     alt="${s.name}" 
                     onclick="openLightbox('${avatar}', 'Học viên: ${s.name}')" 
+                    onerror="this.onerror=null;this.src='assets/avatar_vietnd.png';" 
                     class="w-[50px] h-[50px] rounded-2xl object-cover border border-slate-200 shadow-sm cursor-zoom-in hover:opacity-90 transition flex-shrink-0" 
                   />
                   <div>
@@ -1372,6 +1373,7 @@
                   src="${avatar}" 
                   alt="${s.name}" 
                   onclick="openLightbox('${avatar}', 'Học viên: ${s.name}')" 
+                  onerror="this.onerror=null;this.src='assets/avatar_vietnd.png';" 
                   class="w-12 h-12 rounded-xl object-cover border border-slate-200 shadow-sm cursor-zoom-in hover:opacity-90 transition flex-shrink-0" 
                 />
                 <div class="min-w-0 flex-1">
@@ -1447,6 +1449,7 @@
                   src="${avatar}" 
                   alt="${s.name}" 
                   onclick="openLightbox('${avatar}', 'Học viên: ${s.name}')" 
+                  onerror="this.onerror=null;this.src='assets/avatar_vietnd.png';" 
                   class="w-8 h-8 rounded-lg object-cover border border-slate-200 shadow-sm cursor-zoom-in" 
                 />
                 <div>
