@@ -1,5 +1,716 @@
 [
   {
+    "id": "vu_thi_phuong_thao",
+    "name": "Vũ Thị Phương Thảo",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/vu_thi_phuong_thao",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:41.257Z",
+    "updated_at": "2026-09-18T02:30:41.257Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "trung_tam_msts_fedu_engmates",
+    "name": "Trung Tâm Msts Fedu Engmates",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/trung_tam_msts_fedu_engmates",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:41.033Z",
+    "updated_at": "2026-09-18T02:30:41.033Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "thanh_huyen_msts_academy",
+    "name": "Thanh Huyền Msts Academy",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/thanh_huyen_msts_academy",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:39.373Z",
+    "updated_at": "2026-09-18T02:30:39.373Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "quy_marketing_elearning",
+    "name": "Quý Marketing Elearning",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/quy_marketing_elearning",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:38.094Z",
+    "updated_at": "2026-09-18T02:30:38.094Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "ngoc_thuy",
+    "name": "Ngọc Thúy",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/ngoc_thuy",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:36.253Z",
+    "updated_at": "2026-09-18T02:30:36.253Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "ha_que_trinh",
+    "name": "Hà Quế Trinh",
+    "class": "Khóa Video Marketing - NDV",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/ha_que_trinh",
+    "phone": null,
+    "zalo_url": null,
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên online, quét từ nhóm Zalo 18/09/2026",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T02:30:34.603Z",
+    "updated_at": "2026-09-18T02:30:34.603Z",
+    "last_updated_vn": "18/09/2026 09:30",
+    "completeness_score": 20,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "phone",
+        "label": "Số điện thoại / Zalo",
+        "severity": "critical",
+        "hint": "Cần xin số Zalo hoặc SĐT để kết nối trao đổi"
+      },
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "tran_cuong",
+    "name": "Trần Cường",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/tran_cuong",
+    "phone": "0348870210",
+    "zalo_url": "0348870210",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Đăng ký khóa offline k3 qua chị gái Minh Nguyệt, đã CK 2.4tr",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T01:50:07.907Z",
+    "updated_at": "2026-09-18T01:50:07.907Z",
+    "last_updated_vn": "18/09/2026 08:50",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "chien_kinh_mat",
+    "name": "Chiến Kính Mắt",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Kính Mắt",
+    "industry_slug": "kinh_mat",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/chien_kinh_mat",
+    "phone": "0382346268",
+    "zalo_url": "0382346268",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "• [18/09/2026 08:27] Đăng ký khóa offline 4, chưa CK\nĐăng ký khóa offline 4 (sang tháng), chưa chuyển khoản",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-18T01:27:16.865Z",
+    "updated_at": "2026-09-18T01:27:32.769032+00:00",
+    "last_updated_vn": "18/09/2026 08:27",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "la_giang",
+    "name": "La Giang",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/la_giang",
+    "phone": null,
+    "zalo_url": "La Giang",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên khóa offline - Đã kết bạn Zalo",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:45:15.795Z",
+    "updated_at": "2026-09-17T15:45:15.795Z",
+    "last_updated_vn": "17/09/2026 22:45",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "le_anh_tai",
+    "name": "Lê Anh Tài",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/le_anh_tai",
+    "phone": null,
+    "zalo_url": "Lê Anh Tài",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên khóa offline - Đã kết bạn Zalo",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:45:15.665Z",
+    "updated_at": "2026-09-17T15:45:15.665Z",
+    "last_updated_vn": "17/09/2026 22:45",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "minhnguyettran",
+    "name": "Minhnguyettran",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/minhnguyettran",
+    "phone": null,
+    "zalo_url": "Minhnguyettran",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên khóa offline - Đã kết bạn Zalo",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:45:15.551Z",
+    "updated_at": "2026-09-17T15:45:15.551Z",
+    "last_updated_vn": "17/09/2026 22:45",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "trang_ang",
+    "name": "Trang Đặng",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/trang_ang",
+    "phone": null,
+    "zalo_url": "Trang Đặng",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên khóa offline - Đã kết bạn Zalo",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:45:15.448Z",
+    "updated_at": "2026-09-17T15:45:15.448Z",
+    "last_updated_vn": "17/09/2026 22:45",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "tuan_nam",
+    "name": "Tuấn Nam",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/tuan_nam",
+    "phone": null,
+    "zalo_url": "Tuấn Nam offline 3",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Học viên khóa offline - Đã kết bạn Zalo",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:45:15.330Z",
+    "updated_at": "2026-09-17T15:45:15.330Z",
+    "last_updated_vn": "17/09/2026 22:45",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "to_van_chien",
+    "name": "Tô Văn Chiến",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/to_van_chien",
+    "phone": "0888434222",
+    "zalo_url": "0888434222",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Full khóa off 3M - Bill chuyển khoản Hà Quế Trinh",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:44:28.465Z",
+    "updated_at": "2026-09-17T15:44:28.465Z",
+    "last_updated_vn": "17/09/2026 22:44",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
+    "id": "tran_thu_hien",
+    "name": "Trần Thu Hiền",
+    "class": "Tư Vấn Fanpage",
+    "industry": "Chưa phân loại",
+    "industry_slug": "general",
+    "avatar_url": "assets/avatar_vietnd.png",
+    "thumbnail_url": "assets/avatar_vietnd.png",
+    "drive_folder_url": "",
+    "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/tran_thu_hien",
+    "phone": "0355378932",
+    "zalo_url": "0355378932",
+    "facebook_url": null,
+    "reference_channels": [],
+    "videos": [],
+    "consultations": [],
+    "notes": "Cọc khóa off 1.5M - Bill chuyển khoản Hà Quế Trinh",
+    "contact_source": "facebook",
+    "contact_source_label": "Facebook",
+    "created_at": "2026-09-17T15:44:20.052Z",
+    "updated_at": "2026-09-17T15:44:20.052Z",
+    "last_updated_vn": "17/09/2026 22:44",
+    "completeness_score": 40,
+    "health_status": "critical",
+    "missing_items": [
+      {
+        "field": "facebook_url",
+        "label": "Link Facebook cá nhân",
+        "severity": "critical",
+        "hint": "Cần lưu link trang cá nhân FB"
+      },
+      {
+        "field": "reference_channels",
+        "label": "Kênh mẫu tham khảo",
+        "severity": "warning",
+        "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
+      },
+      {
+        "field": "videos",
+        "label": "Video thực hành",
+        "severity": "warning",
+        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
+      }
+    ]
+  },
+  {
     "id": "minhkhue_edu",
     "name": "Minhkhue Edu",
     "class": "Tư Vấn Fanpage",
