@@ -77,7 +77,190 @@
       "Mục đích 1: Kéo khách ở vùng xung quanh đến làm dịch vụ tại cơ sở (Gội đầu dưỡng sinh, massage trị liệu cổ vai gáy, thư giãn)",
       "Mục đích 2: Chia sẻ kiến thức chuyên sâu da liễu / đông y để bán sản phẩm đặc trị liên quan đến trị nám, phục hồi da",
       "Mục đích 3: Xây dựng và phát triển nhãn hiệu cá nhân & thương hiệu Đặng Hường Y Quán định vị uy tín, tận tâm"
-    ]
+    ],
+    "is_offline3_attended": false
+  },
+  {
+    "id": "c_nhuong",
+    "name": "C Nhường",
+    "class": "Offline 3",
+    "phone": "0359776789",
+    "sales_closer": "Anh Việt",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.811567Z",
+    "updated_at": "2026-09-19T15:48:24.811569Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "le_quynh_anh_1",
+    "name": "Le quỵnh anh",
+    "class": "Offline 3",
+    "phone": "0936048488",
+    "sales_closer": "Anh Việt",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.811328Z",
+    "updated_at": "2026-09-19T15:48:24.811331Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "ao_trung_nghia_vo",
+    "name": "Đào trung Nghĩa (vợ)",
+    "class": "Offline 3",
+    "phone": "",
+    "sales_closer": "Anh Việt",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.810880Z",
+    "updated_at": "2026-09-19T15:48:24.810883Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "ao_ha_my",
+    "name": "ĐÀO HÀ MY",
+    "class": "Offline 3",
+    "phone": "0902161993",
+    "sales_closer": "Minh Kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.810541Z",
+    "updated_at": "2026-09-19T15:48:24.810543Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "nguyen_thi_hong_van",
+    "name": "Nguyễn Thị Hồng Vân",
+    "class": "Offline 3",
+    "phone": "0948310388",
+    "sales_closer": "Trinh kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.810342Z",
+    "updated_at": "2026-09-19T15:48:24.810344Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "le_duy",
+    "name": "Lê Duy",
+    "class": "Offline 3",
+    "phone": "0843193678",
+    "sales_closer": "Trinh kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.810101Z",
+    "updated_at": "2026-09-19T15:48:24.810103Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "anh_minh",
+    "name": "Anh Minh",
+    "class": "Offline 3",
+    "phone": "0904013386",
+    "sales_closer": "Thảo kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.809950Z",
+    "updated_at": "2026-09-19T15:48:24.809952Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "chu_suc",
+    "name": "Chu Sức",
+    "class": "Offline 3",
+    "phone": "0981926629",
+    "sales_closer": "Trinh kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.809800Z",
+    "updated_at": "2026-09-19T15:48:24.809801Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "le_inh_tai",
+    "name": "Lê Đình Tài",
+    "class": "Offline 3",
+    "phone": "0941073366",
+    "sales_closer": "Trinh kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.809636Z",
+    "updated_at": "2026-09-19T15:48:24.809638Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "tang_xinh_chi_yen",
+    "name": "Tâng Xinh (chị Yến)",
+    "class": "Offline 3",
+    "phone": "0989161868",
+    "sales_closer": "Thảo kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.809469Z",
+    "updated_at": "2026-09-19T15:48:24.809474Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "du_phung_phuong",
+    "name": "Dư Phụng Phương",
+    "class": "Offline 3",
+    "phone": "0908999919",
+    "sales_closer": "Trinh kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.809054Z",
+    "updated_at": "2026-09-19T15:48:24.809056Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "hoang_thi_hoai",
+    "name": "Hoàng thị Hoài",
+    "class": "Offline 3",
+    "phone": "0968086518",
+    "sales_closer": "Thảo kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.808891Z",
+    "updated_at": "2026-09-19T15:48:24.808893Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
+  },
+  {
+    "id": "ang_thi_huong",
+    "name": "Đặng Thị Hường",
+    "class": "Offline 3",
+    "phone": "0345976676",
+    "sales_closer": "Thảo kimedia",
+    "is_offline3_attended": true,
+    "created_at": "2026-09-19T15:48:24.808188Z",
+    "updated_at": "2026-09-19T15:48:24.808657Z",
+    "consultations": [],
+    "videos": [],
+    "missing_items": [],
+    "health_status": "good"
   },
   {
     "id": "le_minh_uc",
@@ -132,7 +315,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "ao_trung_nghia",
@@ -205,7 +390,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "loc_cat_toc",
@@ -266,7 +453,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "trang_ang",
@@ -278,7 +466,7 @@
     "thumbnail_url": "assets/avatar_vietnd.png",
     "drive_folder_url": "",
     "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/trang_ang",
-    "phone": null,
+    "phone": "0979985110",
     "zalo_url": "Trang Đặng",
     "facebook_url": null,
     "reference_channels": [],
@@ -321,7 +509,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "le_quynh_lien",
@@ -333,7 +523,7 @@
     "thumbnail_url": "assets/avatar_vietnd.png",
     "drive_folder_url": "",
     "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/le_quynh_lien",
-    "phone": null,
+    "phone": "0865258568",
     "zalo_url": null,
     "facebook_url": null,
     "reference_channels": [],
@@ -382,7 +572,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "minh_nguyet_tran_thu_hien",
@@ -433,7 +625,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "vu_thi_phuong_thao",
@@ -484,7 +677,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "trung_tam_msts_fedu_engmates",
@@ -535,7 +729,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "thanh_huyen_msts_academy",
@@ -586,7 +781,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "quy_marketing_elearning",
@@ -637,7 +833,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ngoc_thuy",
@@ -688,7 +885,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ha_que_trinh",
@@ -739,7 +937,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "tran_cuong",
@@ -784,7 +983,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "chien_kinh_mat",
@@ -829,7 +1030,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "la_giang",
@@ -874,7 +1076,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "le_anh_tai",
@@ -919,7 +1122,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "minhnguyettran",
@@ -964,7 +1168,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "tuan_nam",
@@ -1009,7 +1214,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "to_van_chien",
@@ -1054,7 +1260,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "tran_thu_hien",
@@ -1099,7 +1307,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "minhkhue_edu",
@@ -1154,7 +1364,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ngan_gia_huy",
@@ -1233,7 +1444,8 @@
         "severity": "critical",
         "hint": "Cần lưu link trang cá nhân FB"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "thuy_an",
@@ -1291,7 +1503,8 @@
     ],
     "email": "ranmap@gmail.com",
     "paid_status": "Đã cọc 500k (Học 1 ngày)",
-    "paid_amount": 500000
+    "paid_amount": 500000,
+    "is_offline3_attended": false
   },
   {
     "id": "huynh_trang_my",
@@ -1340,7 +1553,9 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "14/09/2026 17:44",
-    "updated_at": "2026-09-14T17:46:00.000Z"
+    "updated_at": "2026-09-14T17:46:00.000Z",
+    "is_offline3_attended": true,
+    "sales_closer": "Trinh kimedia"
   },
   {
     "id": "ph_ng_kim",
@@ -1377,7 +1592,8 @@
     "last_updated_vn": "14/09/2026 15:26",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "nguy_n_th_thanh_hoa",
@@ -1414,7 +1630,8 @@
     "last_updated_vn": "14/09/2026 15:22",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "tran_hai_duong",
@@ -1451,7 +1668,8 @@
     "last_updated_vn": "14/09/2026 15:15",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "su_ngoc_ly",
@@ -1488,7 +1706,8 @@
     "last_updated_vn": "14/09/2026 15:13",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "thanh_loc",
@@ -1537,7 +1756,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_huu_chien",
@@ -1592,7 +1812,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nhuong_gk",
@@ -1646,7 +1867,8 @@
       }
     ],
     "payment_status": "paid",
-    "amount_paid": 3000000
+    "amount_paid": 3000000,
+    "is_offline3_attended": false
   },
   {
     "id": "le_son",
@@ -1691,7 +1913,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "mai_spa",
@@ -1736,7 +1959,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_cuong_viet_tri",
@@ -1791,7 +2015,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ang_ly",
@@ -1846,7 +2071,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "luong_thi_thanh_huong",
@@ -1891,7 +2117,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "lien_phuong_nguyen",
@@ -1936,7 +2163,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "hoang_kim_truc",
@@ -1981,7 +2209,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_kim_phuong",
@@ -2026,7 +2255,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_tai",
@@ -2071,7 +2301,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ha_thi_lien",
@@ -2116,7 +2347,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ngoc_quynh",
@@ -2161,7 +2393,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_ngoc",
@@ -2206,7 +2439,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "huong_rung",
@@ -2251,7 +2485,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "xuyen_huynh",
@@ -2296,7 +2531,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "an_bao",
@@ -2341,7 +2577,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "do_thanh_tam",
@@ -2386,7 +2623,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "bui_thoa",
@@ -2431,7 +2669,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "le_quynh_anh",
@@ -2505,7 +2744,8 @@
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
     ],
-    "email": "quynhanhle1988@gmail.com"
+    "email": "quynhanhle1988@gmail.com",
+    "is_offline3_attended": false
   },
   {
     "id": "ao_huy_gym_tuan_tu",
@@ -2560,7 +2800,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "pham_thi_hang",
@@ -2572,7 +2813,7 @@
     "thumbnail_url": "assets/avatar_vietnd.png",
     "drive_folder_url": "",
     "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/pham_thi_hang",
-    "phone": null,
+    "phone": "030902346789",
     "zalo_url": "Phạm Thị Hằng bds offline3",
     "facebook_url": null,
     "reference_channels": [],
@@ -2624,7 +2865,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "nguyen_truong_duy",
@@ -2680,7 +2923,8 @@
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
     ],
-    "email": "duynt9024@gmail.com"
+    "email": "duynt9024@gmail.com",
+    "is_offline3_attended": false
   },
   {
     "id": "phien_kim",
@@ -2764,7 +3008,8 @@
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
     ],
-    "email": "kimphien14284@gmail.com"
+    "email": "kimphien14284@gmail.com",
+    "is_offline3_attended": false
   },
   {
     "id": "hong_thu",
@@ -2819,7 +3064,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "tr_ng_chang_chang",
@@ -2856,7 +3102,8 @@
     "last_updated_vn": "11/09/2026 17:17",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "vu_tri_van",
@@ -2911,7 +3158,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "cao_hung_son",
@@ -2966,7 +3214,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "l_c_duy",
@@ -3003,7 +3252,8 @@
     "last_updated_vn": "11/09/2026 13:42",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "hoang_ly",
@@ -3048,7 +3298,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_thi_dung",
@@ -3093,7 +3344,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "test",
@@ -3141,7 +3393,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguy_n_duy_anh",
@@ -3176,7 +3429,8 @@
     "last_updated_vn": "10/09/2026 19:01",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "cao_thi_huyen",
@@ -3221,7 +3475,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "ng_h_ng_ch_u",
@@ -3256,7 +3511,8 @@
     "last_updated_vn": "10/09/2026 15:18",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "pham_thi_thuy",
@@ -3301,7 +3557,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "le_thi_nhung",
@@ -3356,7 +3613,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_lan_phuong",
@@ -3420,7 +3678,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "dulin_pha_che_offline2",
@@ -3489,7 +3748,9 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "10/09/2026 15:11",
-    "updated_at": "2026-09-10T08:11:23.577169+00:00"
+    "updated_at": "2026-09-10T08:11:23.577169+00:00",
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "nguy_n_c_vi_t_test_ng_b_tripple",
@@ -3524,7 +3785,8 @@
     "last_updated_vn": "10/09/2026 10:35",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "l_ng_thanh_ki_n",
@@ -3559,7 +3821,9 @@
     "last_updated_vn": "10/09/2026 19:05",
     "completeness_score": 50,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "kat_lynn",
@@ -3614,7 +3878,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "nguyen_thi_thu_huong",
@@ -3679,7 +3945,8 @@
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
     ],
-    "email": "thuhuong121272@gmail.com"
+    "email": "thuhuong121272@gmail.com",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_van_at",
@@ -3734,7 +4001,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_kim_hanh",
@@ -3771,7 +4039,8 @@
     "last_updated_vn": "12/09/2026 19:00",
     "completeness_score": 65,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "lam_tra_my",
@@ -3826,7 +4095,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "hoang_anh_tai",
@@ -3890,7 +4160,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "nguyen_thi_kim_oanh",
@@ -3945,7 +4217,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "minh_vuong",
@@ -4031,7 +4304,8 @@
     "email": "nguyenminhvuong.hn@gmail.com",
     "technical_blockers": "KT Quay làm nổi bật điểm mạnh của sổ và tạo thu hút. Sợ video giơ sổ thô cứng, lướt qua.",
     "mindset_attitude": "Muốn làm video BĐS chuẩn chuyên nghiệp, tạo niềm tin pháp lý & dòng tiền; đang cân nhắc, chưa cọc, cần telesale định hướng.",
-    "zalo_name": "Phúc Vượng"
+    "zalo_name": "Phúc Vượng",
+    "is_offline3_attended": false
   },
   {
     "id": "luu_thi_kim_ngan",
@@ -4095,7 +4369,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_thi_tuyet",
@@ -4159,7 +4434,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "oan_huu_viet",
@@ -4232,7 +4508,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "yuri_thuong_tran",
@@ -4293,7 +4571,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "nguyet_store_hp",
@@ -4406,7 +4685,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "09/09/2026 11:12",
-    "updated_at": "2026-09-09T04:12:02.013Z"
+    "updated_at": "2026-09-09T04:12:02.013Z",
+    "is_offline3_attended": false
   },
   {
     "id": "trang_truong_offline3",
@@ -4474,7 +4754,9 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": true,
+    "sales_closer": "Anh Việt"
   },
   {
     "id": "phuong_tiktokshop_donam",
@@ -4554,7 +4836,8 @@
     "notes": "[Ngành gốc: Thời Trang Nam & TikTok Shop Affiliate]\n[Lớp gốc: Khóa Video Thực Chiến (599k) - Active Skool]\nChủ kênh TikTok Phượng Thích Đồ Nam (@phuongthichdonam). Tên thật: Bùi Bích Phượng, SĐT/Zalo: 0763937222, Email: bichphuong.bui94@gmail.com. Đã chuyển hẳn sang làm tiếp thị liên kết TikTok chuyên nghiệp, dịch chuyển từ hàng bình dân lên phân khúc tầm trung (300k - 600k) để giữ uy tín. Thầy Việt đã bẻ gãy ngộ nhận chuyển cảnh: Không dùng one-shot cày cuốc (farm thời gian), mà chuyển sang mô hình Tách rời Hình - Tiếng (B-roll macro nhịp 2-3s + Voice-over CapCut 20-30s thủ thỉ).",
     "last_updated_vn": "08/09/2026 11:20",
     "updated_at": "2026-09-08T04:21:25.029Z",
-    "email": "bichphuong.bui94@gmail.com"
+    "email": "bichphuong.bui94@gmail.com",
+    "is_offline3_attended": false
   },
   {
     "id": "chang_chang_makeup",
@@ -4615,7 +4898,8 @@
     ],
     "notes": "[Ngành gốc: Makeup & Studio Chụp Ảnh]\n[Lớp gốc: Tư Vấn Zalo]\nThợ makeup 4 năm kinh nghiệm, fanpage 6.9k like, số điện thoại booking 0911100037. Vướng khâu hình ảnh phẳng/bẹt dìm tay nghề. Đã giao bài tập đèn studio 2tr + 6 khách = 6 video.",
     "last_updated_vn": "06/09/2026 11:28",
-    "updated_at": "2026-09-06T11:28:00.000Z"
+    "updated_at": "2026-09-06T11:28:00.000Z",
+    "is_offline3_attended": false
   },
   {
     "id": "lam_vu_offline2",
@@ -4698,7 +4982,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "updated_at": "2026-09-06T00:12:46.190Z",
-    "last_updated_vn": "06/09/2026 07:12"
+    "last_updated_vn": "06/09/2026 07:12",
+    "is_offline3_attended": false
   },
   {
     "id": "vien_the_duc_offline2",
@@ -4756,7 +5041,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_dai_giao_an_offline2",
@@ -4803,7 +5089,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_phuong_trinh_offline2",
@@ -4854,7 +5141,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "hoang_bang_tam_offline2",
@@ -4907,7 +5195,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "bui_hong_ky_offline2",
@@ -4960,7 +5249,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "tran_binh_an_offline2",
@@ -5007,7 +5297,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "ha_bao_chau_offline2",
@@ -5065,7 +5356,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:23:00.000Z",
-    "last_updated_vn": "06/09/2026 14:23"
+    "last_updated_vn": "06/09/2026 14:23",
+    "is_offline3_attended": false
   },
   {
     "id": "do_thanh_cong_k1",
@@ -5123,7 +5415,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo & SĐT",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_thi_thanh_k1",
@@ -5176,7 +5469,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "bui_hoai_anh_k1",
@@ -5223,7 +5517,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "vu_thi_van_anh_k1",
@@ -5281,7 +5576,8 @@
     "contact_source": "tiktok",
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "tran_minh_ngoc_k1",
@@ -5328,7 +5624,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook (424k likes)",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_thi_bich_thuy_k1",
@@ -5380,7 +5677,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Fanpage",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "luat_fire_phoenix",
@@ -5457,7 +5755,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "05/09/2026 23:22",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "chi_mai_suc_khoe",
@@ -5517,7 +5816,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "05/09/2026 20:39",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "nhung_pham_fnb",
@@ -5566,7 +5866,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "05/09/2026 13:42",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "kien_phan_bon",
@@ -5650,7 +5951,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "05/09/2026 08:22",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "mai_thi_hong",
@@ -5699,7 +6001,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "04/09/2026 22:39",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "dulux_hai_nam",
@@ -5748,7 +6051,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "04/09/2026 16:30",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "pham_ba_nghia",
@@ -5808,7 +6112,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "03/09/2026 23:24",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "dang_thuy_van",
@@ -5857,7 +6162,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "03/09/2026 14:15",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "loc_huyen_bds",
@@ -5906,7 +6212,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "03/09/2026 11:20",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "halona_pham_offline2",
@@ -6000,7 +6307,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "02/09/2026 14:20",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "trang_oem_cosmetics",
@@ -6060,7 +6368,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "02/09/2026 01:24",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "miu_miu_spa",
@@ -6143,7 +6452,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "10/09/2026 09:45",
-    "updated_at": "2026-09-10T02:45:47.879620+00:00"
+    "updated_at": "2026-09-10T02:45:47.879620+00:00",
+    "is_offline3_attended": false
   },
   {
     "id": "minh_nguyet",
@@ -6193,7 +6503,8 @@
         "severity": "warning",
         "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
-    ]
+    ],
+    "is_offline3_attended": false
   },
   {
     "id": "hoang_vy_finance",
@@ -6242,7 +6553,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "30/08/2026 23:14",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "tl_fruits_kombucha",
@@ -6279,7 +6591,8 @@
     "last_updated_vn": "12/09/2026 19:00",
     "completeness_score": 60,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "van_anh_offline2",
@@ -6364,7 +6677,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "24/08/2026 19:18",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "thom_nguyen_offline2",
@@ -6432,7 +6746,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "24/08/2026",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "salon_toc_haiphong",
@@ -6528,7 +6843,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "22/08/2026 21:29",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "nuong_offline2",
@@ -6596,7 +6912,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "22/08/2026 20:33",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "tham_tho_offline2",
@@ -6658,7 +6975,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "21/08/2026 20:10",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "dinh_thuy_ngu_coc",
@@ -6695,7 +7013,8 @@
     "last_updated_vn": "12/09/2026 19:00",
     "completeness_score": 60,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "minh_duc_land",
@@ -6742,7 +7061,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "20/08/2026 15:40",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_giang_fnb",
@@ -6789,7 +7109,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "18/08/2026 11:25",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "co_dien_aeg",
@@ -6844,7 +7165,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "09/08/2026 19:06",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "sarah_trinh",
@@ -6893,7 +7215,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "08/08/2026 18:38",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "cat_tuong_offline2",
@@ -6973,7 +7296,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "04/08/2026 08:09",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "do_ha_duong_sinh",
@@ -7010,7 +7334,8 @@
     "last_updated_vn": "12/09/2026 19:00",
     "completeness_score": 65,
     "health_status": "good",
-    "missing_items": []
+    "missing_items": [],
+    "is_offline3_attended": false
   },
   {
     "id": "linh_xu_spa",
@@ -7071,7 +7396,8 @@
     "contact_source": "zalo",
     "contact_source_label": "Zalo",
     "last_updated_vn": "17/07/2026 - 19/07/2026",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "vu_ha_hue_linh",
@@ -7126,7 +7452,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "14/07/2026 17:27 - 20:06",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "le_vu_hoang_k1",
@@ -7184,7 +7511,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "10/09/2026 10:36",
-    "updated_at": "2026-09-10T03:36:20.949937+00:00"
+    "updated_at": "2026-09-10T03:36:20.949937+00:00",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_duc_canh_k1",
@@ -7266,7 +7594,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "updated_at": "2026-09-06T07:28:00.000Z",
-    "last_updated_vn": "06/09/2026 14:28"
+    "last_updated_vn": "06/09/2026 14:28",
+    "is_offline3_attended": false
   },
   {
     "id": "anan_decor",
@@ -7315,7 +7644,8 @@
     "contact_source": "facebook",
     "contact_source_label": "Facebook Page",
     "last_updated_vn": "08/07/2026 15:40",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "hong_nguyen_laeva",
@@ -7364,7 +7694,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "08/07/2026 14:20",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "doan_thu_ngan",
@@ -7413,7 +7744,8 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "08/07/2026 12:10",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   },
   {
     "id": "nguyen_xuan_viet",
@@ -7462,6 +7794,7 @@
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "08/07/2026 10:45",
-    "updated_at": "2026-09-07T02:53:38.259Z"
+    "updated_at": "2026-09-07T02:53:38.259Z",
+    "is_offline3_attended": false
   }
 ]
