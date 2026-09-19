@@ -36,6 +36,26 @@ data.forEach(s => {
     newClass = 'Offline 2';
   }
 
+  // Khóa Video Marketing - NDV -> Khóa Video Marketing
+  if (originalClass === 'Khóa Video Marketing - NDV') {
+      newClass = 'Khóa Video Marketing';
+  }
+
+  // Skool variations -> Khóa Online Skool
+  if (originalClass.toLowerCase().includes('skool')) {
+      newClass = 'Khóa Online Skool';
+  }
+
+  // Tư Vấn variations -> Tư Vấn
+  if (originalClass.toLowerCase().includes('tư vấn')) {
+      newClass = 'Tư Vấn';
+      if (!s.notes) s.notes = "";
+      if (!s.notes.includes(originalClass)) {
+          s.notes = `[Nguồn Gốc Lớp: ${originalClass}]\n` + s.notes;
+      }
+  }
+
+
   if (newClass !== originalClass) {
     s.class = newClass;
     modified++;
