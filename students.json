@@ -70,12 +70,6 @@
         "label": "Kênh mẫu tham khảo",
         "severity": "warning",
         "hint": "Cần hỏi thêm kênh mẫu / phong cách học viên muốn học hỏi"
-      },
-      {
-        "field": "videos",
-        "label": "Video thực hành",
-        "severity": "warning",
-        "hint": "Đang chờ học viên nộp video thực hành đầu tiên"
       }
     ],
     "facebook_alias": "https://www.facebook.com/share/1DUh1X8uNN/?mibextid=wwXIfr",
