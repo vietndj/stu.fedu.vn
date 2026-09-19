@@ -614,7 +614,7 @@
         <span>•</span>
         <span>Khóa Học Làm Video & Xây Dựng Kênh Thực Chiến</span>
       </div>
-      <div>Cập nhật lúc: <span class="font-mono text-slate-600">19/09/2026 22:57:19</span></div>
+      <div>Cập nhật lúc: <span class="font-mono text-slate-600">19/09/2026 23:15:24</span></div>
     </div>
   </footer>
 
@@ -1640,8 +1640,7 @@
           s.industry || '',
           s.contact_source || '',
           s.sales_closer || '',
-          (s.notes || '').replace(/
-/g, ' '),
+          (s.notes || '').replace(/\n/g, ' '),
           s.is_offline3_attended ? 'x' : ''
         ]);
       });
@@ -1650,14 +1649,12 @@
       rows.forEach(row => {
         const escapedRow = row.map(cell => {
           let str = String(cell);
-          if (str.includes(',') || str.includes('"') || str.includes('
-')) {
+          if (str.includes(',') || str.includes('"') || str.includes('\n')) {
             str = `"${str.replace(/"/g, '""')}"`;
           }
           return str;
         });
-        csvContent += escapedRow.join(',') + "
-";
+        csvContent += escapedRow.join(',') + "\r\n";
       });
       
       const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
