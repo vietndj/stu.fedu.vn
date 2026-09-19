@@ -264,6 +264,9 @@
         <button onclick="setStatusFilter('has_drive')" id="status-has_drive" class="status-chip px-2.5 py-1 rounded-xl text-xs font-semibold transition bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 flex items-center gap-1.5 whitespace-nowrap">
           <span>📁</span> Có Drive <span id="badgeCountDrive" class="bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
         </button>
+        <button onclick="setStatusFilter('offline3')" id="status-offline3" class="status-chip px-2.5 py-1 rounded-xl text-xs font-semibold transition bg-white text-slate-600 hover:bg-slate-50 border border-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+          <span>🔥</span> Offline 3 <span id="badgeCountOffline3" class="bg-slate-100 text-slate-600 text-[10px] px-1.5 py-0.2 rounded-full font-bold">0</span>
+        </button>
       </div>
 
       <!-- Edit Mode Notification Banner -->
@@ -830,7 +833,8 @@
       const countVideo = currentStudents.filter(s => s.videos && s.videos.length > 0).length;
       const countNotes = currentStudents.filter(s => s.notes && s.notes.trim()).length;
       const countMissingPhone = currentStudents.filter(s => !s.phone || !s.phone.trim()).length;
-      const countDrive = currentStudents.filter(s => s.drive_folder_url && s.drive_folder_url.trim()).length;
+            const countDrive = currentStudents.filter(s => s.drive_folder_url && s.drive_folder_url.trim()).length;
+      const countOffline3 = currentStudents.filter(s => s.class === 'Offline 3').length;
 
       const elAll = document.getElementById('badgeCountAll');
       if (elAll) elAll.textContent = total;
@@ -840,8 +844,10 @@
       if (elNotes) elNotes.textContent = countNotes;
       const elPhone = document.getElementById('badgeCountMissingPhone');
       if (elPhone) elPhone.textContent = countMissingPhone;
-      const elDrive = document.getElementById('badgeCountDrive');
+            const elDrive = document.getElementById('badgeCountDrive');
       if (elDrive) elDrive.textContent = countDrive;
+      const elOffline3 = document.getElementById('badgeCountOffline3');
+      if (elOffline3) elOffline3.textContent = countOffline3;
     }
 
     function handleFilterChange() {
@@ -880,12 +886,13 @@
           if (activeSourceFilter === 'facebook' && s.contact_source !== 'facebook') return false;
         }
 
-        // Status filter (Điểm 1 UI/UX: Lọc Nhanh 1-Chạm)
+                // Status filter (Điểm 1 UI/UX: Lọc Nhanh 1-Chạm)
         if (activeStatusFilter !== 'all') {
           if (activeStatusFilter === 'has_video' && (!s.videos || s.videos.length === 0)) return false;
           if (activeStatusFilter === 'has_notes' && (!s.notes || !s.notes.trim())) return false;
           if (activeStatusFilter === 'missing_phone' && (s.phone && s.phone.trim() !== '')) return false;
           if (activeStatusFilter === 'has_drive' && (!s.drive_folder_url || !s.drive_folder_url.trim())) return false;
+          if (activeStatusFilter === 'offline3' && s.class !== 'Offline 3') return false;
         }
 
         // Industry filter

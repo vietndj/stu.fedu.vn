@@ -768,7 +768,7 @@
   {
     "id": "thuy_an",
     "name": "Thuy An",
-    "class": "Offline K3 (19-20/09) - Học 1 ngày",
+    "class": "Offline 3",
     "industry": "Dược sỹ",
     "industry_slug": "duoc_sy",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -826,7 +826,7 @@
   {
     "id": "thanh_loc",
     "name": "Thành Lộc",
-    "class": "Offline 3 (19 - 20/09/2026)",
+    "class": "Offline 3",
     "industry": "Salon Tóc & Cắt Tóc",
     "industry_slug": "salon_toc_cat_toc",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -875,7 +875,7 @@
   {
     "id": "nguyen_huu_chien",
     "name": "Nguyễn Hữu Chiến",
-    "class": "Offline K3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Bất động sản",
     "industry_slug": "bat_ong_san",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -930,7 +930,7 @@
   {
     "id": "nhuong_gk",
     "name": "Nhường Gk",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "Thời trang",
     "industry_slug": "thoi_trang",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -962,7 +962,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [14/09/2026 09:12] ✅ [ĐÃ CHUYỂN KHOẢN ĐỦ 3.000.000Đ - CHÍNH THỨC VÀO LỚP OFFLINE K3 19-20/09 AEON MALL LONG BIÊN]. Học viên ngành Thời trang nữ. Đã gọi Zalo tư vấn kỹ thuật quay video phối đồ & bán hàng thực chiến. Đã hoàn tất 100% học phí.\nĐã gọi điện/Zalo tư vấn trực tiếp cho chị Nhường về khóa Offline thực chiến cuối tuần này (19 – 20/09 tại Aeon Mall Long Biên, học phí 3.000.000đ). Khách rất thiện chí, có khả năng CK / Chờ cọc. Cần theo dõi đối soát hóa đơn chuyển khoản.",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [14/09/2026 09:12] ✅ [ĐÃ CHUYỂN KHOẢN ĐỦ 3.000.000Đ - CHÍNH THỨC VÀO LỚP OFFLINE K3 19-20/09 AEON MALL LONG BIÊN]. Học viên ngành Thời trang nữ. Đã gọi Zalo tư vấn kỹ thuật quay video phối đồ & bán hàng thực chiến. Đã hoàn tất 100% học phí.\nĐã gọi điện/Zalo tư vấn trực tiếp cho chị Nhường về khóa Offline thực chiến cuối tuần này (19 – 20/09 tại Aeon Mall Long Biên, học phí 3.000.000đ). Khách rất thiện chí, có khả năng CK / Chờ cọc. Cần theo dõi đối soát hóa đơn chuyển khoản.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-14T01:38:13.613Z",
@@ -984,7 +984,7 @@
   {
     "id": "luong_thi_thanh_huong",
     "name": "Lương Thị Thanh Hương",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Đồ họa / Học viên cũ",
     "industry_slug": "o_hoa_hoc_vien_cu",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1029,7 +1029,7 @@
   {
     "id": "lien_phuong_nguyen",
     "name": "Lien Phuong Nguyen",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1074,7 +1074,7 @@
   {
     "id": "hoang_kim_truc",
     "name": "Hoàng Kim Trúc",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1119,7 +1119,7 @@
   {
     "id": "nguyen_kim_phuong",
     "name": "Nguyễn Kim Phượng",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1164,7 +1164,7 @@
   {
     "id": "nguyen_tai",
     "name": "Nguyễn Tài",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1209,7 +1209,7 @@
   {
     "id": "ha_thi_lien",
     "name": "Hà Thị Liên",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Xây kênh",
     "industry_slug": "tong_quat_xay_kenh",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1254,7 +1254,7 @@
   {
     "id": "ngoc_quynh",
     "name": "Ngọc Quỳnh",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1299,7 +1299,7 @@
   {
     "id": "nguyen_ngoc",
     "name": "Nguyễn Ngọc",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1344,7 +1344,7 @@
   {
     "id": "huong_rung",
     "name": "Hương Rừng",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Rừng - Nông sản",
     "industry_slug": "tong_quat_rung_nong_san",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1389,7 +1389,7 @@
   {
     "id": "xuyen_huynh",
     "name": "Xuyên Huỳnh",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1434,7 +1434,7 @@
   {
     "id": "an_bao",
     "name": "An Bảo",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1534,7 +1534,7 @@
   {
     "id": "do_thanh_tam",
     "name": "Do Thanh Tam",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1579,7 +1579,7 @@
   {
     "id": "bui_thoa",
     "name": "Bui Thoa",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1624,7 +1624,7 @@
   {
     "id": "ang_ly",
     "name": "Đặng Lý",
-    "class": "Offline 19-20/09",
+    "class": "Offline 3",
     "industry": "Tổng quát / Chưa rõ",
     "industry_slug": "tong_quat_chua_ro",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1679,7 +1679,7 @@
   {
     "id": "test",
     "name": "test",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Chưa điền",
     "industry_slug": "ch_a_i_n",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1701,7 +1701,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [10/09/2026 19:02] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 19:02] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-10T12:02:02.026892+00:00",
@@ -1727,7 +1727,7 @@
   {
     "id": "le_quynh_anh",
     "name": "Lê Quỳnh Anh",
-    "class": "Offline K3 (19-20/09) - Đã cọc 3tr",
+    "class": "Offline 3",
     "industry": "Đồ gia dụng & Thiết bị bếp Đức High-end (10 năm kinh nghiệm - Đại lý chính hãng)",
     "industry_slug": "do_bep_duc_highend",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1856,7 +1856,7 @@
   {
     "id": "nguyen_truong_duy",
     "name": "Nguyễn Trường Duy",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Khác",
     "industry_slug": "khac",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -1879,7 +1879,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [14/09/2026 15:30] [KHO STU ARCHIVE]: 📞 Đã đàm thoại 7m 28s (11/09 20:25) | [Mục đích: Xây kênh cá nhân, trải nghiệm] Trao đổi có vẻ ưng, khả năng chuyển khoản (Đã gửi Zalo thông tin lớp 19-20/09 Aeon Mall Long Biên & mã QR cọc 3tr).\n• [14/09/2026 15:30] đã hoc online , nhưng gọi lần 2 có vẻ nguội, ko chốt .📞 Đã đàm thoại 7m 28s (11/09 20:25) | [Mục đích: Xây kênh cá nhân, trải nghiệm] Trao đổi có vẻ ưng, khả năng chuyển khoản (Đã gửi Zalo thông tin lớp 19-20/09 Aeon Mall Long Biên & mã QR cọc 3tr).\n• [11/09/2026 20:25] 📞 Đàm thoại 7m 28s: Anh Việt trực tiếp gọi điện trao đổi chi tiết. Mục đích học: Xây kênh cá nhân, trải nghiệm. Trường Duy có vẻ ưng, khả năng chuyển khoản cọc. Đã gửi Zalo thông tin khóa học (19-20/09 gần Aeon Mall Long Biên), chi phí 3tr và mã QR Techcombank 4101986 nội dung 'T Duy - offline-19-20' lúc 20:36. Email: duynt9024@gmail.com.",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [14/09/2026 15:30] [KHO STU ARCHIVE]: 📞 Đã đàm thoại 7m 28s (11/09 20:25) | [Mục đích: Xây kênh cá nhân, trải nghiệm] Trao đổi có vẻ ưng, khả năng chuyển khoản (Đã gửi Zalo thông tin lớp 19-20/09 Aeon Mall Long Biên & mã QR cọc 3tr).\n• [14/09/2026 15:30] đã hoc online , nhưng gọi lần 2 có vẻ nguội, ko chốt .📞 Đã đàm thoại 7m 28s (11/09 20:25) | [Mục đích: Xây kênh cá nhân, trải nghiệm] Trao đổi có vẻ ưng, khả năng chuyển khoản (Đã gửi Zalo thông tin lớp 19-20/09 Aeon Mall Long Biên & mã QR cọc 3tr).\n• [11/09/2026 20:25] 📞 Đàm thoại 7m 28s: Anh Việt trực tiếp gọi điện trao đổi chi tiết. Mục đích học: Xây kênh cá nhân, trải nghiệm. Trường Duy có vẻ ưng, khả năng chuyển khoản cọc. Đã gửi Zalo thông tin khóa học (19-20/09 gần Aeon Mall Long Biên), chi phí 3tr và mã QR Techcombank 4101986 nội dung 'T Duy - offline-19-20' lúc 20:36. Email: duynt9024@gmail.com.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-11T13:44:02.037Z",
@@ -1996,7 +1996,7 @@
   {
     "id": "hong_thu",
     "name": "Hong thu",
-    "class": "Offline K3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Coaching / Đào tạo",
     "industry_slug": "coaching_ao_tao",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2051,7 +2051,7 @@
   {
     "id": "ao_trung_nghia",
     "name": "Đào trung Nghĩa",
-    "class": "Offline K3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Tattoo Artist",
     "industry_slug": "tattoo_artist",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2115,7 +2115,7 @@
   {
     "id": "vu_tri_van",
     "name": "Vũ Trí Văn",
-    "class": "Offline K3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Nông Nghiệp & Phân Bón",
     "industry_slug": "nong_nghiep_phan_bon",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2170,7 +2170,7 @@
   {
     "id": "cao_hung_son",
     "name": "Cao Hùng Sơn",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Bất động sản",
     "industry_slug": "bat_ong_san",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2193,7 +2193,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [14/09/2026 15:36] [KHO STU ARCHIVE]: Anh bận không đi được. [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.. gọi lại lần 2 là nguội rồi\n• [14/09/2026 15:35] Anh bận không đi được. [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.\n• [11/09/2026 16:43] [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.\n📞 Đàm thoại 2m 35s (11/09 16:37). Email: hungsonguide@gmail.com. Tiềm năng, đã lưu danh bạ offline3 - Cao Hùng Sơn.",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [14/09/2026 15:36] [KHO STU ARCHIVE]: Anh bận không đi được. [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.. gọi lại lần 2 là nguội rồi\n• [14/09/2026 15:35] Anh bận không đi được. [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.\n• [11/09/2026 16:43] [Bất động sản] Bắt đầu từ đầu. Đàm thoại 2m35s: Trao đổi có vẻ ổn, tiềm năng.\n📞 Đàm thoại 2m 35s (11/09 16:37). Email: hungsonguide@gmail.com. Tiềm năng, đã lưu danh bạ offline3 - Cao Hùng Sơn.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-11T09:43:20.200Z",
@@ -2495,7 +2495,7 @@
   {
     "id": "pham_thi_hang",
     "name": "Phạm Thị Hằng",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "Bất động sản (BĐS)",
     "industry_slug": "bat_ong_san_b_s",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2527,7 +2527,7 @@
         "screenshot_url": "assets/hocvien/media_1789036130417.png"
       }
     ],
-    "notes": "• [12/09/2026 16:05] ✅ ĐÃ CHUYỂN KHOẢN THÀNH CÔNG OFFLINE K3 (19-20/09). Học viên Bất động sản (BĐS). Đã xác nhận chuyển khoản qua Zalo (Phạm Thị Hằng bds offline3). Sắp xếp lịch học và add vào nhóm lớp thực chiến 19-20/09 tại Hà Nội.\n• [10/09/2026 17:30] Đã gọi điện thoại 14p49s tối qua (09/09/2026) trao đổi rất kỹ. 20:36 đã gửi mã QR Vietcombank, chị Hằng thả tim và 'OK em' lúc 20:37. Hiện đã chuyển khoản thành công.",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [12/09/2026 16:05] ✅ ĐÃ CHUYỂN KHOẢN THÀNH CÔNG OFFLINE K3 (19-20/09). Học viên Bất động sản (BĐS). Đã xác nhận chuyển khoản qua Zalo (Phạm Thị Hằng bds offline3). Sắp xếp lịch học và add vào nhóm lớp thực chiến 19-20/09 tại Hà Nội.\n• [10/09/2026 17:30] Đã gọi điện thoại 14p49s tối qua (09/09/2026) trao đổi rất kỹ. 20:36 đã gửi mã QR Vietcombank, chị Hằng thả tim và 'OK em' lúc 20:37. Hiện đã chuyển khoản thành công.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-10T10:29:58.582Z",
@@ -2559,7 +2559,7 @@
   {
     "id": "le_thi_nhung",
     "name": "Lê Thị Nhung",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "AIA Bảo hiểm",
     "industry_slug": "aia_bao_hiem",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2582,7 +2582,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [10/09/2026 17:43] [KHO STU ARCHIVE]: AIA Bảo hiểm. Gọi 2 lần không nhắc máy (10/09/2026). sai đã gọi ko biet ly do\n• [10/09/2026 14:32] AIA Bảo hiểm. Gọi 2 lần không nhấc máy (10/09/2026).\nGọi 2 lần không nhấc máy (10/09/2026). Đã lưu danh bạ Apple Contacts offline3 - Lê Thị Nhung.",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [10/09/2026 17:43] [KHO STU ARCHIVE]: AIA Bảo hiểm. Gọi 2 lần không nhắc máy (10/09/2026). sai đã gọi ko biet ly do\n• [10/09/2026 14:32] AIA Bảo hiểm. Gọi 2 lần không nhấc máy (10/09/2026).\nGọi 2 lần không nhấc máy (10/09/2026). Đã lưu danh bạ Apple Contacts offline3 - Lê Thị Nhung.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-10T07:32:31.223Z",
@@ -2614,7 +2614,7 @@
   {
     "id": "nguyen_lan_phuong",
     "name": "Nguyen Lan Phương",
-    "class": "Offline 3 (Hà Nội 19-20/09)",
+    "class": "Offline 3",
     "industry": "Chủ nhà hàng / F&B",
     "industry_slug": "chu_nha_hang_f_b",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2678,7 +2678,7 @@
   {
     "id": "kat_lynn",
     "name": "Kat Lynn",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "F&B - Tiệm Bánh Ngọt",
     "industry_slug": "f_b_tiem_banh_ngot",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2701,7 +2701,7 @@
         "screenshot_url": "assets/hocvien/media_1788952951044.png"
       }
     ],
-    "notes": "• [10/09/2026 08:16] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [10/09/2026 08:02] [KHO STU ARCHIVE]: Học viên Kat Lynn tiệm bánh ngọt đã hoàn tất chuyển khoản cọc K3.\n• [10/09/2026 07:55] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [10/09/2026 07:55] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [09/09/2026 23:43] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [TRẠNG THÁI: ĐÃ CHUYỂN KHOẢN ĐĂNG KÝ OFFLINE K3]. Lịch học 19-20/09/2026 tại Hà Nội. Đăng ký web lúc 14:05:13 ngày 09/09/2026. SĐT: 0904545611. Zalo: Kat offline k3. Sản phẩm: Bánh sừng bò, tart trứng ngàn lớp, bánh mì nướng sốt.",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [10/09/2026 08:16] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [10/09/2026 08:02] [KHO STU ARCHIVE]: Học viên Kat Lynn tiệm bánh ngọt đã hoàn tất chuyển khoản cọc K3.\n• [10/09/2026 07:55] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [10/09/2026 07:55] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [09/09/2026 23:43] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.\n• [TRẠNG THÁI: ĐÃ CHUYỂN KHOẢN ĐĂNG KÝ OFFLINE K3]. Lịch học 19-20/09/2026 tại Hà Nội. Đăng ký web lúc 14:05:13 ngày 09/09/2026. SĐT: 0904545611. Zalo: Kat offline k3. Sản phẩm: Bánh sừng bò, tart trứng ngàn lớp, bánh mì nướng sốt.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-09T15:00:20.723Z",
@@ -2733,7 +2733,7 @@
   {
     "id": "nguyen_thi_thu_huong",
     "name": "Nguyễn Thị Thu Hương",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Xây kênh cá nhân",
     "industry_slug": "xay_kenh_ca_nhan",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2765,7 +2765,7 @@
         "screenshot_url": "assets/hocvien/media_1788962147099.png"
       }
     ],
-    "notes": "• [10/09/2026 17:44] [KHO STU ARCHIVE]: offline3 - Xây kênh cá nhân tất kiểm\nEmail: thuhuong121272@gmail.com | Lớp: offline3 - Xây kênh cá nhân\n• [09/09/2026 21:09] Đã gọi điện: Kêu xa không học offline được, đã học bên Nguyễn Tất Kiểm. Cần pivot sang khóa Online Skool.",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [10/09/2026 17:44] [KHO STU ARCHIVE]: offline3 - Xây kênh cá nhân tất kiểm\nEmail: thuhuong121272@gmail.com | Lớp: offline3 - Xây kênh cá nhân\n• [09/09/2026 21:09] Đã gọi điện: Kêu xa không học offline được, đã học bên Nguyễn Tất Kiểm. Cần pivot sang khóa Online Skool.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-09T13:56:15.069Z",
@@ -2877,7 +2877,7 @@
   {
     "id": "nguyen_van_at",
     "name": "Nguyễn Văn Đạt",
-    "class": "Offline 3 (Đang ở Đà Nẵng)",
+    "class": "Offline 3",
     "industry": "Luật sư",
     "industry_slug": "luat_su",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2932,7 +2932,7 @@
   {
     "id": "lam_tra_my",
     "name": "Lâm Trà My",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Kinh doanh online",
     "industry_slug": "kinh_doanh_online",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -2955,7 +2955,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [10/09/2026 17:45] [KHO STU ARCHIVE]: KD Online. Chưa đủ kinh phí học Offline 3. Phù hợp chuyển phễu sang Skool Online.\n• [15:10 09/09/2026] Đã trao đổi tư vấn. Khách phản hồi chưa đủ kinh phí học Offline 3. Phù hợp chuyển hướng sang khóa Online Skool.",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 17:45] [KHO STU ARCHIVE]: KD Online. Chưa đủ kinh phí học Offline 3. Phù hợp chuyển phễu sang Skool Online.\n• [15:10 09/09/2026] Đã trao đổi tư vấn. Khách phản hồi chưa đủ kinh phí học Offline 3. Phù hợp chuyển hướng sang khóa Online Skool.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-09T08:11:12.073Z",
@@ -2987,7 +2987,7 @@
   {
     "id": "hoang_anh_tai",
     "name": "Hoàng Anh Tài",
-    "class": "Offline 3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Sửa chữa / Xe máy / Cơ khí",
     "industry_slug": "sua_chua_xe_may_co_khi",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -3051,7 +3051,7 @@
   {
     "id": "nguyen_thi_kim_oanh",
     "name": "Nguyễn Thị Kim Oanh",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Đào tạo",
     "industry_slug": "ao_tao",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -3074,7 +3074,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "• [10/09/2026 17:45] [KHO STU ARCHIVE]: Sai tệp lớp Offline 3. Nhu cầu: Video AI, người AI nói.\n• [15:00 09/09/2026] Đã trao đổi qua Zalo. Sai tệp lớp Offline 3 (không muốn tự quay video). Mong muốn: Làm video về AI, người AI nói. Chuyển sang phễu Video AI.",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 17:45] [KHO STU ARCHIVE]: Sai tệp lớp Offline 3. Nhu cầu: Video AI, người AI nói.\n• [15:00 09/09/2026] Đã trao đổi qua Zalo. Sai tệp lớp Offline 3 (không muốn tự quay video). Mong muốn: Làm video về AI, người AI nói. Chuyển sang phễu Video AI.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-09T08:01:02.459Z",
@@ -3256,7 +3256,7 @@
   {
     "id": "nguyen_thi_tuyet",
     "name": "Nguyễn Thị Tuyết",
-    "class": "Offline 2 ngày",
+    "class": "Offline 2",
     "industry": "Chưa phân loại",
     "industry_slug": "chua_phan_loai",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -3320,7 +3320,7 @@
   {
     "id": "oan_huu_viet",
     "name": "Đoàn Hữu Việt",
-    "class": "Offline 2 ngày",
+    "class": "Offline 2",
     "industry": "Salon Tóc / Hair Designer (Chủ DN)",
     "industry_slug": "salon_toc_hair_designer_chu_dn",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -3393,7 +3393,7 @@
   {
     "id": "yuri_thuong_tran",
     "name": "Yuri Thương Trần",
-    "class": "Offline 3 (Chưa chốt)",
+    "class": "Offline 3",
     "industry": "Chưa phân loại",
     "industry_slug": "general",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -3416,7 +3416,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "Trạng thái: Offline 3 nhưng chưa chốt được. Cần follow-up gửi video mẫu.",
+    "notes": "[Nguồn Gốc: Offline 3 (Chưa chốt)]\nTrạng thái: Offline 3 nhưng chưa chốt được. Cần follow-up gửi video mẫu.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-09T04:53:33.046Z",
@@ -3567,7 +3567,7 @@
   {
     "id": "trang_truong_offline3",
     "name": "Trang Trương",
-    "class": "Offline 19-20 (K3)",
+    "class": "Offline 3",
     "industry": "Sáng Tạo Nội Dung & Video Marketing",
     "industry_slug": "sang_tao_noi_dung_video_marketing",
     "avatar_url": "assets/hocvien/avatar_trang_truong_offline3.jpg",
@@ -4618,7 +4618,7 @@
   {
     "id": "huynh_trang_my",
     "name": "Huỳnh Trang My",
-    "class": "Offline Hà Nội 19-20/09 (Đã Cọc)",
+    "class": "Offline 3",
     "industry": "Đào Tạo & Kinh Doanh Đa Ngành",
     "industry_slug": "kinh_doanh_da_nganh",
     "avatar_url": "assets/hocvien/avatar_huynh_trang_my.jpg",
@@ -4658,7 +4658,7 @@
         "screenshot_url": "assets/hocvien/bill_ck_3tr_huynh_trang_my_1409.png"
       }
     ],
-    "notes": "Học viên Huỳnh Trang My (0949499042). Chuyển khoản cọc 3.000.000đ lúc 17:44 ngày 14/09/2026 (MGD: FT26257754630309). Trợ lý Trinh xác nhận khóa off.",
+    "notes": "[Nguồn Gốc: Offline Hà Nội 19-20/09 (Đã Cọc)]\nHọc viên Huỳnh Trang My (0949499042). Chuyển khoản cọc 3.000.000đ lúc 17:44 ngày 14/09/2026 (MGD: FT26257754630309). Trợ lý Trinh xác nhận khóa off.",
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "14/09/2026 17:44",
@@ -4727,7 +4727,7 @@
   {
     "id": "dulin_pha_che_offline2",
     "name": "Phạm Thùy Linh (Linh Dulin)",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "Đồ Uống & F&B",
     "industry_slug": "fb_beverage",
     "avatar_url": "assets/hocvien/thumb_dulin_pha_che_offline2_01.jpg",
@@ -4775,7 +4775,7 @@
         "screenshot_url": "assets/hocvien/tu_van_dulin_pha_che.png"
       }
     ],
-    "notes": "• [10/09/2026 15:11] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09 - 3.000.000đ]. SĐT: 0335062222 | Email: Phamthuylinh2204@gmail.com. Ngành Đồ uống & F&B (Pha chế Dulin). CK lúc 13:24 10/09/2026 vào Techcombank (4101986 - NGUYEN DUC VIET). Nội dung: 'Linh Dulin- off 19-20', Mã GD: 15981161547. Zalo: Linh Dulin.\n• [10/09/2026 15:03] Cung cấp SĐT 0335062222 và Email Phamthuylinh2204@gmail.com.\n• [10/09/2026 13:24] ✅ [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3 19-20/09 - 3.000.000đ]. Học viên Phạm Thùy Linh (Linh Dulin) (Ngành Đồ uống & F&B, bán buôn nguyên liệu pha chế cho nhà hàng & quán bar). Chuyển khoản 3.000.000đ qua Techcombank (4101986 - NGUYEN DUC VIET). Nội dung: 'Linh Dulin- off 19-20', Mã GD: 15981161547. Lịch học thực chiến 19-20/09 tại Hà Nội.\nLinh làm mảng bán buôn nguyên liệu pha chế cho nhà hàng & quán bar. Video dulin pha che.mp4 bắt âm thanh ASMR rất tốt.",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [10/09/2026 15:11] ✅ [ĐÃ CỌC OFFLINE K3 19-20/09 - 3.000.000đ]. SĐT: 0335062222 | Email: Phamthuylinh2204@gmail.com. Ngành Đồ uống & F&B (Pha chế Dulin). CK lúc 13:24 10/09/2026 vào Techcombank (4101986 - NGUYEN DUC VIET). Nội dung: 'Linh Dulin- off 19-20', Mã GD: 15981161547. Zalo: Linh Dulin.\n• [10/09/2026 15:03] Cung cấp SĐT 0335062222 và Email Phamthuylinh2204@gmail.com.\n• [10/09/2026 13:24] ✅ [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3 19-20/09 - 3.000.000đ]. Học viên Phạm Thùy Linh (Linh Dulin) (Ngành Đồ uống & F&B, bán buôn nguyên liệu pha chế cho nhà hàng & quán bar). Chuyển khoản 3.000.000đ qua Techcombank (4101986 - NGUYEN DUC VIET). Nội dung: 'Linh Dulin- off 19-20', Mã GD: 15981161547. Lịch học thực chiến 19-20/09 tại Hà Nội.\nLinh làm mảng bán buôn nguyên liệu pha chế cho nhà hàng & quán bar. Video dulin pha che.mp4 bắt âm thanh ASMR rất tốt.",
     "videos": [
       {
         "id": "vid_01",
@@ -4845,7 +4845,7 @@
   {
     "id": "kien_phan_bon",
     "name": "Kiên Phân Bón",
-    "class": "Offline 19-20 (K3)",
+    "class": "Offline 3",
     "industry": "Nông Nghiệp & Phân Bón",
     "industry_slug": "agriculture_fertilizer",
     "avatar_url": "assets/hocvien/kien_phan_bon_avatar.jpg",
@@ -5339,7 +5339,7 @@
   {
     "id": "miu_miu_spa",
     "name": "Miu Miu (La Hues Clinic)",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Spa & Da Liễu Clinic",
     "industry_slug": "spa_clinic",
     "avatar_url": "assets/hocvien/avatar_miu_miu.jpg",
@@ -5413,7 +5413,7 @@
         "screenshot_url": "assets/hocvien/tu_van_miu_miu_05.png"
       }
     ],
-    "notes": "• [10/09/2026 09:45] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ\n• [10/09/2026 07:55] 🔥 [HẸN MAI CHỐT]\nHọc viên Miu Miu (Chủ/quản lý La Hues Clinic - Spa Da Liễu Thẩm Mỹ), đã học Offline K2. Có case study hành trình khách hàng cực kỳ sâu sắc.",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 09:45] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ\n• [10/09/2026 07:55] 🔥 [HẸN MAI CHỐT]\nHọc viên Miu Miu (Chủ/quản lý La Hues Clinic - Spa Da Liễu Thẩm Mỹ), đã học Offline K2. Có case study hành trình khách hàng cực kỳ sâu sắc.",
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "10/09/2026 09:45",
@@ -6244,7 +6244,7 @@
   {
     "id": "le_vu_hoang_k1",
     "name": "Lê Vũ Hoàng (Offline K1)",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Sản Xuất Nội Dung & Kinh Doanh",
     "industry_slug": "content_business",
     "avatar_url": "assets/hocvien/avatar_vu_hoang.jpg",
@@ -6293,7 +6293,7 @@
         "screenshot_url": "assets/hocvien/tu_van_offline_k1.png"
       }
     ],
-    "notes": "• [10/09/2026 10:36] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ\nHọc viên Lê Vũ Hoàng (Zalo: Vũ Hoàng) - Lớp Offline K1 (74 Nguyễn Văn Tuyết). Đã đăng ký từ Fanpage ngày 14/07/2026. SĐT: 0986789136. Được thầy Việt kèm trực tiếp dựng 2 góc máy trên CapCut.",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 10:36] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ\nHọc viên Lê Vũ Hoàng (Zalo: Vũ Hoàng) - Lớp Offline K1 (74 Nguyễn Văn Tuyết). Đã đăng ký từ Fanpage ngày 14/07/2026. SĐT: 0986789136. Được thầy Việt kèm trực tiếp dựng 2 góc máy trên CapCut.",
     "contact_source": "both",
     "contact_source_label": "Cả FB & Zalo",
     "last_updated_vn": "10/09/2026 10:36",
@@ -6302,7 +6302,7 @@
   {
     "id": "nguyen_duc_canh_k1",
     "name": "Nguyễn Đức Cảnh (Offline K1)",
-    "class": "Offline K1 (Hà Nội, 74 Nguyễn Văn Tuyết)",
+    "class": "Offline 1",
     "industry": "Sáng Tạo Nội Dung & Video Maker",
     "industry_slug": "video_creator",
     "avatar_url": "assets/hocvien/avatar_duc_canh.jpg",
@@ -6580,7 +6580,7 @@
   {
     "id": "l_ng_thanh_ki_n",
     "name": "Lương Thanh Kiên",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Quản lý kinh doanh/Phân bón và dinh dưỡng cây trồng",
     "industry_slug": "qu_n_l_kinh_doanh_ph_n_b_n_v_dinh_d_ng_c_y_tr_ng",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6602,7 +6602,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [10/09/2026 19:05] Kiên từ TikTok liên hệ hỏi lớp Offline\n• [10/09/2026 08:10] [KHO STU ARCHIVE]: Test: Sai tệp không nhu cầu",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 19:05] Kiên từ TikTok liên hệ hỏi lớp Offline\n• [10/09/2026 08:10] [KHO STU ARCHIVE]: Test: Sai tệp không nhu cầu",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-10T01:10:34.221060+00:00",
@@ -6615,7 +6615,7 @@
   {
     "id": "nguy_n_c_vi_t_test_ng_b_tripple",
     "name": "Nguyễn Đức Việt (Test Đồng Bộ Tripple)",
-    "class": "Offline 3 (Sai tệp)",
+    "class": "Offline 3",
     "industry": "Chủ doanh nghiệp",
     "industry_slug": "ch_doanh_nghi_p",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6637,7 +6637,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [10/09/2026 10:35] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ",
+    "notes": "[Nguồn Gốc: Offline 3 (Sai tệp)]\n• [10/09/2026 10:35] [KHO STU ARCHIVE]: Sai tệp / Không có nhu cầu / Đã lọc bỏ",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-10T03:35:47.543431+00:00",
@@ -6650,7 +6650,7 @@
   {
     "id": "ng_h_ng_ch_u",
     "name": "Đặng Hồng Châu",
-    "class": "Offline 3 (Dừng tư vấn)",
+    "class": "Offline 3",
     "industry": "trainer",
     "industry_slug": "trainer",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6672,7 +6672,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [10/09/2026 15:18] [KHO STU ARCHIVE]: Sale đã gọi, dừng tư vấn (Trainer)",
+    "notes": "[Nguồn Gốc: Offline 3 (Dừng tư vấn)]\n• [10/09/2026 15:18] [KHO STU ARCHIVE]: Sale đã gọi, dừng tư vấn (Trainer)",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-10T08:18:34.770659+00:00",
@@ -6685,7 +6685,7 @@
   {
     "id": "nguy_n_duy_anh",
     "name": "Nguyễn duy anh",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Coach gym",
     "industry_slug": "coach_gym",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6707,7 +6707,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [10/09/2026 19:01] [KHO STU ARCHIVE]: Coach gym | Nút thắt: Học quy | Lớp Offline 19-20/09 Hà Nội sale da goi",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [10/09/2026 19:01] [KHO STU ARCHIVE]: Coach gym | Nút thắt: Học quy | Lớp Offline 19-20/09 Hà Nội sale da goi",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-10T12:01:54.701757+00:00",
@@ -6720,7 +6720,7 @@
   {
     "id": "l_c_duy",
     "name": "Lê Đức Duy",
-    "class": "Offline 3 (Đã CK)",
+    "class": "Offline 3",
     "industry": "Giảng Viên",
     "industry_slug": "gi_ng_vi_n",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6744,7 +6744,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [11/09/2026 13:42] [KHO STU ARCHIVE]: [Sale đã TV] Giảng Viên | Nút thắt: Hiểu cách đóng gói sản phẩm đào tạo & video marketing hiệu quả | Lớp Offline 19-20/09 Hà Nội. đã ck cho sale làm vết giáo dục",
+    "notes": "[Nguồn Gốc: Offline 3 (Đã CK)]\n• [11/09/2026 13:42] [KHO STU ARCHIVE]: [Sale đã TV] Giảng Viên | Nút thắt: Hiểu cách đóng gói sản phẩm đào tạo & video marketing hiệu quả | Lớp Offline 19-20/09 Hà Nội. đã ck cho sale làm vết giáo dục",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-11T06:42:34.197322+00:00",
@@ -6757,7 +6757,7 @@
   {
     "id": "tr_ng_chang_chang",
     "name": "Trương chang chang",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Nv vp",
     "industry_slug": "nv_vp",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6781,7 +6781,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [11/09/2026 17:17] 📞 Đã đàm thoại 25s (11/09 17:13) | [KHO STU] Nv vp | Lớp Offline 19-20/09 Hà Nội. tu van goi rồi\n• [11/09/2026 17:14] [KHO STU ARCHIVE]: Nv vp | Lớp Offline 19-20/09 Hà Nội. tu van goi rồi",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [11/09/2026 17:17] 📞 Đã đàm thoại 25s (11/09 17:13) | [KHO STU] Nv vp | Lớp Offline 19-20/09 Hà Nội. tu van goi rồi\n• [11/09/2026 17:14] [KHO STU ARCHIVE]: Nv vp | Lớp Offline 19-20/09 Hà Nội. tu van goi rồi",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-11T10:14:19.792819+00:00",
@@ -6794,7 +6794,7 @@
   {
     "id": "nguyen_kim_hanh",
     "name": "Cô Nguyễn Kim Hạnh",
-    "class": "Offline K3 (19-20/09)",
+    "class": "Offline 3",
     "industry": "Giảng Viên Đại Học",
     "industry_slug": "giang_vien_dai_hoc",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -6979,7 +6979,7 @@
   {
     "id": "su_ngoc_ly",
     "name": "Su ngoc ly",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Beauty",
     "industry_slug": "beauty",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -7003,7 +7003,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [14/09/2026 15:13] [KHO STU ARCHIVE]: 📞 Đàm thoại 19s (14/09 14:41). Không chốt được K3 do bận việc -> Lưu kho (Bảo lưu). Hẹn tháng sau gọi lại. Có bạn Ý có phòng ở Thảo Điền (Sài Gòn) cho thuê ~20 người (rất phù hợp địa điểm tổ chức Offline SG), bạn Ý có nhiều kiến thức và làm lâu năm trong ngành.",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [14/09/2026 15:13] [KHO STU ARCHIVE]: 📞 Đàm thoại 19s (14/09 14:41). Không chốt được K3 do bận việc -> Lưu kho (Bảo lưu). Hẹn tháng sau gọi lại. Có bạn Ý có phòng ở Thảo Điền (Sài Gòn) cho thuê ~20 người (rất phù hợp địa điểm tổ chức Offline SG), bạn Ý có nhiều kiến thức và làm lâu năm trong ngành.",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-14T08:13:42.650513+00:00",
@@ -7016,7 +7016,7 @@
   {
     "id": "tran_hai_duong",
     "name": "Tran Hai Duong",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Kinh doanh tự do",
     "industry_slug": "kinh_doanh_t_do",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -7040,7 +7040,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [14/09/2026 15:15] [KHO STU ARCHIVE]: ko tham gia đc  đã gọi , tháng sau goi lai",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [14/09/2026 15:15] [KHO STU ARCHIVE]: ko tham gia đc  đã gọi , tháng sau goi lai",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-14T08:15:36.623073+00:00",
@@ -7053,7 +7053,7 @@
   {
     "id": "nguy_n_th_thanh_hoa",
     "name": "Nguyễn Thị Thanh Hoa",
-    "class": "Offline K3 (Không tiềm năng)",
+    "class": "Offline 3",
     "industry": "Quản lý",
     "industry_slug": "qu_n_l",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -7077,7 +7077,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [14/09/2026 15:22] [KHO STU ARCHIVE]: Đã gọi 1m8s (15:18 ngày 14/09). Báo học phí xong thì thoái thác bảo \"nhắn lại lịch\" (dù đã báo lịch trước đó) -> Phản xạ thể diện né tránh do rào cản chi phí/tiền. Chưa khai thác sâu thông tin bài toán của khách đã báo giá. Khách khó chốt, không tiềm năng, không gọi lại. Đưa vào kho STU.",
+    "notes": "[Nguồn Gốc: Offline K3 (Không tiềm năng)]\n• [14/09/2026 15:22] [KHO STU ARCHIVE]: Đã gọi 1m8s (15:18 ngày 14/09). Báo học phí xong thì thoái thác bảo \"nhắn lại lịch\" (dù đã báo lịch trước đó) -> Phản xạ thể diện né tránh do rào cản chi phí/tiền. Chưa khai thác sâu thông tin bài toán của khách đã báo giá. Khách khó chốt, không tiềm năng, không gọi lại. Đưa vào kho STU.",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-14T08:22:08.108801+00:00",
@@ -7090,7 +7090,7 @@
   {
     "id": "ph_ng_kim",
     "name": "Phùng Kim",
-    "class": "Offline 3 (Bảo lưu)",
+    "class": "Offline 3",
     "industry": "Nhà báo",
     "industry_slug": "nh_b_o",
     "avatar_url": "assets/avatar_vietnd.png",
@@ -7114,7 +7114,7 @@
         "marketing_use": "Dữ liệu lưu trữ hồ sơ học viên."
       }
     ],
-    "notes": "• [14/09/2026 15:26] [KHO STU ARCHIVE]: 📞 Đã đàm thoại 3m 13s (11/09 16:53) | Nhà báo | Lớp Offline 19-20/09 Hà Nội đã gọi chị này kêu xa nhà chị ở Cầu Diễn kêu là để xem thế nào khả năng cao là không đi sẽ gọi lại vào ngày mai xem thế nào [🔄 Hẹn gọi lại lúc 16:58 11/09]",
+    "notes": "[Nguồn Gốc: Offline 3 (Bảo lưu)]\n• [14/09/2026 15:26] [KHO STU ARCHIVE]: 📞 Đã đàm thoại 3m 13s (11/09 16:53) | Nhà báo | Lớp Offline 19-20/09 Hà Nội đã gọi chị này kêu xa nhà chị ở Cầu Diễn kêu là để xem thế nào khả năng cao là không đi sẽ gọi lại vào ngày mai xem thế nào [🔄 Hẹn gọi lại lúc 16:58 11/09]",
     "contact_source": "telesale_radar",
     "contact_source_label": "Telesale Radar",
     "created_at": "2026-09-14T08:26:14.072202+00:00",
