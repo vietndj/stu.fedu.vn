@@ -378,7 +378,13 @@
     "phone": "0869911319",
     "zalo_url": "0869911319",
     "facebook_url": null,
-    "reference_channels": [],
+    "reference_channels": [
+      {
+        "name": "Kênh Gửi Từ Form Trà Đá",
+        "url": "Đang cập nhật",
+        "platform": "other"
+      }
+    ],
     "videos": [],
     "consultations": [
       {
@@ -438,7 +444,12 @@
       }
     ],
     "is_offline3_attended": true,
-    "sales_closer": "Anh Việt"
+    "sales_closer": "Anh Việt",
+    "post_course_survey": {
+      "journeyStory": "",
+      "feedbackAll": "Cần giải lao sau những phân khúc bài giảng và có thể chữa bài onl hoặc offline",
+      "photos": []
+    }
   },
   {
     "id": "loc_cat_toc",
