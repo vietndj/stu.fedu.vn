@@ -1,5 +1,24 @@
 [
   {
+    "id": "luu_tuan_minh_offline",
+    "name": "Lưu Tuấn Minh",
+    "class": "Khóa Offline Thực Chiến",
+    "industry": "Khác",
+    "industry_slug": "other",
+    "phone": "03448408",
+    "email": "lminh5001@gmail.com",
+    "facebook_url": "Chưa gửi link",
+    "reference_channels": [],
+    "completeness_score": 60,
+    "health_status": "healthy",
+    "notes": "[Tạo tự động từ Form Trà Đá]\nMảng KD: Em muốn đến những video giải trí gia đình hoặc vợ chồng nhưng không như những kênh khác, các cảnh cut cũng như chất lượng về video em muốn quay kiểu chuyên nghiệp như phim, kịch tính kèm sau đó là hài hước. Rồi khi đủ chín hoặc đến thời điểm có thể chuyển đổi anh định hướng xem em nên làm bước gì tiếp theo nhé ạ! Em sẽ bắt đầu với kênh mới",
+    "post_course_survey": {
+      "journeyStory": "",
+      "feedbackAll": "Theo cảm nhận và góc nhìn của em em xin phép được đóng góp 2 điểm nho nhỏ thôi. Em cũng tham gia một vài lớp đào tạo về các kỹ năng khác trước đây, và họ làm được một điều rằng đưa tất cả học viên và mọi người vào cùng một trạng thái dòng chảy. Anh rất tâm huyết rất gần gũi cùng mọi người nhưng vì anh để cho mọi người có một không gian thoải mái quá dẫn đến bị kiểu mỗi người một việc ai chăm chú thì chăm chú thôi, nên hơi vụn sự tập trung. Anh nên set up cho mọi người có một góc ngồi làm sao để họ luôn luôn phải tập trung để được nhận lại những giá trị anh trao cho mọi người được đầy đủ kiến thức nhất, không bị rơi vãi kiến thức. Và điểm thứ 2 là không nên thoải mái về thời gian quá hoặc cũng không nên gò bó quá, mỗi buổi ngoài thực hành ra thì sẽ có thời gian giải lao khoảng 15p-20 thôi bởi vì trong lúc làm và thực hành bài tập thì tư tưởng của họ cũng không được nghĩ là giải lao, để mọi người dùng thời gian đó xử lý, trả lời công việc riêng thì trong giờ học mọi người sẽ tập trung hết tầm, chúc anh sẽ càng ngày càng chạm đến những thành công mới những lớp học rộng hơn, nhiều thành viên hơn, luôn luôn gần gũi mọi người như vậy anh nhé! Em quý anh lắm không biết nói sao nhưng chưa có cơ hội ae mình nói chuyện cũng như tâm sự nhiều để chia sẻ những điều muốn anh dẫn đường, chia sẻ những nỗi đau. Em mong những video sau này của em được anh xem được anh đánh giá từng sản phẩm, từng ngày để em đi đúng con đường mình nên đi!",
+      "photos": []
+    }
+  },
+  {
     "id": "ang_huong",
     "name": "Đặng Hường (Đặng Hường Y Quán)",
     "class": "Offline 3",
@@ -238,7 +257,7 @@
     "id": "tang_xinh_chi_yen",
     "name": "Tâng Xinh (chị Yến)",
     "class": "Offline 3",
-    "phone": "0989161868",
+    "phone": "098 9161868",
     "sales_closer": "Thảo kimedia",
     "is_offline3_attended": true,
     "created_at": "2026-09-19T15:56:18.141805Z",
@@ -246,7 +265,19 @@
     "consultations": [],
     "videos": [],
     "missing_items": [],
-    "health_status": "good"
+    "health_status": "good",
+    "post_course_survey": {
+      "journeyStory": "",
+      "feedbackAll": "Điểm tuyệt vời: Nhiều kiến thức hay, cần thiết ; Thầy giáo nhiệt huyết\n\nĐiểm cần cải thiện\n\n1- Cần phân loại học viên\n2- Nội dung cần làm rõ trước mỗi phần theo cấu trúc\n\nWhy What How\n\nCách trình bày hiện tại không rõ Why nên hơi khó hiểu, bị rối.\n\n2- Màn chiếu bị mờ",
+      "photos": [
+        {
+          "name": "IMG_7018.jpeg",
+          "size": "102 KB",
+          "url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/tra-da-hoc-vien/tang_xinh_20260920143710/anh_1_IMG_7018.jpeg"
+        }
+      ]
+    },
+    "email": "tangxinhambassador@gmail.com"
   },
   {
     "id": "du_phung_phuong",
@@ -550,7 +581,24 @@
       }
     ],
     "is_offline3_attended": true,
-    "sales_closer": "Trinh kimedia"
+    "sales_closer": "Trinh kimedia",
+    "post_course_survey": {
+      "journeyStory": "E ấn tượng về video quảng cáo của thầy. Hình ảnh đẹp, cách nói chuyện gần gũi ko bị phô trương. E nhắn qua kênh fb để hỏi kỹ hơn về nội dung dạy và quyết định đăng ký học",
+      "feedbackAll": "E ấn tượng về ngày học thứ 2 nhiều hơn vì có cảm giác mọi người mở lòng có sự kết nối hơn ngày đầu. E mở salon ngay 16 Thể Giao. Hôm nào thầy dạy ở Lương Yên thầy cho phép e mời thầy đi cafe để có thêm lời khuyên từ thầy trong quá trình e tập làm video nhé ạ.",
+      "photos": [
+        {
+          "name": "IMG_6906.jpeg",
+          "size": "139 KB",
+          "url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/tra-da-hoc-vien/_ang_huyen_trang_20260920141546/anh_1_IMG_6906.jpeg"
+        },
+        {
+          "name": "IMG_6907.jpeg",
+          "size": "212 KB",
+          "url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/tra-da-hoc-vien/_ang_huyen_trang_20260920141546/anh_2_IMG_6907.jpeg"
+        }
+      ]
+    },
+    "email": ""
   },
   {
     "id": "le_quynh_lien",
