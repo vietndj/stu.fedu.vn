@@ -5024,7 +5024,7 @@
     "thumbnail_url": "assets/hocvien/vien_the_duc_avatar.jpg",
     "drive_folder_url": "https://drive.google.com/drive/folders/vien_the_duc_offline2",
     "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/vien_the_duc_offline2",
-    "phone": "Viên Thế Đức (TikTok @vientheduc)",
+    "phone": "0866492018",
     "zalo_url": null,
     "facebook_url": null,
     "completeness_score": 80,
@@ -5041,6 +5041,11 @@
       {
         "name": "TikTok Viên Thế Đức",
         "url": "https://www.tiktok.com/@vientheduc?_r=1&_t=ZS-995DQmafRuX",
+        "platform": "tiktok"
+      },
+      {
+        "name": "TikTok Form Gửi",
+        "url": "https://www.tiktok.com/@vientheduc?_r=1&_t=ZS-99BlxTjCWpT",
         "platform": "tiktok"
       }
     ],
@@ -5071,7 +5076,18 @@
     "contact_source_label": "TikTok",
     "updated_at": "2026-09-06T07:23:00.000Z",
     "last_updated_vn": "06/09/2026 14:23",
-    "is_offline3_attended": false
+    "is_offline3_attended": false,
+    "post_course_survey": {
+      "journeyStory": "Biết đến qua video ngẫy nhiên sau đó vào kênh xem lại toàn bộ rồi mới quyết định học",
+      "feedbackAll": "Tư vấn chuẩn bị còn yếu kém, ví dụ thực tế: có thể sắp xếp tìm hiểu vài quán ăn, nhà nghỉ xung quanh cho học viên ở xa để hỗ trợ họ đỡ mất thời gian và tiện nhất.\nNhất là chỗ thuê cuối tuần là phố ẩm thực cấm ô tô giờ nào... muốn bắt xe đi bộ sang phố thái thịnh.... cách có 15m sang đường\nHướng dẫn bằng video: tải ứng dụng j, phần mềm j, như thế nào, 1 vài clip nên tự học cắt, tách âm thanh... trước khi vào học vài hôm cũng được để đến là thực chiến luôn, chứ cầm tay từng người không biết j rất tốn thời gian.\nHướng dẫn mọi người hãy lưu vài video mẫu mà mình muốn, để có thể hướng dẫn, phân tích, hoặc bóc tách font chữ, sound effect, hiệu ứng... cho họ biết. Lưu vài kênh mong muốn, hoặc gửi trước cho trung tâm để có sự chuẩn bị nội dung cá nhân hoá cho từng học viên. Họ sẽ nhận thấy khoá này là dành cho bản thân.\nTrợ giảng còn quá ít, tối thiểu buổi đầu mà đông đúng ra tầm 5 bạn, hỗ trợ AC nào chưa biết gì, cài đặt.... hỗ trợ trong 30-1h buổi sáng thôi, đưa họ tài liệu, phân tích video của họ đưa hoặc kênh họ muốn cho từng học viên...\nNên có tài liệu tham khảo trực tiếp theo khoá học, từ A-Z đóng gói thành quy trình chuẩn.\nCái này ko sợ lộ, ko sợ mang đi ra ngoài vì học viên đến vì thầy chứ ko vì tài liệu.\nNên đến cái là phải theo thầy, chứ ko theo ý kiến cá nhân từng người.\nVào cái học quay video luôn\nNên làm y như thầy... xong có bạn hướng dẫn luôn. Cứ copy đã, chưa cần hiểu. Sau đó từ buổi chiều mới giải thích chi tiết, cái này là gì, tại sao phải thế... sau đó mới đến AI, cách tìm kênh đối thủ... chứ mới vào lý thuyết nhiều, lan man cái không liên quan, họ chưa biết gì, sẽ rất khó để họ hiểu. Cứ quay bắt trước đã\nHọ tự trải nghiệm xong giải thích sẽ dễ hơn. Bắt nộp bài để check kiểm tra từng người, nên trợ giảng trong nhóm đang thiếu.",
+      "photos": [
+        {
+          "name": "IMG_2504.jpeg",
+          "size": "145 KB",
+          "url": "https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/tra-da-hoc-vien/vien_the_uc_20260825223915/anh_1_IMG_2504.jpeg"
+        }
+      ]
+    }
   },
   {
     "id": "nguyen_dai_giao_an_offline2",
