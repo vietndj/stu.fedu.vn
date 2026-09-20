@@ -8584,7 +8584,16 @@
               ...localS,
               class: initS.class,
               industry: initS.industry,
-              notes: (localS.notes && localS.notes.trim().length > 0) ? localS.notes : (initS.notes || ''),
+              notes: (() => {
+                let finalNotes = (localS.notes && localS.notes.trim().length > 0) ? localS.notes : (initS.notes || '');
+                if (initS.notes && initS.notes.includes('[PHẢN HỒI TRÀ ĐÁ]') && !finalNotes.includes('[PHẢN HỒI TRÀ ĐÁ]')) {
+                  const parts = initS.notes.split('[PHẢN HỒI TRÀ ĐÁ]');
+                  if (parts.length > 1) {
+                    finalNotes += '\n\n[PHẢN HỒI TRÀ ĐÁ]' + parts[1];
+                  }
+                }
+                return finalNotes;
+              })(),
               phone: localS.phone || initS.phone,
               zalo_url: localS.zalo_url || initS.zalo_url,
               facebook_url: localS.facebook_url || initS.facebook_url,
