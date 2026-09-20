@@ -1,0 +1,29 @@
+fedu_students_data_v8
+META:https://stu.fedu.vn
+3_https://accounts.google.com
+nextRotationAttemptTs
+1789926125273
+ META:https://accounts.google.com
+--
+fedu_students_data_v8
+$META:https://docs.google.com
+3_https://stu.fedu.vn
+fedu_students_data_v8
+ META:https://stu.fedu.vn
+3_https://stu.fedu.vn
+fedu_students_data_v8
+6META:https://js.stripe.com/^0https://skool.com
+>_https://www.skool.com
+awswaf_token_refresh_timestamp
+>_https://www.skool.com
+awswaf_token_refresh_timestamp
+--
+fedu_students_data_v8
+ META:https://stu.fedu.vn
+3_https://stu.fedu.vn
+fedu_students_data_v8
+S_https://www.youtube.com/^0https://google.com
+ytidb::LAST_RESULT_ENTRY_KEY
+ META:devtools://devtools
+]_https://developers.tiktok.com
+text.1901a2701de111f0a8a3a9723645cea5.dev_platform.en

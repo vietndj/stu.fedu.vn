@@ -1609,7 +1609,7 @@
             const student = currentStudents.find(s => s.id === id);
             if (student && student[field] !== newVal) {
               student[field] = newVal;
-              saveStudents();
+              saveStudents(id);
               showToast(`Đã lưu "${field}" cho ${student.name}!`);
             }
           };
@@ -1706,7 +1706,7 @@
       if (!deleteTargetId) return;
       const targetName = (currentStudents.find(s => s.id === deleteTargetId) || {}).name || 'Học viên';
       currentStudents = currentStudents.filter(s => s.id !== deleteTargetId);
-      saveStudents();
+      saveStudents(deleteTargetId);
       closeDeleteModal();
       closeDrawer();
       populateFilterDropdowns();
@@ -2321,7 +2321,7 @@
         currentPastedImageDataUrl = null;
       }
 
-      saveStudents();
+      saveStudents(id);
       closeEditModal();
       openDrawer(id); // Re-render drawer immediately with new notes!
       populateFilterDropdowns();
