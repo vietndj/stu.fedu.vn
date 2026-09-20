@@ -1,23 +1,5 @@
 [
   {
-    "id": "truong_thuy_trang_offline",
-    "name": "Trương Thuỳ Trang",
-    "class": "Khóa Offline Thực Chiến",
-    "industry": "Tâm Lý Học / Coaching",
-    "industry_slug": "psychology",
-    "phone": "0932325118",
-    "facebook_url": "https://www.facebook.com/share/1EtNJTKmqa/?mibextid=wwXIfr",
-    "reference_channels": [],
-    "completeness_score": 60,
-    "health_status": "healthy",
-    "notes": "[Tạo tự động từ Form Trà Đá]\nMảng KD: Psyhology",
-    "post_course_survey": {
-      "journeyStory": "",
-      "feedbackAll": "Mong thầy có khoá học nâng cao, chuyên sâu cho những học viên có nhu cầu xây kênh đường dài, mang tính chắt lọc k phải mang tính chuyển đổi bán hàng ngay lập tức.. như vậy thầy sẽ có 1 tệp khách rất chất lượng và lâu dài (nếu em nói ở đâu khó hiểu mong thầy thông cảm ạ)",
-      "photos": []
-    }
-  },
-  {
     "id": "ang_huong",
     "name": "Đặng Hường (Đặng Hường Y Quán)",
     "class": "Offline 3",
@@ -4750,15 +4732,15 @@
     "id": "trang_truong_offline3",
     "name": "Trang Trương",
     "class": "Offline 3",
-    "industry": "Sáng Tạo & Truyền Thông",
+    "industry": "Tâm Lý Học / Coaching",
     "industry_slug": "sang_tao_noi_dung_video_marketing",
     "avatar_url": "assets/hocvien/avatar_trang_truong_offline3.jpg",
     "thumbnail_url": "assets/hocvien/zalo_trang_truong_offline3_tuvan_02.png",
     "drive_folder_url": "",
     "local_folder_path": "/Users/vietmac/Documents/CODE/facebook, skool/data/hocvien/trang_truong_offline3",
-    "phone": "Trang Trương (Zalo - Học viên Offline 3)",
+    "phone": "0932325118",
     "zalo_url": "Trang Trương - lớp offline 3",
-    "facebook_url": null,
+    "facebook_url": "https://www.facebook.com/share/1EtNJTKmqa/?mibextid=wwXIfr",
     "reference_channels": [],
     "videos": [],
     "consultations": [
@@ -4814,7 +4796,13 @@
       }
     ],
     "is_offline3_attended": true,
-    "sales_closer": "Anh Việt"
+    "sales_closer": "Anh Việt",
+    "email": "trangtruonghealingcoach@gmail.com",
+    "post_course_survey": {
+      "journeyStory": "",
+      "feedbackAll": "Mong thầy có khoá học nâng cao, chuyên sâu cho những học viên có nhu cầu xây kênh đường dài, mang tính chắt lọc k phải mang tính chuyển đổi bán hàng ngay lập tức.. như vậy thầy sẽ có 1 tệp khách rất chất lượng và lâu dài (nếu em nói ở đâu khó hiểu mong thầy thông cảm ạ)",
+      "photos": []
+    }
   },
   {
     "id": "phuong_tiktokshop_donam",
