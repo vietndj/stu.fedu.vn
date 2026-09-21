@@ -614,7 +614,13 @@
     "phone": "0865258568",
     "zalo_url": null,
     "facebook_url": null,
-    "reference_channels": [],
+    "reference_channels": [
+      {
+        "name": "Kênh Gửi Từ Form Trà Đá",
+        "url": "Lê Quỳnh Liên cho mọi kênh. Hihi",
+        "platform": "other"
+      }
+    ],
     "videos": [],
     "consultations": [
       {
@@ -627,7 +633,7 @@
         "screenshot_url": null
       }
     ],
-    "notes": "[Ngành gốc: Bảo hiểm nhân thọ]\n[Lớp gốc: Tư Vấn Fanpage]",
+    "notes": "[Ngành gốc: Bảo hiểm nhân thọ]\n[Lớp gốc: Tư Vấn Fanpage]\n\n[PHẢN HỒI TRÀ ĐÁ]\n- Hành trình: Không có\n- Góp ý: Tổng quan 2 ngày thì em thấy em cũng có thêm góc nhìn, kỹ thuật, hiểu biết và công cụ đa dạng để có thể bắt đầu. Phần này em happy.\n Thầy chân thành y như trên video cũng rất thu hút không như 1 số người khác có 2 màu \nThầy cố gắng chia sẻ nhiều nội dung cho lớp về cách làm, em cũng cảm nhận được sự nhiệt huyết của thầy.\nVề lưu trình em nghĩ cần logic hơn. Bắt đầu từ mục tiêu rồi đến làm thế nào, rồi làm gì ( nội dung với kỹ thuật) thì sẽ dễ hiểu hơn..\nThầy chia sẻ tổng quan để nắm, rất ok ạ. Tuy  sau dó  Chọn 1 thứ và làm sâu thay vì tất cả và k sâu ạ. Vì ít thời gian quá ạ.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-18T06:57:31.421Z",
@@ -662,7 +668,12 @@
       }
     ],
     "is_offline3_attended": true,
-    "sales_closer": "Trinh kimedia"
+    "sales_closer": "Trinh kimedia",
+    "post_course_survey": {
+      "journeyStory": "",
+      "feedbackAll": "Tổng quan 2 ngày thì em thấy em cũng có thêm góc nhìn, kỹ thuật, hiểu biết và công cụ đa dạng để có thể bắt đầu. Phần này em happy.\n Thầy chân thành y như trên video cũng rất thu hút không như 1 số người khác có 2 màu \nThầy cố gắng chia sẻ nhiều nội dung cho lớp về cách làm, em cũng cảm nhận được sự nhiệt huyết của thầy.\nVề lưu trình em nghĩ cần logic hơn. Bắt đầu từ mục tiêu rồi đến làm thế nào, rồi làm gì ( nội dung với kỹ thuật) thì sẽ dễ hiểu hơn..\nThầy chia sẻ tổng quan để nắm, rất ok ạ. Tuy  sau dó  Chọn 1 thứ và làm sâu thay vì tất cả và k sâu ạ. Vì ít thời gian quá ạ.",
+      "photos": []
+    }
   },
   {
     "id": "minh_nguyet_tran_thu_hien",
