@@ -445,6 +445,7 @@
           <source id="theaterVideoSource" src="" type="video/mp4">
           Trình duyệt không hỗ trợ video HTML5.
         </video>
+        <iframe id="theaterIframeEl" class="w-full h-full border-0 hidden max-h-[66vh] aspect-[9/16]" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
 
       <!-- Theater Footer / Info & Clips Switcher -->
@@ -619,7 +620,7 @@
   <script>
     // --- 1. INITIAL DATA & STORAGE SETUP ---
     
-    const STORAGE_KEY_DATA = 'fedu_students_data_v8';
+    const STORAGE_KEY_DATA = 'fedu_students_data_v9';
     const STORAGE_KEY_PIN = 'fedu_hocvien_pin_v6';
     const REQUIRED_PIN = '0070';
 
@@ -1926,6 +1927,10 @@
                 const vSrc = v.local_path || v.video_url || '';
                 const isVmp4 = vSrc.endsWith('.mp4') || vSrc.endsWith('.mov') || vSrc.endsWith('.webm');
                 const poster = v.thumbnail || '';
+                const rawUrl = v.youtube_url || v.drive_url || v.video_url || '';
+                const ytMatch = rawUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+                const ytId = v.youtube_id || (ytMatch ? ytMatch[1] : null);
+                const isFb = Boolean(v.facebook_url || (v.drive_url && v.drive_url.includes('facebook.com')));
                 return `
                   <div class="p-3.5 rounded-2xl bg-slate-900 border border-slate-800 text-white space-y-2.5 shadow-sm">
                     <div class="flex items-center justify-between text-xs">
@@ -1937,11 +1942,24 @@
                         <button type="button" onclick="openVideoTheater('${s.id}', ${i})" class="text-slate-300 hover:text-white font-semibold flex items-center gap-0.5" title="Xem phóng to Theater">
                           <span>⛶</span> Phóng to
                         </button>
-                        ${v.drive_url ? `<a href="${v.drive_url}" target="_blank" class="text-blue-400 hover:underline font-semibold">${v.drive_url.includes('tiktok.com') ? 'TikTok ↗' : 'Drive ↗'}</a>` : ''}
+                        ${ytId ? `<a href="https://youtu.be/${ytId}" target="_blank" class="text-red-400 hover:underline font-semibold flex items-center gap-0.5"><span>▶️</span> YouTube ↗</a>` : ''}
+                        ${!ytId && v.drive_url ? `<a href="${v.drive_url}" target="_blank" class="text-blue-400 hover:underline font-semibold">${isFb ? 'Facebook ↗' : 'Drive ↗'}</a>` : ''}
                       </div>
                     </div>
 
-                    ${isVmp4 ? `
+                    ${ytId ? `
+                      <div class="flex justify-center my-2">
+                        <div class="w-[240px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-lg border border-slate-800">
+                          <iframe 
+                            src="https://www.youtube-nocookie.com/embed/${ytId}?rel=0&modestbranding=1" 
+                            title="${v.title || 'Video học viên'}" 
+                            class="w-full h-full border-0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                          </iframe>
+                        </div>
+                      </div>
+                    ` : isVmp4 ? `
                       <div class="flex justify-center my-2">
                         <div class="w-[220px] aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-lg border border-slate-800 flex items-center justify-center">
                           <video controls preload="metadata" poster="${poster}" onplay="handleVideoPlay(this)" class="w-full h-full object-cover">
@@ -1954,8 +1972,8 @@
                       <div class="flex justify-center my-2">
                         <div class="w-[220px] aspect-[9/16] bg-slate-950 rounded-2xl overflow-hidden relative group flex items-center justify-center shadow-lg border border-slate-800">
                           ${poster ? `<img src="${poster}" class="w-full h-full object-cover opacity-80 group-hover:opacity-95 transition" />` : ''}
-                          <a href="${v.drive_url || s.drive_folder_url || '#'}" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/25 transition">
-                            <div class="w-12 h-12 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
+                          <a href="${v.drive_url || v.facebook_url || s.drive_folder_url || '#'}" target="_blank" class="absolute inset-0 flex items-center justify-center bg-black/40 hover:bg-black/25 transition">
+                            <div class="w-12 h-12 rounded-full ${isFb ? 'bg-blue-600' : 'bg-red-600'} text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition">
                               <svg class="w-6 h-6 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                           </a>
@@ -1964,6 +1982,15 @@
                     `}
 
                     ${v.description ? `<p class="text-xs text-slate-300 leading-relaxed">${v.description}</p>` : ''}
+
+                    ${v.feedback ? `
+                      <div class="p-3 bg-slate-950/90 rounded-xl border border-emerald-500/40 text-xs space-y-1">
+                        <div class="text-[11px] font-bold text-emerald-400 uppercase tracking-wider flex items-center gap-1">
+                          <span>✨</span> Nhận xét của giảng viên:
+                        </div>
+                        <p class="text-slate-300 leading-relaxed whitespace-pre-wrap">${v.feedback}</p>
+                      </div>
+                    ` : ''}
                   </div>
                 `;
               }).join('')}
@@ -2148,7 +2175,10 @@
       currentTheaterVideoIdx = videoIndex;
       const v = student.videos[videoIndex];
       const videoSrc = v.local_path || v.video_url || '';
-      const driveUrl = v.drive_url || student.drive_folder_url || '#';
+      const rawUrl = v.youtube_url || v.drive_url || v.video_url || '';
+      const ytMatch = rawUrl.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([\w-]{11})/);
+      const ytId = v.youtube_id || (ytMatch ? ytMatch[1] : null);
+      const driveUrl = v.youtube_url || (ytId ? `https://youtu.be/${ytId}` : (v.drive_url || student.drive_folder_url || '#'));
 
       document.getElementById('theaterVideoTitle').innerHTML = `<span>🎬</span> ${v.title || 'Video thực hành'}`;
       document.getElementById('theaterStudentName').textContent = `${student.name} (${student.class || 'Lớp Offline'}) • ${v.duration ? '⏱️ ' + v.duration : ''}`;
@@ -2157,9 +2187,29 @@
 
       const videoEl = document.getElementById('theaterVideoEl');
       const videoSource = document.getElementById('theaterVideoSource');
-      videoSource.src = videoSrc;
-      videoEl.load();
-      videoEl.play().catch(() => {});
+      const iframeEl = document.getElementById('theaterIframeEl');
+
+      if (ytId) {
+        if (videoEl) {
+          videoEl.pause();
+          videoEl.classList.add('hidden');
+        }
+        if (iframeEl) {
+          iframeEl.src = `https://www.youtube-nocookie.com/embed/${ytId}?autoplay=1&rel=0&modestbranding=1`;
+          iframeEl.classList.remove('hidden');
+        }
+      } else {
+        if (iframeEl) {
+          iframeEl.src = '';
+          iframeEl.classList.add('hidden');
+        }
+        if (videoEl && videoSource) {
+          videoEl.classList.remove('hidden');
+          videoSource.src = videoSrc;
+          videoEl.load();
+          videoEl.play().catch(() => {});
+        }
+      }
 
       // Render clips switcher in theater
       const switcher = document.getElementById('theaterClipsSwitcher');
@@ -2194,6 +2244,10 @@
         videoEl.pause();
         const source = document.getElementById('theaterVideoSource');
         if (source) source.src = '';
+      }
+      const iframeEl = document.getElementById('theaterIframeEl');
+      if (iframeEl) {
+        iframeEl.src = '';
       }
       if (modal) modal.classList.add('hidden');
       currentTheaterStudent = null;
