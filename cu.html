@@ -1,0 +1,2338 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FEDU LED Hub — Quản Lý Lead & Cuộc Gọi iPhone</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%234f46e5'/><text x='50%' y='64%' text-anchor='middle' font-family='system-ui, -apple-system, sans-serif' font-weight='900' font-size='38' fill='white' letter-spacing='-0.5'>LED</text></svg>">
+  <script>
+    window.__errors = [];
+    window.addEventListener('error', function(e) {
+      window.__errors.push((e.message || e.type) + ' at ' + (e.filename || '') + ':' + (e.lineno || ''));
+    });
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+    .font-mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .kanban-col {
+      min-height: calc(100vh - 175px);
+      max-height: calc(100vh - 175px);
+      transition: all 0.2s ease;
+    }
+    .kanban-col.drag-over {
+      background-color: #eff6ff !important;
+      border: 2px dashed #6366f1 !important;
+    }
+    .card-dragging {
+      opacity: 0.35;
+      transform: scale(0.97);
+    }
+    .badge-pulse {
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+      animation: pulse-green 2s infinite;
+    }
+    @keyframes pulse-green {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+      70% { box-shadow: 0 0 0 7px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+
+<script>
+window.STATIC_LEADS = [{"phone": "0948310388", "name": "Hồng Vân", "status": "new", "tags": ["⚠️ Direct (Check lại)", "Chưa điền nghề"], "note": "⚠️ Nguồn trực tiếp (Không có UTM) - Nghi vấn Trinh/Sale điền hộ sau khi chốt hoặc khách tự gõ web. Cần check lại!", "updated_at": "15/09/2026 10:54:53"}, {"phone": "0943490349", "status": "considering", "note": "📞 Đã đàm thoại 11s (14/09 15:50) | Đàm thoại 2m 9s (14/09 15:30) • 📞 Đã gọi 2m 9s (14/09 15:30) • Đã gọi, kêu là giáo viên nhân viên không sắp xếp được, hỏi là gửi bản để sửa cũng đượcChủ mầm non. Hẹn mai báo lại. Đã báo giảm 10% (2tr7). goi chua nhac may ho nay. Huy là tên con. định cho giáo viên trong trường học .", "updated_at": "14/09/2026 17:12:00"}, {"phone": "0904545611", "status": "paid", "note": "✅ [ĐÃ CỌC OFFLINE K3 19-20/09] 📵 [KHÔNG NGHE MÁY] [ĐÃ CHUYỂN KHOẢN CỌC OFFLINE K3]. Tiệm bánh ngọt croissant cao cấp.", "updated_at": "10/09/2026 08:16:30", "is_archived": false, "archived_at": "10/09/2026 08:02:24"}, {"phone": "0327288139", "status": "called", "note": "🔥 Đã báo giảm giá còn 2.4 nhưng chưa chốt • 📞 Đàm thoại 1m 14s (14/09 15:36) • Đã gọi trao đổi 5m", "updated_at": "15/09/2026 16:46:14"}, {"phone": "0898889090", "note": "📵 Gọi nhỡ/bận (14/09 15:27) • Thời trang online | Video bán hàng | Lớp Offline 19-20/09 Hà Nội. đang xem sắp lịch đc ko", "updated_at": "14/09/2026 15:34:00", "status": "considering"}, {"phone": "0567166888", "is_archived": false, "archive_category": "unqualified", "archived_at": "10/09/2026 08:10:33", "note": "Kiên từ TikTok liên hệ hỏi lớp Offline", "status": "paid", "updated_at": "10/09/2026 19:05:42"}, {"phone": "0911741993", "status": "paid", "updated_at": "10/09/2026 17:36:17", "note": ""}, {"phone": "0982492003", "note": "[✉️ Đã gửi Mail lúc 09:46 10/09]", "name": "Nguyễn Việt (Test Cockpit)", "updated_at": "10/09/2026 09:46:04"}, {"phone": "0925513636", "status": "contacted", "note": "📵 Gọi thuê bao (14:24 10/09). Đã gửi tin nhắn Zalo lúc 14:23 (kèm SMS & Mail sáng nay). Chủ nhà hàng. Chờ khách bật máy phản hồi Zalo.", "tags": ["F&B / Nhà hàng", "Đã gửi SMS", "Đã gửi Mail", "Lớp 19-20/09"], "name": "Nguyen Lan Phương", "updated_at": "10/09/2026 14:25:16"}, {"phone": "0969863488", "note": "Giảng Viên | Nút thắt: Tiết kiệm hàng chục triệu thuê quay\nĐã gọi , thuê bao", "updated_at": "10/09/2026 14:51:55"}, {"phone": "0335062222", "status": "paid", "note": "✅ [ĐÃ CỌC OFFLINE K3 19-20/09 - 3.000.000đ]. SĐT: 0335062222 | Email: Phamthuylinh2204@gmail.com. Ngành Đồ uống & F&B (Pha chế Dulin). CK lúc 13:24 10/09/2026 vào Techcombank (4101986 - NGUYEN DUC VIET). Nội dung: 'Linh Dulin- off 19-20', Mã GD: 15981161547. Zalo: Linh Dulin.", "name": "Phạm Thùy Linh (Linh Dulin)", "updated_at": "10/09/2026 15:11:19"}, {"phone": "0973975758", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] PT Fitness | Lớp Offline FEDU 19-20/09", "name": "Nguyễn Phước Long", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0941810888", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Sale BĐS | Nút thắt: KT quay nổi bật sổ đỏ | Lớp Offline 19-20/09 Hà Nội", "name": "Minh Vương", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0866221370", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Spa chăm sóc sức khỏe | Lớp Offline FEDU 19-20/09", "name": "Thùy Nguyễn", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0978226893", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Bảo hiểm | Lớp Offline FEDU 19-20/09", "name": "Nhung Đàm", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0843193678", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Lớp Offline FEDU 19-20/09", "name": "Lê Duy", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0969512269", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Học viên đăng ký Offline 19-20/09 Hà Nội lúc 08:52 ngày 09/09/2026", "name": "Nguyễn Thị Tuyết", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0979331684", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Chưa điền ngành | Lớp Offline 19-20/09 Hà Nội", "name": "Tùng", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0902215786", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Lớp Offline FEDU 19-20/09", "name": "Hạnh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0977277890", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Lớp Offline FEDU 19-20/09", "name": "Trần Tùng", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0865838268", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Quyết", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0929568882", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn thuận nga", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0988912939", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "VU NGA", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0981178489", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Maya Nguyen", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0989161868", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Tâng Xinh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0368188288", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Le Thi Hoai Tram", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0981926629", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Chu Sức", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0963387923", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Thái Hồng Hiếu", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0979985110", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Trang Đặng", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0394576931", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Hoàng thị Thúy", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0908999919", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Dư Phụng Phương", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0989229027", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Thuy Nguyen https://www.facebook.com/profile.php?id=1011921621", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0366572662", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Thành Đạt", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0849368141", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "NGUYÊN", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0989701998", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Tuyết Mai", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0949499042", "tags": ["Đã cọc 3tr", "K3 Offline Hà Nội", "Bill Trợ lý Trinh 14/09"], "status": "paid", "note": "✅ Đã chuyển khoản cọc 3.000.000đ lúc 17:44 ngày 14/09/2026 (MGD: FT26257754630309) vào MB Bank 186129999 TOPEXPERT. Trợ lý Trinh xác nhận khóa off.", "name": "Huỳnh Trang My", "updated_at": "14/09/2026 22:23:04"}, {"phone": "0989022462", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Thị Hoan", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0983610268", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Phan vân", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0969611136", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Ngọc Nam", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0967729966", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Thu Trịnh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0932263781", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Đào thị Thìn", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0837628555", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Lỗ thế dân", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0936676363", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "phuong dung", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0918773668", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Quỳnh Hương", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0982819709", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Thị Trang Nhung", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0976163334", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Kiều Thị Oanh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0973386016", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Phạm Hải Linh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0378502248", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Trang", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0936886486", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] Bất động sản | Lớp Offline 19-20/09 Hà Nội", "name": "Lê Minh Đức", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0936848555", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Đình Vượng", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0973655919", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Minh Pham", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0896617966", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Dương Diệu Linh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0824483622", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn Thu Trang", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0986551986", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Đặng Duy Anh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0987890044", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn công thanh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0904819860", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Tâm ngô", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0866512992", "tags": ["Sale đã TV"], "status": "contacted", "note": "[Sale đã TV] [Sale đã TV: ĐÃ TV]", "name": "Nguyễn minh thanh", "updated_at": "10/09/2026 17:59:14"}, {"phone": "0936323885", "status": "contacted", "note": "Giáo dục | Video chuyển đổi cao | Lớp Offline 19-20/09 Hà Nội [💬 Đã gửi SMS lúc 19:01 10/09]", "name": "Trần Thu Thương", "updated_at": "10/09/2026 19:01:33"}, {"phone": "0366670789", "status": "contacted", "note": "Kinh doanh | Lớp Offline FEDU 19-20/09 [💬 Đã gửi SMS lúc 19:02 10/09]", "name": "Ngo thị ánh tuyết", "updated_at": "10/09/2026 19:02:18"}, {"phone": "0349615871", "note": "Nội trợ | Lớp Offline FEDU 19-20/09 - gọi  báo thuê bao [📵 Gọi nhỡ/thuê bao lúc 20:47 10/09]", "updated_at": "10/09/2026 20:47:38", "status": "contacted", "name": "linh nhâm"}, {"phone": "0335156521", "status": "considering", "note": "[GV tiểu học] Đã trao đổi 6m: Chưa biết đi được không, có thể gọi lại. đã gọi lại đang họp", "tags": ["Giáo viên tiểu học", "Cân nhắc"], "name": "Hoàng Lý", "updated_at": "11/09/2026 17:15:28"}, {"phone": "0348662298", "status": "contacted", "note": "[Spa] Đã gọi 22:04 chưa nghe máy (gọi nhỡ)", "tags": ["Spa", "Gọi nhỡ"], "name": "Phạm thị thuý", "updated_at": "10/09/2026 22:04:42"}, {"phone": "0905891899", "status": "contacted", "note": "[Tattoo] Đàm thoại 2m24s: Giọng nhỏ, rụt rè, ở tỉnh làm xăm, phân khúc thấp, khả năng đk ít [📞 Đã gọi trao đổi lúc 17:11 11/09]", "tags": ["Tattoo", "Khó chốt", "Sai tệp"], "name": "Le sơn", "updated_at": "14/09/2026 15:28:50"}, {"phone": "0789122166", "status": "considering", "note": "📵 Gọi nhỡ/bận (14/09 15:27) • [Spa] Đàm thoại 12m28s: Rất quan tâm, đã gửi QR cọc 3tr trên Zalo lúc 22:22 thuê bao", "tags": ["Spa", "Đã gửi QR", "Cân nhắc cọc"], "name": "Mai Spa", "updated_at": "14/09/2026 15:34:00"}, {"phone": "0932695566", "status": "considering", "note": "[SN 1969 - Tiềm năng] Đàm thoại 11m30s: Lớn tuổi, lăn tăn học được gì ngoài quay điện thoại. Có thể về QN nên nhắn Zalo.", "tags": ["SN 1969", "Có tiềm năng", "Hẹn Zalo"], "name": "Cao thị Huyền", "updated_at": "10/09/2026 22:39:02"}, {"phone": "0832126789", "status": "considering", "note": "📵 Gọi nhỡ (14/09 15:22) | Đã nhắn SMS 15:23 • [Phân bón - Nhóm] Cuộc gọi 16:41 (27s): Báo team chưa về đủ, hẹn tuần sau xem thế nào. (Trước đó 07:56 đàm thoại 3m21s: dự định cho nhóm học kịch bản chuyển đổi ngành phân bón).", "tags": ["Phân bón", "Đăng ký nhóm", "Hẹn tuần sau", "Đang cân nhắc"], "name": "Vũ Trí Văn", "updated_at": "14/09/2026 15:34:00"}, {"phone": "0949969286", "status": "considering", "note": "[Học viên Offline Tháng 10] Chị Dung (FB: Dung Nguyen, Page 10k like: Dung Nguyen - Người Gieo Hạt Thiện Lành, Page 2.2k: Nguyendung26.com). Làm Herbalife (HBL) & Phòng FIT. Muốn học kỹ thuật quay dựng và kịch bản video để chạy ads tuyển F1 online. Lớp 19-20/09 bận du lịch, tháng 10 đi Đài Loan -> Đăng ký lớp Offline Tháng 10. Đang hỗ trợ tư vấn chiến lược trên Zalo (chị chuẩn bị chạy ads và Zoom ngày 21/09).", "tags": ["Herbalife / HBL", "Phòng FIT", "Lớp Tháng 10", "Page 10k like", "Tuyển F1", "Chăm sóc Zalo"], "name": "Nguyễn Thị Dung", "updated_at": "11/09/2026 08:06:58"}, {"phone": "0989188467", "status": "considering", "note": "📞 Đã gọi 11s (14/09 15:21) • cam thấy  nguoi nay ko co nhu câu , ưu tiên thấp📞 Đã đàm thoại 6m (11/09 16:42) | Coach | Lớp Offline 19-20/09 Hà Nội. đã gọi có rủ thêm bạn. đang suy nghĩ xem lịch\ngọi lần 2 kêu đang bận", "updated_at": "14/09/2026 15:34:00", "name": "Hong thu", "tags": ["Coach", "Rủ thêm bạn", "Đang suy nghĩ lịch", "Đàm thoại 6m"]}, {"phone": "0988978886", "status": "considering", "note": "Bất động sản | Lớp Offline 19-20/09 Hà Nội [📞 Đã gọi trao đổi lúc 16:53 11/09] [🔄 Hẹn gọi lại lúc 16:53 11/09]", "name": "Nhật", "updated_at": "11/09/2026 16:53:15"}, {"phone": "0936423998", "note": "📵 Gọi nhỡ/bận (14/09 15:29) • 📞 Đã đàm thoại 15s (11/09 17:00) | Chưa điền | Lớp Offline 19-20/09 Hà Nội, đang bận . có vẻ khó chịu", "updated_at": "14/09/2026 15:34:00", "status": "contacted", "name": "Nguyễn Minh Duyên"}, {"phone": "0869911319", "note": "✅ ĐÃ ACTIVE CHUYỂN KHOẢN | Tattoo artist | Lớp Offline 19-20/09 Hà Nội. Đã kết nối Zalo, đóng gói khóa học xăm nghệ thuật. Đã nhắn tin add vào nhóm lớp K3.", "updated_at": "12/09/2026 16:05:00", "status": "paid", "name": "Đào trung Nghĩa", "tags": ["Tattoo artist", "Đóng gói khóa xăm", "Đã active CK", "Đã cọc K3", "Đàm thoại 4m35s", "Đã add nhóm"]}, {"phone": "0978161211", "status": "contacted", "note": "📵 Cuộc gọi nhỡ / không nhấc máy (11/09 17:13) | Nấu ăn | Lớp Offline 19-20/09 Hà Nội [📵 Gọi nhỡ/thuê bao lúc 17:13 11/09]", "name": "Dung Nguyễn", "updated_at": "11/09/2026 17:16:54"}, {"phone": "0356105104", "status": "contacted", "note": "📵 Cuộc gọi nhỡ / không nhấc máy (10/09 21:52) | Chưa điền | Lớp Offline 19-20/09 Hà Nội", "name": "Đào Uyên", "updated_at": "11/09/2026 17:16:20"}, {"phone": "0936048488", "status": "paid", "note": "✅ ĐÃ CHUYỂN KHOẢN CỌC 3TR (13/09 15:10) OFFLINE K3 (19-20/09). Kèm 1 trợ lý đi buổi 2 (ngày 20/09). 10 năm đại lý đồ gia dụng & bếp Đức High-end (cung cấp nhiều KOLs). Đã biết quay cận/trung/toàn đẹp, biết cắt ghép. Nút thắt: Storytelling quá khó/mất thời gian. Định hướng lớp: Học Kỹ thuật quay chuyển cảnh (Match cut / Visual ASMR) áp dụng Voice-over & Talking Head 2 góc máy; trợ lý dựng CapCut 15-20p/clip. Đã cung cấp link FB cá nhân (Business Manager - Trivera Group phân phối chính hãng) và link Page định xây kênh (Lê Kitchen).", "tags": ["Đã cọc K3 (3tr)", "Kèm trợ lý đi buổi 2", "Đồ bếp Đức Highend", "10 năm gia dụng", "Đã biết quay dựng", "Kỹ thuật quay chuyển cảnh", "Visual ASMR", "iMessage CK 13/09", "Đàm thoại 11m40s", "Business Manager Trivera", "Lê Kitchen Page", "Phân phối đồ bếp Đức"], "name": "Lê Quỳnh Anh", "updated_at": "13/09/2026 19:53:00"}, {"phone": "pham_thi_hang", "status": "paid", "note": "✅ ĐÃ CHUYỂN KHOẢN THÀNH CÔNG OFFLINE K3 (19-20/09). Học viên Bất động sản (BĐS). Đã xác nhận chuyển khoản qua Zalo (Phạm Thị Hằng bds offline3). Sắp xếp lịch học và add vào nhóm lớp.", "updated_at": "12/09/2026 16:05:00", "name": "Phạm Thị Hằng", "tags": ["Bất động sản (BĐS)", "Zalo Direct", "Đã active CK", "Đã cọc K3", "Đàm thoại Zalo 14m49s", "Chốt thành công K3"]}, {"phone": "0855855688", "status": "considering", "note": "Zalo: Sáng Phạm. Email: sanglee221.net@gmail.com. Đã gửi thông tin khóa học Offline 19-20/09 qua Zalo lúc 08:47 ngày 13/09. Đang chờ đồng ý kết bạn.", "name": "Sáng Phạm", "tags": ["Sáng Phạm", "K3 Offline Hà Nội", "Đã nhắn Zalo"], "updated_at": "14/09/2026 22:23:59"}, {"phone": "0839666685", "status": "considering", "note": "Đã gọi tư vấn chuyên sâu 7m39s lúc 14:30 (14/09). Anh Chiến mảng BĐS rất ưng lộ trình, chuẩn bị chuyển khoản cọc 3.000.000đ.", "tags": ["BĐS", "Đã tư vấn 7p39s", "Tiềm năng cọc 3tr"], "name": "Nguyễn Hữu Chiến", "updated_at": "14/09/2026 14:46:50"}, {"phone": "0976661286", "status": "called", "note": "Lộc cắt tóc - Đã gọi điện thoại Zalo 13p50s lúc 12:00 ngày 14/09. Rất ấn tượng việc anh Việt quay không mất năng lượng. Nỗi đau: Mất rất nhiều thời gian quay video, tụt năng lượng mệt mỏi. Làm nghề tóc và dạy cắm hoa lụa. Quan tâm lớp Offline 3.", "tags": ["toc", "offline3", "called"], "name": "Thành Lộc (Tóc)", "updated_at": "14/09/2026 12:20:36"}, {"phone": "0767276677", "note": "📵 Gọi nhỡ/bận (14/09 15:22) • Luật sư (xây kênh). Đang ở Đà Nẵng chưa về, cân nhắc lịch 19-20/9 gần Aeon Long Biên. Đã gửi Fanpage theo dõi.", "updated_at": "14/09/2026 15:34:00"}, {"phone": "0982349877", "name": "Thuy An", "email": "ranmap@gmail.com", "occupation": "Dược sỹ", "status": "paid", "note": "✅ ĐÃ CỌC 500.000Đ OFFLINE K3 (19-20/09). 📞 Đàm thoại 17m57s (14/09 20:50) • Chị Thuy An (Dược sỹ). Chỉ học 1 ngày, đã book trước 500k, đến lớp chuyển nốt.", "tags": ["Đã cọc 500k", "Học 1 ngày", "Đến chuyển nốt", "Dược sỹ"], "paid_amount": 500000, "paid_status": "Đã cọc 500k (Học 1 ngày, đến chuyển nốt)", "class": "Offline K3 19-20/09 (Học 1 ngày)", "updated_at": "14/09/2026 21:18:00"}, {"phone": "0382346268", "status": "contacted", "note": "Đăng ký khóa offline 4, chưa CK", "name": "Chiến Kính Mắt", "updated_at": "18/09/2026 08:27:21"}, {"phone": "0916999522", "status": "contacted", "note": "Đã đàm thoại lúc chạy bộ: Tư vấn logic xây kênh cá nhân bán xe điện (niềm tin, làm thật, thời gian). Khách chốt lịch học offline cuối tháng ngày 30. Cần gọi lại chăm sóc.", "name": "Chị Thuý (Xe điện)", "updated_at": "23/09/2026 23:43:14"}, {"phone": "0963716988", "status": "contacted", "note": "Nhà hàng, đã hỗ trợ, cần gửi video quay nhà hàng, offline4", "name": "Hội Nguyễn", "updated_at": "24/09/2026 19:01:32"}];
+</script>
+
+</head>
+<body class="min-h-screen bg-slate-50 antialiased flex flex-col pb-10">
+
+  <!-- ============================================================ -->
+  <!-- 1. TOP APP BAR (HEADER TINH GỌN) -->
+  <!-- ============================================================ -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30 px-5 py-2.5 shadow-xs">
+    <div class="max-w-[1780px] mx-auto flex items-center justify-between gap-4">
+      
+      <!-- Brand & Live Indicator -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-700 via-indigo-600 to-violet-600 flex items-center justify-center text-white font-black text-xs tracking-wider shadow-md shadow-indigo-200 border border-indigo-400/30 select-none font-mono">
+          LED
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <h1 class="font-extrabold text-sm tracking-tight text-slate-900 flex items-center gap-1.5">
+              <span>FEDU <span class="text-indigo-600 font-black">LED Hub</span></span>
+            </h1>
+            <span class="inline-flex items-center gap-1 px-2 py-0.2 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 badge-pulse"></span>
+              <span id="liveStatusText">Live 2-Way Sync</span>
+            </span>
+          </div>
+          <p class="text-[10px] text-slate-400 font-medium">Quản lý Lead & Cuộc gọi iPhone • chat.db • Danh bạ Contacts • Google Sheets</p>
+        </div>
+      </div>
+
+      <!-- Center View Mode Switcher -->
+      <div class="flex items-center gap-2">
+        <div class="bg-slate-100 p-0.5 rounded-xl flex items-center border border-slate-200">
+          <button
+            id="tabActiveRadar"
+            onclick="switchViewMode('active')"
+            class="px-3.5 py-1 text-xs font-bold rounded-lg transition bg-white text-indigo-700 shadow-sm flex items-center gap-1.5"
+          >
+            <span>⚡ Bàn Gọi LED</span>
+            <span id="activeCountBadge" class="px-1.5 py-0.2 bg-indigo-50 text-indigo-700 rounded-full text-[10px] font-extrabold border border-indigo-200">0</span>
+          </button>
+          <button
+            id="tabArchivedSTU"
+            onclick="switchViewMode('archived')"
+            class="px-3.5 py-1 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5"
+          >
+            <span>📦 Kho STU Offline</span>
+            <span id="archivedCountBadge" class="px-1.5 py-0.2 bg-slate-200 text-slate-700 rounded-full text-[10px] font-extrabold">0</span>
+          </button>
+        </div>
+
+        <a
+          href="https://docs.google.com/spreadsheets/d/1PaHkFMdY615FasQDcqqeia94L1662YKES7cPuFIpKhg/edit"
+          target="_blank"
+          title="Mở Google Sheet gốc"
+          class="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 text-xs font-bold rounded-xl border border-emerald-200 transition"
+        >
+          <svg class="w-3.5 h-3.5 text-emerald-600" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V5h14v14zM7 7h10v2H7zm0 4h10v2H7zm0 4h7v2H7z"/>
+          </svg>
+          <span>Sheet Live ↗</span>
+        </a>
+      </div>
+
+      <!-- Quick Search & Reload -->
+      <div class="flex items-center gap-2 flex-1 max-w-xs ml-auto">
+        <div class="relative w-full">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Tìm tên, SĐT, nghề, ngày ĐK..."
+            class="w-full pl-7 pr-3 py-1.5 bg-slate-100 border border-slate-200 rounded-xl text-xs focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:bg-white transition-all"
+            oninput="handleSearch(this.value)"
+          />
+          <svg class="w-3.5 h-3.5 text-slate-400 absolute left-2 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </div>
+
+        <button
+          onclick="loadData(true)"
+          title="Đồng bộ tức thì từ iPhone & Contacts"
+          class="p-1.5 text-slate-500 hover:text-indigo-600 hover:bg-slate-100 rounded-xl transition border border-slate-200 shrink-0"
+        >
+          <svg id="refreshIcon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ============================================================ -->
+  <!-- 2. NHIỆM VỤ HÀNG ĐẦU HÔM NAY (TOP ACTION RADAR & FOCUS CHIPS) -->
+  <!-- ============================================================ -->
+  <section class="bg-slate-100/80 border-b border-slate-200 px-5 py-2">
+    <div class="max-w-[1780px] mx-auto flex flex-wrap items-center justify-between gap-2.5">
+      
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span class="text-[11px] font-black uppercase tracking-wider text-slate-500 flex items-center gap-1 mr-1">
+          <span>🎯 Nhiệm vụ hàng đầu:</span>
+        </span>
+
+        <!-- Chip 1: Tất cả -->
+        <button
+          onclick="setPriorityFilter('all')"
+          id="chip-all"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-indigo-600 text-white border-indigo-600 shadow-2xs"
+        >
+          Tất cả (<span id="count-chip-all">0</span>)
+        </button>
+
+        <!-- Chip 2: Hẹn gọi lại hôm nay -->
+        <button
+          onclick="setPriorityFilter('callback')"
+          id="chip-callback"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border border-rose-200 bg-white text-rose-700 hover:bg-rose-50 transition shadow-2xs flex items-center gap-1"
+        >
+          <span>🔥 Cần gọi lại ngay</span>
+          <span id="count-chip-callback" class="px-1.5 py-0.2 bg-rose-100 text-rose-800 rounded-full text-[10px] font-extrabold">0</span>
+        </button>
+
+        <!-- Chip 3: Lead mới trong ngày -->
+        <button
+          onclick="setPriorityFilter('today')"
+          id="chip-today"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border border-amber-200 bg-white text-amber-800 hover:bg-amber-50 transition shadow-2xs flex items-center gap-1"
+        >
+          <span>⚡ Lead nóng hôm nay</span>
+          <span id="count-chip-today" class="px-1.5 py-0.2 bg-amber-100 text-amber-800 rounded-full text-[10px] font-extrabold">0</span>
+        </button>
+
+        <!-- Chip 4: Đã nhắn tin chờ gọi -->
+        <button
+          onclick="setPriorityFilter('contacted')"
+          id="chip-contacted"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border border-blue-200 bg-white text-blue-700 hover:bg-blue-50 transition shadow-2xs flex items-center gap-1"
+        >
+          <span>💬 Đã nhắn chờ gọi</span>
+          <span id="count-chip-contacted" class="px-1.5 py-0.2 bg-blue-100 text-blue-800 rounded-full text-[10px] font-extrabold">0</span>
+        </button>
+
+        <!-- Chip 5: Đã trao đổi -->
+        <button
+          onclick="setPriorityFilter('called')"
+          id="chip-called"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border border-indigo-200 bg-white text-indigo-700 hover:bg-indigo-50 transition shadow-2xs flex items-center gap-1"
+        >
+          <span>📞 Đã trao đổi</span>
+          <span id="count-chip-called" class="px-1.5 py-0.2 bg-indigo-100 text-indigo-800 rounded-full text-[10px] font-extrabold">0</span>
+        </button>
+
+        <div class="h-4 w-px bg-slate-300 mx-1 hidden sm:block"></div>
+
+        <!-- Chip 6: Đã TV bởi Sale (Ẩn khỏi bàn gọi chính để rộng chỗ) -->
+        <button
+          onclick="setPriorityFilter('sale')"
+          id="chip-sale"
+          class="priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border border-purple-200 bg-white text-purple-700 hover:bg-purple-50 transition shadow-2xs flex items-center gap-1"
+          title="Bấm để xem các lead Sale đã tư vấn (mặc định đã ẩn khỏi bàn gọi chính để rộng chỗ)"
+        >
+          <span>🎧 Sale đã TV</span>
+          <span id="count-chip-sale" class="px-1.5 py-0.2 bg-purple-100 text-purple-800 rounded-full text-[10px] font-extrabold">0</span>
+        </button>
+      </div>
+
+      <!-- Drag & Drop Hint -->
+      <div class="text-[11px] text-slate-500 font-medium hidden md:flex items-center gap-2">
+        <span>💡 Giữ chuột kéo thả thẻ giữa các cột. Có nút <b>↩️ Hoàn tác</b> nếu bấm nhầm.</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- 3. MAIN KANBAN BOARD (ACTIVE CALLING DESK) -->
+  <!-- ============================================================ -->
+  <main class="flex-1 px-5 py-3 overflow-x-auto" id="kanbanContainer">
+    <div class="max-w-[1780px] mx-auto min-w-[1020px]">
+
+      <!-- Banner khi đang mở danh sách Sale đã TV -->
+      <div id="saleFilterNotice" class="hidden mb-3 px-4 py-2 bg-purple-50 border border-purple-200 rounded-xl flex items-center justify-between text-xs text-purple-900 shadow-2xs">
+        <div class="flex items-center gap-2">
+          <span class="text-base">🎧</span>
+          <span>Đang hiển thị <b id="saleNoticeCount">0</b> học viên <b>Sale đã tư vấn</b> (Đã ẩn khỏi bàn gọi chính để rộng chỗ).</span>
+        </div>
+        <button onclick="setPriorityFilter('all')" class="px-2.5 py-1 bg-purple-600 hover:bg-purple-700 text-white font-bold rounded-lg transition text-xs flex items-center gap-1 shadow-2xs">
+          <span>← Quay lại Bàn gọi chính</span>
+        </button>
+      </div>
+      
+      <div class="grid grid-cols-4 gap-3.5" id="kanbanGrid">
+
+        <!-- CỘT 1: CHƯA GỌI -->
+        <div
+          id="col-new"
+          class="flex flex-col bg-slate-100/60 border border-slate-200/90 rounded-2xl p-2.5 kanban-col"
+          ondragover="handleDragOver(event)"
+          ondragenter="handleDragEnter(event, 'col-new')"
+          ondragleave="handleDragLeave(event, 'col-new')"
+          ondrop="handleDrop(event, 'new')"
+        >
+          <div class="flex items-center justify-between pb-2 border-b border-slate-200 mb-2 px-1">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-blue-500"></span>
+              <h2 class="font-bold text-xs uppercase tracking-wider text-slate-800">Chưa Gọi (Mới)</h2>
+            </div>
+            <span id="count-new" class="text-xs font-bold bg-white text-slate-600 px-2 py-0.2 rounded-full border border-slate-200 shadow-2xs">0</span>
+          </div>
+          <div id="cards-new" class="space-y-2 overflow-y-auto flex-1 pr-0.5"></div>
+        </div>
+
+        <!-- CỘT 2: ĐÃ NHẮN TIN -->
+        <div
+          id="col-contacted"
+          class="flex flex-col bg-slate-100/60 border border-slate-200/90 rounded-2xl p-2.5 kanban-col"
+          ondragover="handleDragOver(event)"
+          ondragenter="handleDragEnter(event, 'col-contacted')"
+          ondragleave="handleDragLeave(event, 'col-contacted')"
+          ondrop="handleDrop(event, 'contacted')"
+        >
+          <div class="flex items-center justify-between pb-2 border-b border-slate-200 mb-2 px-1">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+              <h2 class="font-bold text-xs uppercase tracking-wider text-slate-800">Đã liên hệ</h2>
+            </div>
+            <span id="count-contacted" class="text-xs font-bold bg-white text-slate-600 px-2 py-0.2 rounded-full border border-slate-200 shadow-2xs">0</span>
+          </div>
+          <div id="cards-contacted" class="space-y-2 overflow-y-auto flex-1 pr-0.5"></div>
+        </div>
+
+        <!-- CỘT 3: ĐÃ TRAO ĐỔI / CÂN NHẮC 🔥 (GỘP ĐÃ GỌI & HẸN MAI) -->
+        <div
+          id="col-called"
+          class="flex flex-col bg-indigo-50/20 border border-indigo-200/80 rounded-2xl p-2.5 kanban-col"
+          ondragover="handleDragOver(event)"
+          ondragenter="handleDragEnter(event, 'col-called')"
+          ondragleave="handleDragLeave(event, 'col-called')"
+          ondrop="handleDrop(event, 'called')"
+        >
+          <div class="flex items-center justify-between pb-2 border-b border-indigo-200/70 mb-2 px-1">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+              <h2 class="font-bold text-xs uppercase tracking-wider text-indigo-950">Đang chốt sale</h2>
+            </div>
+            <span id="count-called" class="text-xs font-bold bg-white text-indigo-700 px-2 py-0.2 rounded-full border border-indigo-200 shadow-2xs">0</span>
+          </div>
+          <div id="cards-called" class="space-y-2 overflow-y-auto flex-1 pr-0.5"></div>
+        </div>
+
+        <!-- CỘT 4: ĐÃ CHỐT CỌC / CK -->
+        <div
+          id="col-paid"
+          class="flex flex-col bg-emerald-50/40 border border-emerald-200/70 rounded-2xl p-2.5 kanban-col"
+          ondragover="handleDragOver(event)"
+          ondragenter="handleDragEnter(event, 'col-paid')"
+          ondragleave="handleDragLeave(event, 'col-paid')"
+          ondrop="handleDrop(event, 'paid')"
+        >
+          <div class="flex items-center justify-between pb-2 border-b border-emerald-200 mb-2 px-1">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <h2 class="font-bold text-xs uppercase tracking-wider text-emerald-900">Đã Cọc K3 ✅</h2>
+            </div>
+            <span id="count-paid" class="text-xs font-bold bg-white text-emerald-700 px-2 py-0.2 rounded-full border border-emerald-200 shadow-2xs">0</span>
+          </div>
+          <div id="cards-paid" class="space-y-2 overflow-y-auto flex-1 pr-0.5"></div>
+        </div>
+
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- 4. KHO STU OFFLINE (OFFLINE CARE VAULT VỚI 3 CỘT PHÂN LOẠI) -->
+      <!-- ============================================================ -->
+      <div id="archivedViewContainer" class="hidden space-y-3">
+        
+        <div class="bg-white border border-slate-200 rounded-2xl p-4 shadow-xs flex items-center justify-between">
+          <div>
+            <h2 class="text-sm font-extrabold text-slate-900 flex items-center gap-2">
+              <span>📦 Kho Lưu Trữ Dữ Liệu Khách Hàng Offline (Student Hub Vault)</span>
+            </h2>
+            <p class="text-xs text-slate-500 mt-0.5">
+              Nơi lưu trữ các học viên đã hoàn tất chăm sóc (Đã cọc, Sai tệp/Từ chối, hoặc Bảo lưu). Dữ liệu được đồng bộ vào <code class="bg-slate-100 px-1 py-0.2 rounded font-mono text-indigo-600">students.json</code> và tách biệt khỏi bàn gọi hàng ngày để giảm tải nhận thức.
+            </p>
+          </div>
+          <button
+            onclick="switchViewMode('active')"
+            class="px-3.5 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl transition shadow-xs flex items-center gap-1.5"
+          >
+            <span>← Quay lại Bàn Gọi Chính</span>
+          </button>
+        </div>
+
+        <!-- Thanh Thống Kê Kho STU -->
+        <div class="flex flex-wrap sm:flex-nowrap gap-3 bg-white border border-slate-200 rounded-2xl p-3 shadow-sm" id="stuStatsBar">
+          <div class="flex-1 w-full sm:w-auto bg-blue-50 rounded-xl p-3 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-lg leading-none">📦</span>
+              <span class="text-blue-700 font-bold text-[11px] uppercase tracking-wider">Tổng Hồ Sơ</span>
+            </div>
+            <span class="text-blue-700 font-black text-xl" id="stu-stat-total">0</span>
+          </div>
+          <div class="flex-1 w-full sm:w-auto bg-green-50 rounded-xl p-3 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-lg leading-none">✅</span>
+              <span class="text-green-700 font-bold text-[11px] uppercase tracking-wider">Đã Cọc</span>
+            </div>
+            <span class="text-green-700 font-black text-xl" id="stu-stat-paid">0</span>
+          </div>
+          <div class="flex-1 w-full sm:w-auto bg-red-50 rounded-xl p-3 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-lg leading-none">❌</span>
+              <span class="text-red-700 font-bold text-[11px] uppercase tracking-wider">Sai Tệp</span>
+            </div>
+            <span class="text-red-700 font-black text-xl" id="stu-stat-unqualified">0</span>
+          </div>
+          <div class="flex-1 w-full sm:w-auto bg-yellow-50 rounded-xl p-3 flex flex-col justify-center">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-lg leading-none">⏸️</span>
+              <span class="text-yellow-700 font-bold text-[11px] uppercase tracking-wider">Hẹn Sau</span>
+            </div>
+            <span class="text-yellow-700 font-black text-xl" id="stu-stat-postponed">0</span>
+          </div>
+        </div>
+
+        <!-- Thêm Search & Filter Realtime vào Kho STU Offline -->
+        <div id="stuFilterBar" class="bg-white border border-slate-200 rounded-2xl p-3 shadow-xs flex flex-col sm:flex-row items-center gap-3">
+          <div class="flex-1 w-full">
+            <input 
+              type="text" 
+              id="stuSearchInput" 
+              placeholder="Tìm kiếm trong kho STU (Tên, SĐT, Ghi chú)..." 
+              class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 text-sm"
+              oninput="handleSTUSearch(event)"
+            />
+          </div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <button onclick="toggleSTUColumn('paid')" id="chip-stu-paid" class="px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-all bg-emerald-100 text-emerald-800 ring-2 ring-emerald-500">✅ Đã Cọc</button>
+            <button onclick="toggleSTUColumn('unqualified')" id="chip-stu-unqualified" class="px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-all bg-slate-200 text-slate-800 ring-2 ring-slate-400">❌ Sai Tệp</button>
+            <button onclick="toggleSTUColumn('postponed')" id="chip-stu-postponed" class="px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-all bg-amber-100 text-amber-800 ring-2 ring-amber-500">⏸️ Hẹn Sau</button>
+            <button onclick="resetSTUFilter()" class="px-3 py-1.5 rounded-full text-xs font-medium cursor-pointer transition-all bg-red-50 text-red-600 hover:bg-red-100">Xóa bộ lọc</button>
+          </div>
+        </div>
+
+        <!-- 3 Cột Kho STU -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          
+          <!-- Cột 1: Đã Cọc K3 (Thành Công) -->
+          <div class="bg-emerald-50/30 border border-emerald-200 rounded-2xl p-3 flex flex-col min-h-[600px]">
+            <div class="flex items-center justify-between pb-2 border-b border-emerald-200 mb-2.5 px-1">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <h3 class="font-extrabold text-xs uppercase tracking-wider text-emerald-900">✅ Đã Cọc / Chốt Xong</h3>
+              </div>
+              <span id="count-archive-paid" class="text-xs font-bold bg-white text-emerald-800 px-2 py-0.2 rounded-full border border-emerald-200">0</span>
+            </div>
+            <div id="archive-list-paid" class="space-y-2 overflow-y-auto flex-1 pr-1"></div>
+          </div>
+
+          <!-- Cột 2: Sai Tệp / Không Nhu Cầu / Hủy -->
+          <div class="bg-slate-100/70 border border-slate-200 rounded-2xl p-3 flex flex-col min-h-[600px]">
+            <div class="flex items-center justify-between pb-2 border-b border-slate-200 mb-2.5 px-1">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-slate-400"></span>
+                <h3 class="font-extrabold text-xs uppercase tracking-wider text-slate-800">❌ Sai Tệp / Không Nhu Cầu</h3>
+              </div>
+              <span id="count-archive-unqualified" class="text-xs font-bold bg-white text-slate-700 px-2 py-0.2 rounded-full border border-slate-200">0</span>
+            </div>
+            <div id="archive-list-unqualified" class="space-y-2 overflow-y-auto flex-1 pr-1"></div>
+          </div>
+
+          <!-- Cột 3: Bảo Lưu / Hẹn Khóa Sau -->
+          <div class="bg-amber-50/40 border border-amber-200 rounded-2xl p-3 flex flex-col min-h-[600px]">
+            <div class="flex items-center justify-between pb-2 border-b border-amber-200 mb-2.5 px-1">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-amber-500"></span>
+                <h3 class="font-extrabold text-xs uppercase tracking-wider text-amber-900">⏸️ Hẹn Khóa Sau / Bảo Lưu</h3>
+              </div>
+              <span id="count-archive-postponed" class="text-xs font-bold bg-white text-amber-800 px-2 py-0.2 rounded-full border border-amber-200">0</span>
+            </div>
+            <div id="archive-list-postponed" class="space-y-2 overflow-y-auto flex-1 pr-1"></div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================================ -->
+  <!-- 5. ZEN FOCUS DRAWER (CHẾ ĐỘ GỌI TẬP TRUNG ĐƠN NHIỆM) -->
+  <!-- ============================================================ -->
+  <div
+    id="focusDrawerBackdrop"
+    onclick="closeFocusDrawer()"
+    class="fixed inset-0 bg-slate-900/50 backdrop-blur-xs z-50 hidden transition-opacity"
+  ></div>
+
+  <div
+    id="focusDrawer"
+    class="fixed top-0 right-0 bottom-0 w-full max-w-lg bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col border-l border-slate-200"
+  >
+    <!-- Drawer Header -->
+    <div class="p-4 border-b border-slate-200 flex items-center justify-between bg-slate-50">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 badge-pulse"></span>
+        <h3 class="font-extrabold text-sm text-slate-900 uppercase tracking-wider">🎯 Chế Độ Gọi Tập Trung</h3>
+      </div>
+      <button
+        onclick="closeFocusDrawer()"
+        class="text-slate-400 hover:text-slate-700 font-black text-lg p-1 rounded-lg hover:bg-slate-200 transition"
+        title="Đóng (Phím Esc)"
+      >
+        &times;
+      </button>
+    </div>
+
+    <!-- Drawer Body -->
+    <div class="flex-1 overflow-y-auto p-5 space-y-4 text-xs text-slate-700" id="focusDrawerBody">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <!-- Drawer Sticky Action Footer -->
+    <div class="p-3 bg-slate-50 border-t border-slate-200 flex items-center justify-between gap-2" id="focusDrawerFooter">
+      <!-- Injected by JavaScript -->
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 6. MODAL: LƯU VÀO KHO STUDENT HUB (CUSTOM ARCHIVE) -->
+  <!-- ============================================================ -->
+  <div id="stuModal" class="fixed inset-0 bg-slate-900/60 backdrop-blur-xs z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-5 shadow-2xl border border-slate-100 flex flex-col gap-3">
+      <div class="flex items-center justify-between border-b border-slate-100 pb-2.5">
+        <h3 class="font-extrabold text-sm text-slate-900 flex items-center gap-1.5">
+          <span>📦 Lưu Vào Kho Student Hub Offline</span>
+        </h3>
+        <button onclick="closeStuModal()" class="text-slate-400 hover:text-slate-600 font-bold text-lg leading-none">&times;</button>
+      </div>
+
+      <div class="text-xs text-slate-600">
+        Đang chuyển học viên <b id="modalStudentName" class="text-slate-900">...</b> (<span id="modalStudentPhone" class="font-mono text-indigo-600">...</span>) vào kho lưu trữ <code class="bg-slate-100 px-1 py-0.2 rounded font-mono text-indigo-700">students.json</code> và ẩn khỏi bàn gọi.
+      </div>
+
+      <div>
+        <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Nhóm phân loại lưu trữ:</label>
+        <select id="modalArchiveCategory" class="w-full text-xs p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-1 focus:ring-indigo-500 font-semibold text-slate-800">
+          <option value="paid">✅ Đã cọc K3 / Chốt thành công</option>
+          <option value="unqualified">❌ Sai tệp / Không tiềm năng / Từ chối</option>
+          <option value="postponed">⏸️ Hẹn khóa sau / Bảo lưu</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block text-[11px] font-bold text-slate-700 uppercase mb-1">Ghi chú tổng kết cuối cùng:</label>
+        <textarea
+          id="modalFinalNote"
+          rows="3"
+          placeholder="Nhập ghi chú chốt phiên tư vấn trước khi đưa vào kho..."
+          class="w-full text-xs p-2 bg-slate-50 border border-slate-200 rounded-lg focus:ring-1 focus:ring-indigo-500 resize-none text-slate-800"
+        ></textarea>
+      </div>
+
+      <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-100">
+        <button onclick="closeStuModal()" class="px-3 py-1.5 text-xs text-slate-500 hover:text-slate-700 font-bold">Hủy</button>
+        <button onclick="confirmArchiveSTU()" class="px-4 py-1.5 bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold rounded-xl shadow-sm transition flex items-center gap-1.5">
+          <span>Xác nhận Lưu Kho</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 7. FLOATING TOAST WITH REALTIME UNDO -->
+  <!-- ============================================================ -->
+  <div id="toast" class="fixed bottom-12 right-6 bg-slate-900 text-white px-4 py-2.5 rounded-xl shadow-2xl flex items-center gap-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50 border border-slate-800">
+    <span id="toastIcon">✅</span>
+    <span id="toastMsg" class="text-xs font-medium">Đã cập nhật</span>
+    <button
+      id="toastUndoBtn"
+      onclick="undoLastAction()"
+      class="hidden text-xs font-bold text-amber-300 hover:text-amber-200 underline ml-2 pl-2 border-l border-slate-700"
+    >
+      ↩️ Hoàn tác
+    </button>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- 8. STICKY MINIMAL FOOTER (THANH CHỈ SỐ STATUS BAR TRẢ KHÔNG GIAN) -->
+  <!-- ============================================================ -->
+  <footer class="fixed bottom-0 left-0 right-0 h-9 bg-slate-900 text-slate-300 border-t border-slate-800 z-40 px-5 flex items-center justify-between text-[11px] shadow-lg">
+    
+    <!-- Left: Metrics Breakdown -->
+    <div class="flex items-center gap-3 overflow-x-auto py-0.5">
+      <span class="font-bold text-slate-400 uppercase tracking-wider text-[10px]">📊 Thống Kê:</span>
+      <span class="text-slate-300">Tổng đang gọi: <b id="statTotal" class="text-white font-extrabold">0</b></span>
+      <span class="text-slate-500">•</span>
+      <span class="text-blue-300">Chưa gọi: <b id="statNew" class="font-bold">0</b></span>
+      <span class="text-slate-500">•</span>
+      <span class="text-amber-300">Đã nhắn: <b id="statContacted" class="font-bold">0</b></span>
+      <span class="text-slate-500">•</span>
+      <span class="text-indigo-300">Đã trao đổi: <b id="statCalled" class="font-bold">0</b></span>
+      <span id="statConsidering" class="hidden">0</span>
+      <span class="text-slate-500">•</span>
+      <span class="text-emerald-300">Đã cọc K3: <b id="statPaid" class="font-black text-emerald-400">0</b></span>
+      <span class="text-slate-500">•</span>
+      <span class="text-purple-300">Sale đã TV: <b id="statSale" class="font-bold text-purple-300">0</b></span>
+    </div>
+
+    <!-- Center & Right: Talktime & Integrations -->
+    <div class="flex items-center gap-4 shrink-0 font-medium">
+      <div class="flex items-center gap-1 text-slate-200">
+        <span>⏱️ Đàm thoại hôm nay:</span>
+        <b id="statTalkTime" class="text-emerald-400 font-mono font-bold">0m</b>
+      </div>
+      <span class="text-slate-600">|</span>
+      <div class="flex items-center gap-1 text-purple-300">
+        <span>📦 Kho STU:</span>
+        <b id="archivedCountFooter" class="text-white font-bold">0</b>
+      </div>
+      <span class="text-slate-600">|</span>
+      <span class="text-emerald-400 font-bold flex items-center gap-1">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> 🍏 Apple Contacts 2s
+      </span>
+    </div>
+
+  </footer>
+
+  <!-- ============================================================ -->
+  <!-- 9. JAVASCRIPT LOGIC & INTERACTIONS -->
+  <!-- ============================================================ -->
+  <script>
+    window.__script_executed = true;
+    let allLeads = [];
+    let searchQuery = "";
+    let currentViewMode = "active"; // "active" | "archived"
+    let currentPriorityFilter = "all"; // "all" | "callback" | "today" | "contacted" | "called"
+    let draggedPhone = null;
+    let lastAction = null;
+    let currentModalPhone = null;
+    let focusedLeadPhone = null;
+
+    // Toast có hỗ trợ Undo
+    function showToast(msg, icon = "✅", canUndo = false) {
+      const toast = document.getElementById("toast");
+      document.getElementById("toastMsg").innerText = msg;
+      document.getElementById("toastIcon").innerText = icon;
+      const undoBtn = document.getElementById("toastUndoBtn");
+
+      if (canUndo && lastAction) {
+        undoBtn.classList.remove("hidden");
+      } else {
+        undoBtn.classList.add("hidden");
+      }
+
+      toast.classList.remove("translate-y-24", "opacity-0");
+      if (window.toastTimer) clearTimeout(window.toastTimer);
+      window.toastTimer = setTimeout(() => {
+        toast.classList.add("translate-y-24", "opacity-0");
+      }, 6000);
+    }
+
+    async function undoLastAction() {
+      if (!lastAction) return;
+      const { phone, prevStatus, prevNote, name, actionType } = lastAction;
+      showToast(`Đang hoàn tác lại cho ${name}...`, "↩️", false);
+
+      try {
+        if (actionType === 'archive') {
+          const res = await fetch('/api/leads/unarchive', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ phone: phone })
+          });
+          const data = await res.json();
+          if (data.success) {
+            if (prevStatus || prevNote !== undefined) {
+              await fetch('/api/leads/update', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ phone: phone, status: prevStatus, note: prevNote })
+              }).catch(() => {});
+            }
+            showToast(`Đã hoàn tác, đưa ${name} trở lại Bàn Gọi!`, "✅", false);
+            const target = allLeads.find(l => l.phone === phone);
+            if (target) {
+              target.is_archived = false;
+              if (prevStatus) target.status = prevStatus;
+              if (prevNote !== undefined) target.note = prevNote;
+            }
+            lastAction = null;
+            renderUI();
+            updateStatsFromActive();
+            return;
+          }
+        }
+
+        const res = await fetch('/api/leads/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone: phone,
+            status: prevStatus,
+            note: prevNote
+          })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast(`Đã hoàn tác thành công cho ${name}!`, "✅", false);
+          const target = allLeads.find(l => l.phone === phone);
+          if (target) {
+            target.status = prevStatus;
+            target.note = prevNote;
+          }
+          lastAction = null;
+          renderUI();
+          updateStatsFromActive();
+        }
+      } catch (err) {
+        showToast("Lỗi khi hoàn tác", "❌", false);
+      }
+    }
+
+    function switchViewMode(mode) {
+      currentViewMode = mode;
+      const activeTab = document.getElementById("tabActiveRadar");
+      const archTab = document.getElementById("tabArchivedSTU");
+      const grid = document.getElementById("kanbanGrid");
+      const archView = document.getElementById("archivedViewContainer");
+
+      if (mode === "active") {
+        activeTab.className = "px-3.5 py-1 text-xs font-bold rounded-lg transition bg-white text-indigo-700 shadow-sm flex items-center gap-1.5";
+        archTab.className = "px-3.5 py-1 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+        grid.classList.remove("hidden");
+        archView.classList.add("hidden");
+      } else {
+        archTab.className = "px-3.5 py-1 text-xs font-bold rounded-lg transition bg-white text-indigo-700 shadow-sm flex items-center gap-1.5";
+        activeTab.className = "px-3.5 py-1 text-xs font-bold rounded-lg transition text-slate-600 hover:text-slate-900 flex items-center gap-1.5";
+        grid.classList.add("hidden");
+        archView.classList.remove("hidden");
+      }
+      renderUI();
+    }
+
+    function setPriorityFilter(filterKey) {
+      currentPriorityFilter = filterKey;
+      document.querySelectorAll(".priority-chip").forEach(btn => {
+        btn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-white text-slate-700 border-slate-200 hover:bg-slate-50 shadow-2xs flex items-center gap-1";
+      });
+
+      const activeBtn = document.getElementById(`chip-${filterKey}`);
+      if (activeBtn) {
+        if (filterKey === 'callback') {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-rose-600 text-white border-rose-600 shadow-2xs flex items-center gap-1";
+        } else if (filterKey === 'today') {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-amber-500 text-white border-amber-500 shadow-2xs flex items-center gap-1";
+        } else if (filterKey === 'contacted') {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-blue-600 text-white border-blue-600 shadow-2xs flex items-center gap-1";
+        } else if (filterKey === 'called') {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-indigo-600 text-white border-indigo-600 shadow-2xs flex items-center gap-1";
+        } else if (filterKey === 'sale') {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-purple-600 text-white border-purple-600 shadow-2xs flex items-center gap-1";
+        } else {
+          activeBtn.className = "priority-chip px-2.5 py-1 rounded-lg text-xs font-bold border transition bg-indigo-600 text-white border-indigo-600 shadow-2xs flex items-center gap-1";
+        }
+      }
+      renderUI();
+    }
+
+    async function loadData(animate = false) {
+      const refreshIcon = document.getElementById("refreshIcon");
+      if (animate && refreshIcon) refreshIcon.classList.add("animate-spin");
+
+      try {
+        const [leadsRes, statsRes] = await Promise.all([
+          Promise.resolve({json: () => Promise.resolve(window.STATIC_LEADS)}),
+          Promise.resolve({json: () => Promise.resolve({new:0, contacted:0, called:0, paid:0, considering:0})})
+        ]);
+
+        const leadsData = await leadsRes.json();
+        const statsData = await statsRes.json();
+
+        allLeads = leadsData.leads || [];
+        updateStats(statsData);
+        updatePriorityCounts();
+        renderUI();
+
+        if (animate) showToast("Đã đồng bộ realtime với Contacts & CallHistory!");
+      } catch (err) {
+        console.error("Lỗi nạp dữ liệu:", err);
+      } finally {
+        if (refreshIcon) refreshIcon.classList.remove("animate-spin");
+      }
+    }
+
+    function updateStats(s) {
+      document.getElementById("statTotal").innerText = s.total || 0;
+      document.getElementById("statNew").innerText = s.new || 0;
+      document.getElementById("statContacted").innerText = s.contacted || 0;
+      const combinedCalled = (s.called || 0) + (s.considering || 0);
+      const elStatCalled = document.getElementById("statCalled");
+      if (elStatCalled) elStatCalled.innerText = combinedCalled;
+      const elStatConsidering = document.getElementById("statConsidering");
+      if (elStatConsidering) elStatConsidering.innerText = s.considering || 0;
+      document.getElementById("statPaid").innerText = s.paid || 0;
+      const elStatSale = document.getElementById("statSale");
+      if (elStatSale) elStatSale.innerText = s.sale_consulted || 0;
+      document.getElementById("statTalkTime").innerText = s.total_talk_formatted || "0m";
+
+      document.getElementById("activeCountBadge").innerText = s.total || 0;
+      document.getElementById("archivedCountBadge").innerText = s.archived_count || 0;
+      document.getElementById("archivedCountFooter").innerText = s.archived_count || 0;
+    }
+
+    function updateStatsFromActive() {
+      Promise.resolve({json: () => Promise.resolve({new:0, contacted:0, called:0, paid:0, considering:0})}).then(r => r.json()).then(s => updateStats(s));
+      updatePriorityCounts();
+    }
+
+    function isSaleLead(l) {
+      if (!l) return false;
+      if (l.is_sale_consulted) return true;
+      if (l.sale_note && l.sale_note.trim()) return true;
+      if (l.tags && l.tags.some(t => {
+        const s = t.toLowerCase();
+        return s.includes('sale') || s.includes('đã tv') || s.includes('da tv');
+      })) return true;
+      const note = (l.note || '').toLowerCase();
+      if (note.includes('[sale đã tv]') || note.includes('sale đã tv') || note.includes('sale đã gọi') || note.includes('[sale da tv]')) return true;
+      const name = ((l.apple_contact_name || '') + ' ' + (l.name || '')).toLowerCase();
+      if (name.includes('[sale đã tv]') || name.includes('[sale da tv]')) return true;
+      return false;
+    }
+
+    function updatePriorityCounts() {
+      const active = allLeads.filter(l => !l.is_archived);
+      const activeNonSale = active.filter(l => !isSaleLead(l));
+      const activeSale = active.filter(l => isSaleLead(l));
+      
+      const countAll = activeNonSale.length;
+      const countCallback = activeNonSale.filter(l => l.status === 'considering' || (l.note && l.note.toLowerCase().includes('hẹn'))).length;
+      const countToday = activeNonSale.filter(l => l.registration_info && (l.registration_info.is_hot || (l.registration_info.badge && l.registration_info.badge.includes('Hôm nay')))).length;
+      const countContacted = activeNonSale.filter(l => l.status === 'contacted').length;
+      const countCalled = activeNonSale.filter(l => l.status === 'called' || l.status === 'considering' || (l.call_info && l.call_info.total_calls > 0 && l.call_info.total_duration > 0)).length;
+      const countSale = activeSale.length;
+
+      document.getElementById("count-chip-all").innerText = countAll;
+      document.getElementById("count-chip-callback").innerText = countCallback;
+      document.getElementById("count-chip-today").innerText = countToday;
+      document.getElementById("count-chip-contacted").innerText = countContacted;
+      document.getElementById("count-chip-called").innerText = countCalled;
+      const chipSale = document.getElementById("count-chip-sale");
+      if (chipSale) chipSale.innerText = countSale;
+      const elStatSale = document.getElementById("statSale");
+      if (elStatSale) elStatSale.innerText = countSale;
+
+      // Update badge Bàn Gọi LED ở Header
+      const elActiveBadge = document.getElementById("activeCountBadge");
+      if (elActiveBadge) elActiveBadge.innerText = countAll;
+    }
+
+    function handleSearch(val) {
+      searchQuery = (val || "").toLowerCase().trim();
+      renderUI();
+    }
+
+    function renderUI() {
+      if (currentViewMode === "active") {
+        renderKanban();
+      } else {
+        renderArchivedList();
+      }
+    }
+
+    // =============================================================
+    // RENDER KANBAN CHÍNH (4 CỘT TINH GỌN, TỐI ƯU KHÔNG GIAN)
+    // =============================================================
+    function renderKanban() {
+      const cols = {
+        new: document.getElementById("cards-new"),
+        contacted: document.getElementById("cards-contacted"),
+        called: document.getElementById("cards-called"),
+        paid: document.getElementById("cards-paid")
+      };
+
+      const counts = { new: 0, contacted: 0, called: 0, paid: 0 };
+      Object.values(cols).forEach(c => { if (c) c.innerHTML = ""; });
+
+      // Hiển thị banner khi đang xem chế độ "Sale đã TV"
+      const notice = document.getElementById("saleFilterNotice");
+      if (notice) {
+        if (currentPriorityFilter === 'sale') {
+          notice.classList.remove("hidden");
+        } else {
+          notice.classList.add("hidden");
+        }
+      }
+
+      const filtered = allLeads.filter(l => {
+        if (l.is_archived) return false;
+
+        // 🔍 1. ƯU TIÊN TÌM KIẾM: Khi anh Việt gõ tìm kiếm, quét trên TOÀN BỘ lead (bỏ qua mọi bộ lọc ẩn/sale)
+        if (searchQuery) {
+          const blob = `${l.name} ${l.phone} ${l.occupation} ${l.reason} ${l.note} ${l.registration_info?.badge || ''}`.toLowerCase();
+          return blob.includes(searchQuery);
+        }
+
+        const isSale = isSaleLead(l);
+        const isToday = l.registration_info && (l.registration_info.is_hot || (l.registration_info.badge && l.registration_info.badge.includes('Hôm nay')));
+
+        // 🎯 QUY TẮC VÀNG: ẨN CÁC LEAD "SALE ĐÃ TV" CŨ KHỎI BÀN GỌI CHÍNH (TRỪ KHI LEAD ĐĂNG KÝ MỚI HÔM NAY HOẶC BẤM CHIP "Sale đã TV")
+        if (currentPriorityFilter === 'sale') {
+          if (!isSale) return false;
+        } else if (currentPriorityFilter === 'today') {
+          // Khi lọc "Hôm nay", luôn hiển thị mọi lead có biến động đăng ký hôm nay để không sót
+          if (!isToday) return false;
+        } else {
+          // Ở các filter khác ("all", "callback", "contacted", "called"):
+          // Ẩn lead sale cũ (trừ khi lead mới đăng ký lại hôm nay)
+          if (isSale && !isToday) return false;
+
+          if (currentPriorityFilter === 'callback') {
+            const isCb = l.status === 'considering' || (l.note && l.note.toLowerCase().includes('hẹn'));
+            if (!isCb) return false;
+          } else if (currentPriorityFilter === 'contacted') {
+            if (l.status !== 'contacted') return false;
+          } else if (currentPriorityFilter === 'called') {
+            if (l.status !== 'called' && l.status !== 'considering' && (!l.call_info || l.call_info.total_duration === 0)) return false;
+          }
+        }
+
+        return true;
+      });
+
+      const noticeCount = document.getElementById("saleNoticeCount");
+      if (noticeCount) noticeCount.innerText = filtered.length;
+
+      filtered.forEach(lead => {
+        let colKey = lead.status;
+        if (colKey === 'considering') colKey = 'called';
+        if (!(colKey in cols)) colKey = "new";
+        counts[colKey] = (counts[colKey] || 0) + 1;
+        const card = createCard(lead);
+        if (cols[colKey]) cols[colKey].appendChild(card);
+      });
+
+      Object.keys(counts).forEach(k => {
+        const el = document.getElementById(`count-${k}`);
+        if (el) el.innerText = counts[k];
+      });
+    }
+
+    // =============================================================
+    // RENDER KHO STU OFFLINE (3 CỘT KANBAN VAULT)
+    // =============================================================
+    function renderArchivedList() {
+      const listPaid = document.getElementById("archive-list-paid");
+      const listUnqualified = document.getElementById("archive-list-unqualified");
+      const listPostponed = document.getElementById("archive-list-postponed");
+
+      listPaid.innerHTML = "";
+      listUnqualified.innerHTML = "";
+      listPostponed.innerHTML = "";
+
+      const archived = allLeads.filter(l => {
+        if (!l.is_archived) return false;
+        if (!searchQuery) return true;
+        const blob = `${l.name} ${l.phone} ${l.occupation} ${l.note}`.toLowerCase();
+        return blob.includes(searchQuery);
+      });
+
+      let countPaid = 0;
+      let countUnqualified = 0;
+      let countPostponed = 0;
+
+      archived.forEach(l => {
+        const cat = l.archive_category || (l.status === 'paid' ? 'paid' : (l.status === 'unqualified' ? 'unqualified' : 'postponed'));
+        const card = createArchiveCard(l, cat);
+
+        if (cat === 'paid') {
+          countPaid++;
+          listPaid.appendChild(card);
+        } else if (cat === 'unqualified') {
+          countUnqualified++;
+          listUnqualified.appendChild(card);
+        } else {
+          countPostponed++;
+          listPostponed.appendChild(card);
+        }
+      });
+
+      document.getElementById("count-archive-paid").innerText = countPaid;
+      document.getElementById("count-archive-unqualified").innerText = countUnqualified;
+      document.getElementById("count-archive-postponed").innerText = countPostponed;
+
+      // Empty states if needed
+      if (countPaid === 0) listPaid.innerHTML = `<div class="py-8 text-center text-slate-400 text-xs italic">Chưa có học viên cọc trong kho.</div>`;
+      if (countUnqualified === 0) listUnqualified.innerHTML = `<div class="py-8 text-center text-slate-400 text-xs italic">Chưa có hồ sơ sai tệp.</div>`;
+      if (countPostponed === 0) listPostponed.innerHTML = `<div class="py-8 text-center text-slate-400 text-xs italic">Chưa có hồ sơ bảo lưu.</div>`;
+
+      updateSTUStats();
+    }
+
+    function updateSTUStats() {
+      const listPaid = document.getElementById("archive-list-paid");
+      const listUnqualified = document.getElementById("archive-list-unqualified");
+      const listPostponed = document.getElementById("archive-list-postponed");
+
+      const paidCards = listPaid ? listPaid.querySelectorAll('.bg-white.border.border-slate-200.rounded-xl').length : 0;
+      const unqualCards = listUnqualified ? listUnqualified.querySelectorAll('.bg-white.border.border-slate-200.rounded-xl').length : 0;
+      const postCards = listPostponed ? listPostponed.querySelectorAll('.bg-white.border.border-slate-200.rounded-xl').length : 0;
+      
+      const elTotal = document.getElementById('stu-stat-total');
+      const elPaid = document.getElementById('stu-stat-paid');
+      const elUnqual = document.getElementById('stu-stat-unqualified');
+      const elPost = document.getElementById('stu-stat-postponed');
+
+      if (elTotal) elTotal.innerText = paidCards + unqualCards + postCards;
+      if (elPaid) elPaid.innerText = paidCards;
+      if (elUnqual) elUnqual.innerText = unqualCards;
+      if (elPost) elPost.innerText = postCards;
+    }
+
+    function createArchiveCard(l, cat) {
+      const div = document.createElement("div");
+      div.className = "bg-white border border-slate-200 rounded-xl p-3 shadow-2xs flex flex-col gap-2";
+      div.innerHTML = `
+        <div class="flex items-start justify-between gap-1">
+          <div>
+            <h4 class="font-extrabold text-xs text-slate-900 leading-tight">${l.name}</h4>
+            <span
+              onclick="copyPhoneNumber('${l.phone}', event)"
+              class="font-mono text-[11px] font-bold text-indigo-600 hover:text-indigo-900 bg-indigo-50/70 hover:bg-indigo-100 px-1 py-0.2 rounded border border-indigo-200/60 inline-flex items-center gap-1 transition cursor-pointer"
+              title="Bấm để copy số điện thoại"
+            >
+              <span>${l.display_phone || l.phone}</span>
+              <span data-copy-icon="${l.phone}" class="text-[9px] opacity-70">📋</span>
+            </span>
+          </div>
+          <span class="text-[9px] font-bold px-1.5 py-0.2 rounded ${
+            cat === 'paid' ? 'bg-emerald-100 text-emerald-800' : (cat === 'unqualified' ? 'bg-slate-100 text-slate-600' : 'bg-amber-100 text-amber-800')
+          }">
+            ${cat === 'paid' ? 'ĐÃ CỌC' : (cat === 'unqualified' ? 'SAI TỆP' : 'BẢO LƯU')}
+          </span>
+        </div>
+        <p class="text-[11px] text-slate-600 leading-tight"><b>💼 Nghề:</b> ${l.occupation || 'Chưa điền'}</p>
+        <div class="text-[11px] bg-slate-50 border border-slate-200/80 rounded-lg p-1.5 text-slate-700 italic leading-snug">
+          "${l.note || 'Không có ghi chú'}"
+        </div>
+        <div class="pt-1.5 border-t border-slate-100 flex items-center justify-between">
+          <span class="text-[10px] text-slate-400">students.json</span>
+          <button
+            onclick="unarchiveLead('${l.phone}')"
+            class="text-[10px] font-bold px-2 py-0.5 rounded-lg bg-indigo-50 hover:bg-indigo-100 text-indigo-700 border border-indigo-200 transition"
+          >
+            ↩️ Khôi phục lại
+          </button>
+        </div>
+      `;
+      return div;
+    }
+
+    // =============================================================
+    // TẠO THẺ HỌC VIÊN ULTRA-COMPACT (CHUẨN THỤY SĨ TỐI GIẢN)
+    // =============================================================
+    function createCard(l) {
+      const div = document.createElement("div");
+      div.className = "bg-white border border-slate-200/90 rounded-xl p-2.5 shadow-xs hover:shadow-md transition-all flex flex-col gap-1.5 relative cursor-grab active:cursor-grabbing";
+      div.id = `card-${l.phone}`;
+      div.draggable = true;
+
+      div.ondragstart = (e) => handleDragStart(e, l.phone);
+      div.ondragend = (e) => handleDragEnd(e);
+
+      // Ngày đăng ký
+      const regInfo = l.registration_info || { badge: 'Chưa rõ', is_hot: false };
+      const regBadgeHtml = regInfo.is_hot
+        ? `<span class="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.2 rounded bg-amber-50 text-amber-800 border border-amber-200">🔥 ${regInfo.badge}</span>`
+        : `<span class="inline-flex items-center gap-0.5 text-[10px] font-medium text-slate-500">📅 ${regInfo.badge}</span>`;
+
+      // Cuộc gọi
+      const totalCalls = l.call_info.total_calls;
+      const lastDur = l.call_info.last_call_duration;
+      const lastCallTime = l.call_info.last_call_time || "";
+      let callBadge = "";
+      if (totalCalls > 0 && lastDur > 0) {
+        callBadge = `
+          <span class="inline-flex items-center gap-0.5 text-[10px] font-bold px-1.5 py-0.2 rounded bg-indigo-50 text-indigo-700 border border-indigo-200" title="Đã trao đổi ${l.call_info.last_call_formatted} lúc ${lastCallTime}">
+            📞 ${l.call_info.last_call_formatted}
+          </span>
+        `;
+      } else if (totalCalls > 0 && lastDur === 0) {
+        callBadge = `
+          <span class="inline-flex items-center gap-0.5 text-[10px] font-semibold px-1.5 py-0.2 rounded bg-rose-50 text-rose-700 border border-rose-200" title="Gọi nhỡ lúc ${lastCallTime}">
+            📵 Nhỡ
+          </span>
+        `;
+      } else {
+        callBadge = `
+          <span class="inline-flex items-center gap-0.5 text-[10px] font-medium px-1.5 py-0.2 rounded bg-slate-100 text-slate-500 border border-slate-200" title="Chưa có cuộc gọi nào">
+            Chưa gọi
+          </span>
+        `;
+      }
+
+      // Apple Contacts status
+      let contactAction = "";
+      if (l.has_apple_contact) {
+        if (l.apple_contact_name && l.apple_contact_name.includes("chưa gọi")) {
+          contactAction = `<span title="Đã lưu danh bạ (Chờ gọi): ${l.apple_contact_name || ''}" class="text-amber-700 font-bold text-[10px] bg-amber-50 border border-amber-300 px-1 py-0.2 rounded">🍏 Chờ gọi</span>`;
+        } else {
+          contactAction = `<span title="Đã lưu danh bạ iPhone: ${l.apple_contact_name || ''}" class="text-emerald-700 font-bold text-[10px] bg-emerald-50 border border-emerald-300 px-1 py-0.2 rounded">🍏 Đã lưu</span>`;
+        }
+      } else {
+        contactAction = `<button onclick="saveContactToPhone('${l.phone}', '${l.name.replace(/'/g, "\\'")}')" class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-amber-100 text-amber-800 hover:bg-amber-200 border border-amber-300 transition shadow-2xs">🍏 +Lưu DB</button>`;
+      }
+
+      // Huy hiệu ĐÃ CỌC
+      const paidBadge = l.status === 'paid'
+        ? `<span class="px-1.5 py-0.2 text-[9px] font-black bg-emerald-600 text-white rounded shadow-2xs shrink-0">✅ ĐÃ CỌC</span>`
+        : ``;
+
+      // Huy hiệu SALE ĐÃ TV
+      const isSaleConsulted = l.is_sale_consulted || (l.sale_note && l.sale_note.trim()) || (l.tags && l.tags.some(t => t.toLowerCase().includes('sale') || t.toLowerCase().includes('đã tv')));
+      const saleBadge = isSaleConsulted
+        ? `<span class="inline-flex items-center gap-0.5 text-[9px] font-extrabold px-1.5 py-0.2 rounded bg-purple-100 text-purple-800 border border-purple-300 shadow-2xs shrink-0" title="Sale đã tư vấn (Cột L: ${l.sale_note || 'ĐÃ TV'})">🎧 Sale đã TV</span>`
+        : ``;
+
+      // Huy hiệu HẸN MAI / CÂN NHẮC
+      const consideringBadge = (l.status === 'considering' || (l.note && l.note.toLowerCase().includes('hẹn')))
+        ? `<span class="inline-flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.2 rounded bg-rose-50 text-rose-700 border border-rose-200 shrink-0" title="Khách hẹn mai gọi lại / Cân nhắc">🔥 Hẹn mai</span>`
+        : ``;
+
+      // Huy hiệu ZALO (Đã kết nối / Đã trao đổi qua Zalo)
+      const isZaloInteracted = l.zalo_status || (l.tags && l.tags.some(t => t.toLowerCase().includes('zalo'))) || (l.note && l.note.toLowerCase().includes('zalo'));
+      const zaloBadge = isZaloInteracted
+        ? `<span class="inline-flex items-center gap-0.5 text-[9px] font-bold px-1.5 py-0.2 rounded bg-blue-50 text-[#0068FF] border border-blue-200 shrink-0" title="${l.zalo_status || 'Đã tương tác Zalo'}">💬 Zalo</span>`
+        : ``;
+
+      // Đoạn hội thoại gần nhất (tránh lặp lại đàm thoại nếu đã có ở badge)
+      let snippetHtml = "";
+      if (l.recent_snippet) {
+        const isRedundantCallSnippet = l.recent_snippet.startsWith("📞 Đàm thoại") && totalCalls > 0 && lastDur > 0;
+        if (!isRedundantCallSnippet) {
+          snippetHtml = `
+            <div class="text-[10px] bg-slate-50 text-slate-700 border border-slate-200/80 rounded-md px-2 py-0.5 leading-snug truncate" title="${l.recent_snippet}">
+              💬 <span class="font-semibold text-slate-800">${l.recent_snippet}</span>
+            </div>
+          `;
+        }
+      }
+
+      // Tags danh mục
+      let tagsHtml = "";
+      if (l.tags && l.tags.length > 0) {
+        tagsHtml = `
+          <div class="flex items-center gap-1 flex-wrap pt-0.5">
+            ${l.tags.map(t => {
+              let tagStyle = 'bg-slate-100 text-slate-700 border border-slate-200';
+              if (t.includes('⚠️') || t.toLowerCase().includes('direct') || t.toLowerCase().includes('điền hộ')) {
+                tagStyle = 'bg-amber-100 text-amber-900 border border-amber-300 font-black animate-pulse';
+              } else if (t.toLowerCase().includes('sale')) {
+                tagStyle = 'bg-purple-100 text-purple-800 border border-purple-300';
+              } else if (t.toLowerCase().includes('cọc')) {
+                tagStyle = 'bg-emerald-100 text-emerald-800 border border-emerald-300';
+              }
+              return `<span class="text-[9px] font-bold px-1.5 py-0.2 rounded ${tagStyle}">${t}</span>`;
+            }).join('')}
+          </div>
+        `;
+      }
+
+      // Ghi chú ngắn gọn
+      let noteSnippetHtml = "";
+      if (l.note && l.note.trim()) {
+        const isSaleNote = l.note.includes('[Sale đã TV]');
+        noteSnippetHtml = `
+          <div class="text-[10px] ${isSaleNote ? 'bg-purple-50/70 border-purple-200 text-purple-950' : 'bg-indigo-50/50 border-indigo-100 text-indigo-900'} border rounded-md px-2 py-0.5 leading-snug flex items-center justify-between gap-1">
+            <span class="truncate"><b>Note:</b> ${l.note}</span>
+            <button onclick="openFocusDrawer('${l.phone}')" class="text-indigo-600 hover:underline shrink-0 text-[9px] font-bold">Sửa</button>
+          </div>
+        `;
+      }
+
+      div.innerHTML = `
+        <!-- Dòng 1: Tên & SĐT trên cùng 1 hàng, huy hiệu bên phải (Tối ưu không gian) -->
+        <div class="flex items-start justify-between gap-1.5">
+          <div class="min-w-0 flex items-center gap-1.5 flex-wrap">
+            <h3 class="font-extrabold text-xs text-slate-900 hover:text-indigo-600 transition truncate cursor-pointer" onclick="openFocusDrawer('${l.phone}')" title="Bấm để mở Chế độ Gọi Tập Trung">
+              ${l.name}
+            </h3>
+            <span
+              onclick="copyPhoneNumber('${l.phone}', event)"
+              class="font-mono text-[10.5px] font-bold text-indigo-600 hover:text-indigo-900 bg-indigo-50/70 hover:bg-indigo-100 px-1 py-0.2 rounded border border-indigo-200/60 inline-flex items-center gap-0.5 transition cursor-pointer"
+              title="Bấm để copy số điện thoại"
+            >
+              <span>${l.display_phone || l.phone}</span>
+              <span data-copy-icon="${l.phone}" class="text-[8.5px] opacity-70">📋</span>
+            </span>
+          </div>
+          <div class="flex items-center gap-1 shrink-0 flex-wrap justify-end">
+            ${paidBadge}
+            ${saleBadge}
+            ${consideringBadge}
+            ${zaloBadge}
+            ${callBadge}
+            ${contactAction}
+          </div>
+        </div>
+
+        <!-- Dòng 2: Nghề nghiệp & Thời gian ĐK -->
+        <div class="flex items-center justify-between gap-1 text-[10px] text-slate-600">
+          <span class="truncate font-semibold text-slate-800">💼 ${l.occupation || 'Chưa điền'}</span>
+          <span class="shrink-0">${regBadgeHtml}</span>
+        </div>
+
+        <!-- Dòng 3: Snippet hội thoại & Tags -->
+        ${snippetHtml}
+        ${tagsHtml}
+        ${noteSnippetHtml}
+
+        <!-- Dòng 4: BỘ NÚT HÀNH ĐỘNG 1-CHẠM (GỌI, ZALO, SMS, KỊCH BẢN, FOCUS) -->
+        <div class="flex items-center justify-between gap-1 pt-1 border-t border-slate-100">
+          
+          <div class="flex items-center gap-1">
+            <!-- Nút Gọi -->
+            <a
+              href="tel:${l.phone}"
+              title="Gọi điện trực tiếp qua iPhone"
+              class="flex items-center gap-0.5 text-[10px] font-bold py-0.5 px-2 rounded-md bg-indigo-50 hover:bg-indigo-600 text-indigo-700 hover:text-white transition border border-indigo-200 shadow-2xs"
+            >
+              <svg class="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+              </svg>
+              <span>Gọi</span>
+            </a>
+
+            <!-- Nút Zalo với Logo Zalo chính thức -->
+            <a
+              href="${l.zalo_app_url || l.zalo_url}"
+              title="Mở ứng dụng Zalo App chat trực tiếp"
+              class="flex items-center gap-0.5 text-[10px] font-bold py-0.5 px-2 rounded-md bg-blue-50 hover:bg-[#0068FF] text-[#0068FF] hover:text-white transition border border-blue-200 shadow-2xs"
+            >
+              <svg class="w-3 h-3" viewBox="0 0 48 48" fill="none">
+                <path d="M24 4C12.95 4 4 12.95 4 24C4 27.68 5 31.12 6.74 34.07L4.5 43.5L14.19 41.33C17.07 43 20.42 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4Z" fill="#0068FF"/>
+                <path d="M15 18H23L17 27H23V30H15L21 21H15V18Z" fill="white"/>
+                <path d="M25 30V18H28V30H25Z" fill="white"/>
+                <path d="M29.5 30V18H32.5V30H29.5Z" fill="white"/>
+              </svg>
+              <span>App Zalo</span>
+            </a>
+
+            <!-- Toggle Kịch bản -->
+            <button
+              onclick="toggleCardScript('${l.phone}')"
+              class="text-[10px] font-semibold py-0.5 px-1.5 rounded-md bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 transition"
+              title="Mở kịch bản tư vấn gợi ý theo nghề"
+            >
+              💡 Kịch bản
+            </button>
+          </div>
+
+          <!-- Nút Focus Mode -->
+          <button
+            onclick="openFocusDrawer('${l.phone}')"
+            class="text-[10px] font-bold py-0.5 px-1.5 rounded-md bg-slate-100 hover:bg-slate-200 text-slate-700 transition"
+            title="Mở bảng gọi tập trung 1 khách"
+          >
+            🎯 Focus
+          </button>
+
+        </div>
+
+        <!-- Khối kịch bản thu gọn (mặc định ẩn để tiết kiệm diện tích) -->
+        <div id="script-box-${l.phone}" class="hidden bg-amber-50/70 border border-amber-200 rounded-lg p-2 text-slate-800 flex flex-col gap-1.5 mt-1">
+          <div class="flex items-center justify-between">
+            <span class="text-[9px] font-bold text-amber-900 uppercase">💡 Mẫu tin nhắn Vietmac:</span>
+            <div class="flex items-center gap-1">
+              <button
+                onclick="copyScriptText('${l.phone}')"
+                class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-white hover:bg-amber-100 text-amber-800 border border-amber-300 transition"
+              >
+                📋 Copy
+              </button>
+              <button
+                onclick="sendScriptViaZalo('${l.phone}')"
+                class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-[#0068FF] text-white hover:bg-blue-600 transition"
+              >
+                Mở Zalo dán
+              </button>
+            </div>
+          </div>
+          <div class="text-[10px] italic text-slate-700 leading-snug cursor-pointer" onclick="copyScriptText('${l.phone}')">
+            "${l.suggested_script || 'Chào bạn, em là Việt - Giảng viên FPT Arena (lớp Offline 19 - 20/09)...'}"
+          </div>
+        </div>
+
+        <!-- Dòng 5: CỤM NÚT CHUYỂN TRẠNG THÁI THEO NGỮ CẢNH (CONTEXTUAL ACTIONS) -->
+        <div class="pt-1 flex items-center justify-between gap-1 flex-wrap">
+          <div class="flex items-center gap-1 flex-wrap">
+            ${l.status === 'new' ? `
+              <button onclick="triggerStatusChange('${l.phone}', 'contacted', '📵 [GỌI NHỠ / BẬN]')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-slate-200 text-slate-600 hover:bg-slate-50 transition" title="Gọi nhỡ / Bận">Nhỡ</button>
+              <button onclick="triggerStatusChange('${l.phone}', 'called', '')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-indigo-200 text-indigo-700 hover:bg-indigo-50 transition" title="Đã gọi trao đổi">Đã gọi</button>
+              <button onclick="triggerStatusChange('${l.phone}', 'considering', '🔥 [HẸN MAI GỌI LẠI]')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-rose-200 text-rose-700 hover:bg-rose-50 transition" title="Khách hẹn mai gọi lại">Hẹn mai</button>
+            ` : (l.status === 'contacted' ? `
+              <button onclick="triggerStatusChange('${l.phone}', 'called', '')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-indigo-200 text-indigo-700 hover:bg-indigo-50 transition" title="Đã gọi trao đổi">Đã gọi</button>
+              <button onclick="triggerStatusChange('${l.phone}', 'considering', '🔥 [HẸN MAI GỌI LẠI]')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-rose-200 text-rose-700 hover:bg-rose-50 transition" title="Khách hẹn mai gọi lại">Hẹn mai</button>
+            ` : (l.status === 'called' || l.status === 'considering' ? `
+              <button onclick="triggerStatusChange('${l.phone}', 'considering', '${l.status === 'considering' ? '🔥 [HẸN LẠI]' : '🔥 [HẸN MAI GỌI LẠI]'}')" class="text-[9px] font-semibold px-2 py-0.5 rounded border border-rose-200 text-rose-700 hover:bg-rose-50 transition" title="Khách hẹn gọi lại">${l.status === 'considering' ? 'Hẹn lại' : 'Hẹn mai'}</button>
+              <button onclick="triggerStatusChange('${l.phone}', 'paid', '')" class="text-[9px] font-bold px-2 py-0.5 rounded bg-emerald-600 text-white hover:bg-emerald-700 border border-emerald-600 transition shadow-2xs" title="Xác nhận khách đã cọc K3">+ Cọc K3</button>
+            ` : `
+              <span class="text-[10px] font-bold text-emerald-700">Đã chốt cọc K3</span>
+            `))}
+          </div>
+
+          <div class="flex items-center gap-1">
+            <button
+              onclick="quickArchiveUnqualified('${l.phone}')"
+              class="text-[9px] font-semibold px-1.5 py-0.5 rounded border border-slate-200 text-slate-400 hover:text-rose-600 hover:bg-rose-50 transition"
+              title="1-Click: Đánh dấu sai tệp và dọn ngay vào Kho STU"
+            >
+              ❌ Sai tệp
+            </button>
+
+            <button
+              onclick="openStuModal('${l.phone}')"
+              class="text-[9px] font-bold px-1.5 py-0.5 rounded bg-purple-50 hover:bg-purple-600 text-purple-700 hover:text-white border border-purple-200 transition"
+              title="Lưu hồ sơ vào Student Hub"
+            >
+              📦 Lưu STU
+            </button>
+          </div>
+        </div>
+      `;
+
+      return div;
+    }
+
+    function toggleCardScript(phone) {
+      const box = document.getElementById(`script-box-${phone}`);
+      if (box) box.classList.toggle("hidden");
+    }
+
+    // =============================================================
+    // CHẾ ĐỘ GỌI TẬP TRUNG (ZEN FOCUS DRAWER)
+    // =============================================================
+    function openFocusDrawer(phone) {
+      const l = allLeads.find(item => item.phone === phone);
+      if (!l) return;
+      focusedLeadPhone = phone;
+
+      const body = document.getElementById("focusDrawerBody");
+      const footer = document.getElementById("focusDrawerFooter");
+
+      const callsList = (l.call_info.calls || []).map(c => {
+        const timeStr = c.time || c.date || 'Chưa rõ giờ';
+        const durStr = c.formatted_duration || c.duration_formatted || (c.duration ? Math.round(c.duration) + 's' : '0s');
+        const isSuccess = c.answered && (c.duration > 0);
+        return `
+          <li class="flex items-center justify-between py-1.5 border-b border-slate-100 text-[11px]">
+            <div class="flex items-center gap-1.5">
+              <span>${c.type === 'outgoing' ? '↗️ Gọi đi' : '↙️ Gọi đến'}</span>
+              <span class="text-slate-600 font-mono text-[11px] font-bold">🕒 ${timeStr}</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span class="text-[10px] px-2 py-0.5 rounded font-bold ${isSuccess ? 'bg-indigo-50 text-indigo-700 border border-indigo-200' : 'bg-rose-50 text-rose-600 border border-rose-200'}">
+                ${isSuccess ? `Đàm thoại: ${durStr}` : '📵 Nhỡ / Bận (0s)'}
+              </span>
+            </div>
+          </li>
+        `;
+      }).join('') || '<li class="text-slate-400 py-2 text-xs italic text-center">Chưa có lịch sử cuộc gọi</li>';
+
+      const msgsList = (l.sms_info.messages || []).slice(0, 5).map(m => `
+        <div class="p-2 rounded-lg text-xs leading-snug ${m.sender === 'me' ? 'bg-indigo-50 text-indigo-900 ml-4' : 'bg-slate-100 text-slate-800 mr-4'}">
+          <div class="text-[9px] text-slate-400 mb-0.5">${m.sender === 'me' ? 'Tôi' : 'Khách'} • ${m.time}</div>
+          <div>${m.text}</div>
+        </div>
+      `).join('') || '<div class="text-slate-400 text-xs italic">Chưa có tin nhắn SMS</div>';
+
+      let stuHistoryHtml = "";
+      if (l.stu_note && l.stu_note.trim()) {
+        stuHistoryHtml = `
+          <!-- STU Hub Consultation History -->
+          <div class="bg-purple-50/80 border border-purple-200 rounded-xl p-3 flex flex-col gap-1.5">
+            <div class="flex items-center justify-between">
+              <span class="text-[10px] font-black text-purple-900 uppercase flex items-center gap-1">
+                <span>📚 Lịch Sử Tư Vấn Trong Kho STU Hub:</span>
+              </span>
+              <span class="text-[9px] font-bold px-1.5 py-0.2 rounded bg-purple-200 text-purple-800">students.json</span>
+            </div>
+            <div class="text-xs text-purple-950 font-medium leading-relaxed whitespace-pre-line bg-white/80 p-2.5 rounded-lg border border-purple-100">
+              ${l.stu_note}
+            </div>
+          </div>
+        `;
+      }
+
+      // Xử lý hiển thị nguồn đăng ký gọn gàng, chống tràn layout
+      let sourceClean = "Landing Page";
+      if (l.source) {
+        if (l.source.includes("fbclid") || l.source.includes("facebook") || l.source.includes("fb")) {
+          sourceClean = "Facebook Ads";
+        } else if (l.source.includes("zalo")) {
+          sourceClean = "Zalo";
+        } else if (l.source.includes("fedu.vn")) {
+          if (!l.source.includes("utm_") && !l.source.includes("fbclid")) {
+            sourceClean = "Direct (⚠️ Không UTM - Nghi vấn điền hộ)";
+          } else {
+            sourceClean = "offline.fedu.vn";
+          }
+        }
+      }
+
+      // Trạng thái cuộc gọi
+      const totalCalls = l.call_info?.total_calls || 0;
+      const lastDur = l.call_info?.last_call_duration || 0;
+      const lastDurFormatted = l.call_info?.last_call_formatted || "Chưa gọi";
+      let callStatusBadge = "";
+      if (totalCalls === 0) {
+        callStatusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-rose-100 text-rose-700 border border-rose-200">🔴 CHƯA GỌI</span>`;
+      } else if (lastDur > 0) {
+        callStatusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-emerald-100 text-emerald-800 border border-emerald-300">🟢 ĐÃ GỌI (${totalCalls} cuộc • ${lastDurFormatted})</span>`;
+      } else {
+        callStatusBadge = `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-amber-100 text-amber-800 border border-amber-300">🟡 GỌI NHỠ / BẬN (${totalCalls} cuộc)</span>`;
+      }
+
+      // Trạng thái Danh bạ Apple Contacts
+      const contactStatusBadge = l.has_apple_contact
+        ? `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-300" title="Đã lưu vào Danh bạ iPhone">🍏 ĐÃ LƯU: <b>${l.apple_contact_name || 'offline3 - ' + l.name}</b></span>`
+        : `<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-bold bg-amber-50 text-amber-900 border border-amber-300">⚠️ CHƯA LƯU DANH BẠ <button onclick="saveContactToPhone('${l.phone}', '${l.name.replace(/'/g, "\\'")}')" class="px-2 py-0.5 bg-amber-500 hover:bg-amber-600 text-white rounded text-[10px] font-black cursor-pointer shadow-2xs">📲 Bấm Lưu Ngay</button></span>`;
+
+      body.innerHTML = `
+        <!-- Lead Identity Header -->
+        <div class="bg-indigo-50/60 border border-indigo-100 rounded-2xl p-4 flex flex-col gap-2.5">
+          <div class="flex items-start justify-between gap-2">
+            <div class="min-w-0 flex-1">
+              <h2 class="font-black text-lg text-slate-900 leading-tight truncate">${l.name}</h2>
+              <div class="mt-1 flex items-center gap-2">
+                <button
+                  type="button"
+                  onclick="copyPhoneNumber('${l.phone}', event)"
+                  class="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-white hover:bg-indigo-50 active:scale-95 text-indigo-700 hover:text-indigo-900 border border-indigo-200 hover:border-indigo-400 font-mono font-extrabold text-base transition shadow-2xs cursor-pointer group"
+                  title="Bấm để copy số điện thoại ngay"
+                >
+                  <span class="tracking-wide">${l.display_phone || l.phone}</span>
+                  <span data-copy-icon="${l.phone}" class="text-sm transition group-hover:scale-110">📋</span>
+                  <span data-copy-phone="${l.phone}" data-orig-text="Copy" class="text-[11px] font-bold px-1.5 py-0.5 rounded-md bg-indigo-50 group-hover:bg-indigo-100 text-indigo-600 transition border border-indigo-100">Copy</span>
+                </button>
+              </div>
+              <div class="text-[11px] text-slate-500 mt-1 flex items-center gap-2 flex-wrap">
+                <span>📅 ĐK: <b>${l.registration_info?.badge || 'Chưa rõ'}</b></span>
+                <span>•</span>
+                <span class="truncate max-w-[220px]" title="${l.source || ''}">🌐 Nguồn: <b>${sourceClean}</b></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Status Banners Row -->
+          <div class="flex items-center gap-2 flex-wrap pt-2 border-t border-indigo-100">
+            ${l.is_sale_consulted ? `<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-black bg-purple-100 text-purple-800 border border-purple-300">🎧 ĐÃ TV BỞI SALE</span>` : ''}
+            ${callStatusBadge}
+            ${contactStatusBadge}
+          </div>
+        </div>
+
+        ${l.is_sale_consulted ? `
+          <!-- Alert Sale đã TV -->
+          <div class="p-3 bg-purple-50 border border-purple-300 rounded-2xl flex items-center gap-3 text-purple-950 shadow-xs">
+            <span class="text-2xl shrink-0">🎧</span>
+            <div class="text-xs">
+              <div class="font-black uppercase tracking-wide flex items-center gap-1.5 text-purple-900">
+                <span>ĐÃ ĐƯỢC SALE TƯ VẤN</span>
+                <span class="px-2 py-0.5 bg-purple-200 text-purple-900 rounded font-mono text-[10px] font-bold">${l.sale_note || 'ĐÃ TV'}</span>
+              </div>
+              <p class="text-purple-800 text-[11px] mt-0.5 font-medium leading-normal">
+                Đội Sale đã chăm sóc học viên này. <b>Anh Việt không cần gọi lại</b> để tránh trùng lặp nội dung tư vấn!
+              </p>
+            </div>
+          </div>
+        ` : ''}
+
+        <!-- Primary 1-Click Action Bar (To, rõ ràng, 4 nút không bao giờ tràn) -->
+        <div class="grid grid-cols-4 gap-2">
+          <!-- 1. GỌI ĐIỆN -->
+          <a
+            href="tel:${l.phone}"
+            onclick="triggerPhoneCall('${l.phone}')"
+            class="flex flex-col items-center justify-center p-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl shadow-xs transition text-center font-bold gap-1 group cursor-pointer"
+            title="Bấm để kết nối cuộc gọi qua iPhone / FaceTime"
+          >
+            <span class="text-base group-hover:scale-110 transition-transform">📞</span>
+            <span class="text-xs">Gọi iPhone</span>
+          </a>
+
+          <!-- 2. NHẮN TIN iMESSAGE / SMS -->
+          <a
+            href="sms:${l.phone}"
+            class="flex flex-col items-center justify-center p-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl shadow-xs transition text-center font-bold gap-1 group cursor-pointer"
+            title="Mở app Tin nhắn (iMessage/SMS) để chat với học viên"
+          >
+            <span class="text-base group-hover:scale-110 transition-transform">💬</span>
+            <span class="text-xs">Nhắn Tin</span>
+          </a>
+
+          <!-- 3. NHẮN ZALO -->
+          <a
+            href="${l.zalo_app_url || l.zalo_url}"
+            class="flex flex-col items-center justify-center p-2.5 bg-[#0068FF] hover:bg-blue-600 text-white rounded-xl shadow-xs transition text-center font-bold gap-1 group cursor-pointer"
+            title="Mở Zalo App chat trực tiếp với số này"
+          >
+            <span class="text-base group-hover:scale-110 transition-transform">💬</span>
+            <span class="text-xs">Mở App Zalo</span>
+          </a>
+
+          <!-- 4. LƯU / ĐỒNG BỘ DANH BẠ IPHONE -->
+          <button
+            onclick="saveContactToPhone('${l.phone}', '${l.name.replace(/'/g, "\\'")}')"
+            class="flex flex-col items-center justify-center p-2.5 ${l.has_apple_contact ? 'bg-slate-100 hover:bg-slate-200 text-slate-700 border border-slate-300' : 'bg-amber-500 hover:bg-amber-600 text-white shadow-sm animate-pulse'} rounded-xl transition text-center font-bold gap-1 group cursor-pointer"
+            title="${l.has_apple_contact ? 'Đã lưu danh bạ: ' + (l.apple_contact_name || '') + '. Bấm để đồng bộ lại' : 'Bấm để lưu ngay vào Danh bạ iPhone (đồng bộ iCloud 2s)'}"
+          >
+            <span class="text-base group-hover:scale-110 transition-transform">🍏</span>
+            <span class="text-xs">${l.has_apple_contact ? 'Cập Nhật DB' : 'Lưu Danh Bạ'}</span>
+          </button>
+        </div>
+
+        <!-- Quick Call Result Logger Strip -->
+        <div class="bg-slate-50 border border-slate-200 rounded-xl p-2.5 flex items-center justify-between gap-2 text-xs">
+          <span class="text-[10px] font-bold text-slate-500 uppercase shrink-0">Vừa gọi xong?</span>
+          <div class="flex items-center gap-1.5 flex-wrap justify-end">
+            <button onclick="logCallResult('${l.phone}', 'answered')" class="px-2 py-1 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 rounded-lg font-bold text-[11px] transition cursor-pointer shadow-2xs">
+              📞 Đã nghe máy
+            </button>
+            <button onclick="logCallResult('${l.phone}', 'no_answer')" class="px-2 py-1 bg-rose-50 hover:bg-rose-100 text-rose-700 border border-rose-300 rounded-lg font-bold text-[11px] transition cursor-pointer shadow-2xs">
+              📵 Thuê bao / Nhỡ
+            </button>
+            <button onclick="logCallResult('${l.phone}', 'callback')" class="px-2 py-1 bg-amber-50 hover:bg-amber-100 text-amber-900 border border-amber-300 rounded-lg font-bold text-[11px] transition cursor-pointer shadow-2xs">
+              🔄 Hẹn gọi lại
+            </button>
+          </div>
+        </div>
+
+        <!-- Student Profile -->
+        <div class="grid grid-cols-2 gap-2 text-xs">
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5">
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Nghề nghiệp:</span>
+            <div class="font-semibold text-slate-800 mt-0.5">${l.occupation || 'Chưa điền'}</div>
+          </div>
+          <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 flex flex-col justify-between">
+            <div>
+              <span class="text-[10px] font-bold text-slate-400 uppercase">Email:</span>
+              <div class="font-semibold text-slate-800 mt-0.5 truncate" title="${l.email || ''}">${l.email || 'Chưa có'}</div>
+            </div>
+            ${l.email && l.email.includes('@') ? `
+              <button
+                onclick="sendEmailToLead('${l.phone}')"
+                id="btn-send-mail-${l.phone}"
+                class="mt-1.5 w-full text-[10px] font-bold py-1 px-2 rounded-md bg-sky-50 hover:bg-sky-600 text-sky-700 hover:text-white transition border border-sky-200 shadow-2xs flex items-center justify-center gap-1 cursor-pointer"
+                title="Gửi email xác nhận & kịch bản tư vấn qua Resend Cloud API (100% ngầm, không mở app Mail)"
+              >
+                ✉️ Gửi Email Tư Vấn (Resend)
+              </button>
+            ` : ''}
+          </div>
+          <div class="col-span-2 bg-slate-50 border border-slate-200 rounded-lg p-2.5">
+            <span class="text-[10px] font-bold text-slate-400 uppercase">Nút thắt / Lý do đăng ký:</span>
+            <div class="font-medium text-slate-700 mt-0.5 italic">"${l.reason || 'Chưa điền'}"</div>
+          </div>
+        </div>
+
+        <!-- STU Hub Consultation History (NẾU CÓ DỮ LIỆU TỪ TRƯỚC) -->
+        ${stuHistoryHtml}
+
+        <!-- Tailored Script Box -->
+        <div class="bg-amber-50/80 border border-amber-200 rounded-xl p-3 flex flex-col gap-2">
+          <div class="flex items-center justify-between gap-1 flex-wrap">
+            <span class="text-[10px] font-bold text-amber-900 uppercase">💡 Kịch bản gợi ý theo nghề (Vietmac-Voice):</span>
+            <div class="flex items-center gap-1">
+              <button
+                onclick="copyScriptText('${l.phone}')"
+                class="px-2 py-1 bg-white text-amber-800 border border-amber-300 rounded-lg text-[10px] font-bold hover:bg-amber-50 transition cursor-pointer"
+                title="Sao chép kịch bản mở lời vào bộ nhớ tạm"
+              >
+                📋 Sao chép
+              </button>
+              <button
+                onclick="sendScriptViaSMS('${l.phone}')"
+                id="btn-sms-${l.phone}"
+                class="px-2 py-1 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg text-[10px] font-bold transition cursor-pointer shadow-2xs flex items-center gap-1"
+                title="Gửi ngay kịch bản này tới SĐT học viên qua iMessage / SMS"
+              >
+                🚀 Bắn SMS/iMessage
+              </button>
+            </div>
+          </div>
+          <div class="text-xs text-slate-800 leading-relaxed italic bg-white/70 p-2 rounded-lg border border-amber-100">
+            "${l.suggested_script || ''}"
+          </div>
+        </div>
+
+        <!-- Realtime Apple Note Input -->
+        <div class="bg-white border border-slate-200 rounded-xl p-3 flex flex-col gap-1.5">
+          <div class="flex items-center justify-between">
+            <label class="text-[10px] font-bold text-slate-700 uppercase flex items-center gap-1">
+              <span>🍏 Ghi chú (Màn hình gọi iPhone):</span>
+            </label>
+            <span class="text-[10px] text-slate-400">Tự động đẩy sang iPhone 2s</span>
+          </div>
+          <textarea
+            id="focusDrawerNoteInput"
+            rows="3"
+            placeholder="Nhập ghi chú cuộc gọi... (tự đồng bộ sang danh bạ iPhone)"
+            class="w-full text-xs p-2 bg-slate-50 border border-slate-300 rounded-lg focus:ring-1 focus:ring-indigo-500 text-slate-800 resize-none"
+          >${l.note || ''}</textarea>
+          <div class="flex justify-end">
+            <button
+              onclick="saveFocusDrawerNote()"
+              class="px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-xs rounded-lg shadow-2xs transition"
+              title="Đồng bộ ngay lập tức vào ghi chú của liên hệ trên iPhone"
+            >
+              Lưu Note vào iPhone
+            </button>
+          </div>
+        </div>
+
+        <!-- Call & Chat History -->
+        <div class="space-y-2">
+          <div class="font-bold text-slate-800 text-xs flex items-center justify-between">
+            <span>📞 Lịch sử cuộc gọi (${l.call_info.total_calls})</span>
+            <span class="text-indigo-600 font-mono">${l.call_info.last_call_formatted}</span>
+          </div>
+          <ul class="bg-slate-50 border border-slate-200 rounded-xl p-2.5">${callsList}</ul>
+
+          <div class="font-bold text-slate-800 text-xs pt-1">
+            <span>💬 Lịch sử tin nhắn gần đây</span>
+          </div>
+          <div class="space-y-1.5 max-h-44 overflow-y-auto">${msgsList}</div>
+        </div>
+      `;
+
+      footer.innerHTML = `
+        <div class="flex items-center gap-1 flex-wrap">
+          <button
+            onclick="triggerStatusChange('${l.phone}', 'considering', '🔥 [HẸN MAI GỌI LẠI]'); closeFocusDrawer();"
+            class="text-[10px] font-semibold px-2 py-1 rounded bg-rose-50 text-rose-700 border border-rose-200 hover:bg-rose-100 transition"
+            title="Đánh dấu khách hẹn mai gọi lại và đồng bộ ghi chú sang iPhone"
+          >
+            🔥 Hẹn mai
+          </button>
+          <button
+            onclick="triggerStatusChange('${l.phone}', 'considering', '💸 [ĐÃ BÁO GIẢM 10% (2tr7)]'); closeFocusDrawer();"
+            class="text-[10px] font-semibold px-2 py-1 rounded bg-amber-50 text-amber-700 border border-amber-200 hover:bg-amber-100 transition"
+            title="Ghi nhận đã báo ưu đãi giảm 10% (còn 2tr7)"
+          >
+            💸 Giảm 10%
+          </button>
+          <button
+            onclick="triggerStatusChange('${l.phone}', 'paid', ''); closeFocusDrawer();"
+            class="text-[10px] font-bold px-2.5 py-1 rounded bg-emerald-600 text-white hover:bg-emerald-700 shadow-2xs transition"
+            title="Xác nhận học viên đã chuyển khoản cọc"
+          >
+            + Cọc K3
+          </button>
+          <button
+            onclick="quickArchiveUnqualified('${l.phone}'); closeFocusDrawer();"
+            class="text-[10px] font-semibold px-2 py-1 rounded bg-slate-100 text-slate-600 hover:bg-rose-50 hover:text-rose-700 transition"
+            title="Cất học viên không tiềm năng vào Kho STU (Dữ liệu vẫn lưu trong students.json, KHÔNG BỊ XÓA)"
+          >
+            ❌ Sai tệp
+          </button>
+        </div>
+        <button
+          onclick="openStuModal('${l.phone}'); closeFocusDrawer();"
+          class="text-[10px] font-bold px-3 py-1 rounded bg-purple-600 text-white hover:bg-purple-700 shadow-2xs transition"
+          title="Cất hồ sơ vào Kho Student Hub và ẩn khỏi bàn gọi (Có thể khôi phục lại bất kỳ lúc nào)"
+        >
+          📦 Cất Vào STU
+        </button>
+      `;
+
+      document.getElementById("focusDrawerBackdrop").classList.remove("hidden");
+      document.getElementById("focusDrawer").classList.remove("translate-x-full");
+    }
+
+    function closeFocusDrawer() {
+      document.getElementById("focusDrawerBackdrop").classList.add("hidden");
+      document.getElementById("focusDrawer").classList.add("translate-x-full");
+      focusedLeadPhone = null;
+    }
+
+    async function saveFocusDrawerNote() {
+      if (!focusedLeadPhone) return;
+      const noteVal = document.getElementById("focusDrawerNoteInput").value.trim();
+      const target = allLeads.find(l => l.phone === focusedLeadPhone);
+
+      showToast("Đang đồng bộ Note vào iPhone...", "🍏", false);
+      try {
+        const res = await fetch('/api/leads/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: focusedLeadPhone, note: noteVal })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast("Đã lưu Note thành công vào iPhone!", "✅", false);
+          if (target) target.note = noteVal;
+          renderUI();
+        }
+      } catch (err) {
+        showToast("Lỗi lưu Note", "❌", false);
+      }
+    }
+
+    // =============================================================
+    // KỊCH BẢN 1-CHẠM, COPY SĐT & QUICK ARCHIVE
+    // =============================================================
+    function copyPhoneNumber(phone, event) {
+      if (event) event.stopPropagation();
+      if (!phone) return;
+      const cleanPhone = phone.replace(/[^\d+]/g, '');
+
+      const handleSuccess = () => {
+        // Cập nhật trạng thái phản hồi trên tất cả badge copy của SĐT này
+        const badges = document.querySelectorAll(`[data-copy-phone="${cleanPhone}"]`);
+        badges.forEach(el => {
+          const orig = el.getAttribute('data-orig-text') || el.innerText;
+          el.setAttribute('data-orig-text', orig);
+          el.innerText = 'Đã chép ✓';
+          el.classList.add('bg-emerald-200', 'text-emerald-900');
+          setTimeout(() => {
+            el.innerText = el.getAttribute('data-orig-text') || 'Copy';
+            el.classList.remove('bg-emerald-200', 'text-emerald-900');
+          }, 2000);
+        });
+
+        const icons = document.querySelectorAll(`[data-copy-icon="${cleanPhone}"]`);
+        icons.forEach(ic => {
+          ic.innerText = '✅';
+          setTimeout(() => { ic.innerText = '📋'; }, 2000);
+        });
+
+        showToast(`Đã copy số điện thoại: ${cleanPhone}!`, "📋", false);
+      };
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(cleanPhone).then(handleSuccess).catch(() => {
+          fallbackCopy(cleanPhone, handleSuccess);
+        });
+      } else {
+        fallbackCopy(cleanPhone, handleSuccess);
+      }
+    }
+
+    function fallbackCopy(text, onSuccess) {
+      const input = document.createElement("textarea");
+      input.value = text;
+      input.style.position = "fixed";
+      input.style.opacity = "0";
+      document.body.appendChild(input);
+      input.focus();
+      input.select();
+      try {
+        document.execCommand("copy");
+        if (onSuccess) onSuccess();
+      } catch (err) {
+        showToast("Không thể copy số tự động", "❌", false);
+      }
+      document.body.removeChild(input);
+    }
+
+    function copyScriptText(phone) {
+      const target = allLeads.find(l => l.phone === phone);
+      if (!target || !target.suggested_script) return;
+      navigator.clipboard.writeText(target.suggested_script).then(() => {
+        showToast(`Đã copy kịch bản của ${target.name}!`, "📋", false);
+      }).catch(() => {
+        showToast("Không copy được kịch bản", "❌", false);
+      });
+    }
+
+    function sendScriptViaZalo(phone) {
+      const target = allLeads.find(l => l.phone === phone);
+      if (!target || !target.suggested_script) return;
+      navigator.clipboard.writeText(target.suggested_script).then(() => {
+        showToast(`Đã copy kịch bản! Đang mở App Zalo của ${target.name}...`, "💬", false);
+        const appUrl = target.zalo_app_url || ("zalo://conversation?phone=" + target.phone);
+        window.location.href = appUrl;
+      });
+    }
+
+    async function sendEmailToLead(phone) {
+      const target = allLeads.find(l => l.phone === phone || l.id === phone);
+      if (!target || !target.email) {
+        showToast("Học viên này chưa có email!", "⚠️", false);
+        return;
+      }
+      if (!confirm(`Xác nhận gửi email tư vấn & giữ chỗ cho học viên ${target.name} (${target.email}) qua Resend Cloud API?`)) {
+        return;
+      }
+      const btn = document.getElementById(`btn-send-mail-${phone}`);
+      if (btn) {
+        btn.innerText = "⏳ Đang gửi...";
+        btn.disabled = true;
+      }
+      showToast("Đang gửi email qua Resend Cloud API...", "✉️", false);
+      try {
+        const res = await fetch("/api/leads/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            phone: phone,
+            email: target.email,
+            name: target.name,
+            custom_script: target.suggested_script
+          })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast(`Đã gửi email thành công cho ${target.name}!`, "✅", false);
+          if (btn) btn.innerText = "✅ Đã gửi Mail";
+        } else {
+          showToast(`Lỗi gửi mail: ${data.error || "Không xác định"}`, "❌", false);
+          if (btn) {
+            btn.innerText = "✉️ Gửi lại Email";
+            btn.disabled = false;
+          }
+        }
+      } catch (err) {
+        showToast(`Lỗi kết nối: ${err.message}`, "❌", false);
+        if (btn) {
+          btn.innerText = "✉️ Gửi lại Email";
+          btn.disabled = false;
+        }
+      }
+    }
+
+    async function quickArchiveUnqualified(phone) {
+      const target = allLeads.find(l => l.phone === phone);
+      const name = target ? target.name : "Học viên";
+
+      lastAction = {
+        phone: phone,
+        prevStatus: target ? target.status : 'new',
+        prevNote: target ? target.note : '',
+        name: name,
+        actionType: 'archive'
+      };
+
+      showToast(`Đang chuyển ${name} vào Kho STU (Sai tệp)...`, "📦", true);
+
+      try {
+        const res = await fetch('/api/leads/archive-stu', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone: phone,
+            final_note: "Sai tệp / Không có nhu cầu / Đã lọc bỏ",
+            stu_class: "Offline 3 (Sai tệp)",
+            status: "Sai tệp / Hủy",
+            category: "unqualified"
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showToast(`Đã dọn ${name} vào Kho STU (Sai tệp)!`, "✅", true);
+          if (target) {
+            target.is_archived = true;
+            target.archive_category = "unqualified";
+            target.status = "unqualified";
+            target.note = "Sai tệp / Không có nhu cầu / Đã lọc bỏ";
+          }
+          renderUI();
+          updateStatsFromActive();
+        } else {
+          showToast("Lỗi khi chuyển vào Kho STU", "❌", false);
+        }
+      } catch (err) {
+        showToast("Lỗi lưu kho", "❌", false);
+      }
+    }
+
+    // =============================================================
+    // DRAG & DROP LOGIC
+    // =============================================================
+    function handleDragStart(e, phone) {
+      draggedPhone = phone;
+      e.dataTransfer.setData("text/plain", phone);
+      e.dataTransfer.effectAllowed = "move";
+      const cardEl = document.getElementById(`card-${phone}`);
+      if (cardEl) cardEl.classList.add("card-dragging");
+    }
+
+    function handleDragEnd(e) {
+      if (draggedPhone) {
+        const cardEl = document.getElementById(`card-${draggedPhone}`);
+        if (cardEl) cardEl.classList.remove("card-dragging");
+      }
+      document.querySelectorAll(".kanban-col").forEach(col => col.classList.remove("drag-over"));
+    }
+
+    function handleDragOver(e) {
+      e.preventDefault();
+      e.dataTransfer.dropEffect = "move";
+    }
+
+    function handleDragEnter(e, colId) {
+      e.preventDefault();
+      const col = document.getElementById(colId);
+      if (col) col.classList.add("drag-over");
+    }
+
+    function handleDragLeave(e, colId) {
+      const col = document.getElementById(colId);
+      if (col) col.classList.remove("drag-over");
+    }
+
+    async function handleDrop(e, newStatus) {
+      e.preventDefault();
+      document.querySelectorAll(".kanban-col").forEach(col => col.classList.remove("drag-over"));
+      const phone = draggedPhone || e.dataTransfer.getData("text/plain");
+      if (!phone) return;
+
+      const target = allLeads.find(l => l.phone === phone);
+      if (!target) return;
+      if (newStatus === 'called' && (target.status === 'called' || target.status === 'considering')) return;
+      if (target.status === newStatus) return;
+
+      const colNames = {
+        new: "Chưa Gọi",
+        contacted: "Đã Nhắn Tin",
+        called: "Đã Trao Đổi / Cân Nhắc",
+        paid: "Đã Cọc K3"
+      };
+
+      lastAction = {
+        phone: phone,
+        prevStatus: target.status,
+        prevNote: target.note,
+        name: target.name
+      };
+
+      target.status = newStatus;
+      renderKanban();
+
+      showToast(`Đã chuyển ${target.name} sang [${colNames[newStatus]}]!`, "⚡", true);
+
+      try {
+        await fetch('/api/leads/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone, status: newStatus })
+        });
+        updateStatsFromActive();
+      } catch (err) {
+        showToast("Lỗi khi chuyển cột", "❌", false);
+      }
+    }
+
+    // =============================================================
+    // STATUS ACTIONS & CONTACT SYNC
+    // =============================================================
+    async function triggerStatusChange(phone, newStatus, tagNote) {
+      const target = allLeads.find(l => l.phone === phone);
+      if (!target) return;
+
+      lastAction = {
+        phone: phone,
+        prevStatus: target.status,
+        prevNote: target.note,
+        name: target.name
+      };
+
+      let currentNote = target.note || "";
+      if (currentNote && !currentNote.includes(tagNote)) {
+        currentNote = `${tagNote} ${currentNote}`;
+      } else if (!currentNote) {
+        currentNote = tagNote;
+      }
+
+      target.status = newStatus;
+      target.note = currentNote;
+      renderKanban();
+
+      showToast(`Đã chuyển ${target.name} sang [${newStatus}]!`, "⚡", true);
+
+      try {
+        await fetch('/api/leads/update', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone: phone,
+            status: newStatus,
+            note: currentNote
+          })
+        });
+        updateStatsFromActive();
+      } catch (err) {
+        showToast("Lỗi khi chuyển trạng thái", "❌", false);
+      }
+    }
+
+    async function triggerPhoneCall(phone) {
+      try {
+        await fetch('/api/leads/call', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone })
+        });
+      } catch (err) {}
+    }
+
+    async function sendScriptViaSMS(phone) {
+      const l = allLeads.find(item => item.phone === phone);
+      const script = l ? l.suggested_script : "";
+      const btn = document.getElementById(`btn-sms-${phone}`);
+      if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = "⏳ Đang gửi...";
+      }
+      showToast("Đang gửi iMessage/SMS...", "💬", false);
+      try {
+        const res = await fetch('/api/leads/send-sms', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone, message: script })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast("Đã gửi kịch bản qua iMessage/SMS!", "✅", false);
+          if (btn) btn.innerHTML = "✅ Đã gửi";
+          // Update lead status locally
+          if (l && l.status === 'new') {
+            l.status = 'contacted';
+            updateStatsFromActive();
+            renderUI();
+          }
+        } else {
+          showToast("Đã mở ứng dụng Tin nhắn", "💬", false);
+          if (btn) btn.innerHTML = "🚀 Bắn SMS/iMessage";
+        }
+      } catch (err) {
+        showToast("Lỗi gửi tin nhắn", "❌", false);
+        if (btn) btn.innerHTML = "🚀 Bắn SMS/iMessage";
+      } finally {
+        if (btn) btn.disabled = false;
+      }
+    }
+
+    async function logCallResult(phone, result) {
+      showToast("Đang lưu trạng thái cuộc gọi...", "⏳", false);
+      try {
+        const res = await fetch('/api/leads/log-call', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone, result: result })
+        });
+        const data = await res.json();
+        if (data.success) {
+          const l = allLeads.find(item => item.phone === phone);
+          if (l) {
+            if (data.status) l.status = data.status;
+            if (data.note) l.note = data.note;
+            l.call_info.total_calls = (l.call_info.total_calls || 0) + 1;
+            if (result === 'answered') {
+              l.call_info.last_call_formatted = "Vừa trao đổi";
+              l.call_info.last_call_duration = 30;
+              l.call_info.last_call_answered = true;
+            } else if (result === 'no_answer') {
+              l.call_info.last_call_formatted = "Thuê bao / Nhỡ";
+              l.call_info.last_call_duration = 0;
+              l.call_info.last_call_answered = false;
+            } else if (result === 'callback') {
+              l.call_info.last_call_formatted = "Hẹn gọi lại";
+              l.call_info.last_call_duration = 10;
+              l.call_info.last_call_answered = true;
+            }
+          }
+          const msg = result === 'answered' ? "Đã ghi nhận: Cuộc gọi thành công!" : (result === 'callback' ? "Đã chuyển sang: Hẹn gọi lại!" : "Đã ghi nhận: Thuê bao / Nhỡ!");
+          showToast(msg, "✅", false);
+          updateStatsFromActive();
+          renderUI();
+          if (focusedLeadPhone === phone) {
+            openFocusDrawer(phone);
+          }
+        }
+      } catch (err) {
+        showToast("Lỗi cập nhật cuộc gọi", "❌", false);
+      }
+    }
+
+    async function saveContactToPhone(phone, name) {
+      const target = allLeads.find(l => l.phone === phone);
+      const studentName = (target && target.name) ? target.name : name;
+      showToast(`Đang tạo Danh bạ iPhone cho ${studentName}...`, "🍏", false);
+      try {
+        const res = await fetch('/api/leads/save-contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone, name: studentName })
+        });
+        const data = await res.json();
+        if (data.success) {
+          const realName = data.name || studentName;
+          showToast(`Đã lưu 'offline3 - ${realName}' vào Danh bạ iPhone!`, "✅", false);
+          if (target) {
+            target.has_apple_contact = true;
+            target.apple_contact_name = `offline3 - ${realName}`;
+          }
+          renderUI();
+          if (focusedLeadPhone === phone) {
+            openFocusDrawer(phone);
+          }
+        }
+      } catch (err) {
+        showToast("Lỗi lưu liên hệ", "❌", false);
+      }
+    }
+
+    // =============================================================
+    // MODAL LƯU KHO STU
+    // =============================================================
+    function openStuModal(phone) {
+      const target = allLeads.find(l => l.phone === phone);
+      if (!target) return;
+      currentModalPhone = phone;
+      document.getElementById("modalStudentName").innerText = target.name;
+      document.getElementById("modalStudentPhone").innerText = target.phone;
+      document.getElementById("modalFinalNote").value = target.note || "";
+      
+      const catSelect = document.getElementById("modalArchiveCategory");
+      if (catSelect) {
+        if (target.archive_category) {
+          catSelect.value = target.archive_category;
+        } else if (target.status === 'paid') {
+          catSelect.value = 'paid';
+        } else if (target.status === 'unqualified') {
+          catSelect.value = 'unqualified';
+        } else if (target.status === 'considering') {
+          catSelect.value = 'postponed';
+        } else {
+          catSelect.value = 'paid';
+        }
+      }
+      document.getElementById("stuModal").classList.remove("hidden");
+      setTimeout(() => {
+        const input = document.getElementById("modalFinalNote");
+        if (input) {
+          input.focus();
+          input.setSelectionRange(input.value.length, input.value.length);
+        }
+      }, 50);
+    }
+
+    function closeStuModal() {
+      document.getElementById("stuModal").classList.add("hidden");
+      currentModalPhone = null;
+    }
+
+    async function confirmArchiveSTU() {
+      if (!currentModalPhone) return;
+      const targetPhone = currentModalPhone; // LƯU NGAY TRƯỚC KHI ĐÓNG MODAL
+      const finalNote = document.getElementById("modalFinalNote").value.trim();
+      const category = document.getElementById("modalArchiveCategory").value;
+      const target = allLeads.find(l => l.phone === targetPhone);
+      const name = target ? target.name : "Học viên";
+
+      let stuClass = "Offline 3 (Đã CK)";
+      let statusLabel = "Đã cọc / Hoàn thành";
+      if (category === 'unqualified') {
+        stuClass = "Offline 3 (Sai tệp)";
+        statusLabel = "Sai tệp / Hủy";
+      } else if (category === 'postponed') {
+        stuClass = "Offline 3 (Bảo lưu)";
+        statusLabel = "Hẹn khóa sau / Bảo lưu";
+      }
+
+      // Lưu lastAction để cho phép hoàn tác (Undo)
+      lastAction = {
+        phone: targetPhone,
+        prevStatus: target ? target.status : 'new',
+        prevNote: target ? target.note : '',
+        name: name,
+        actionType: 'archive'
+      };
+
+      closeStuModal();
+      showToast(`Đang lưu ${name} vào Kho Student Hub...`, "📦", true);
+
+      try {
+        const res = await fetch('/api/leads/archive-stu', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phone: targetPhone,
+            final_note: finalNote,
+            stu_class: stuClass,
+            status: statusLabel,
+            category: category
+          })
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showToast(`Đã lưu ${name} vào Kho STU và dọn khỏi bàn gọi!`, "✅", true);
+          if (target) {
+            target.is_archived = true;
+            target.archive_category = category;
+            target.note = finalNote;
+            if (category === 'paid') target.status = 'paid';
+            else if (category === 'unqualified') target.status = 'unqualified';
+            else if (category === 'postponed') target.status = 'considering';
+          }
+          renderUI();
+          updateStatsFromActive();
+        } else {
+          const errDetail = data.detail?.[0]?.msg || data.error || "Thất bại khi lưu kho";
+          showToast(`Lỗi lưu kho: ${errDetail}`, "❌", false);
+        }
+      } catch (err) {
+        showToast("Lỗi kết nối khi lưu kho STU", "❌", false);
+      }
+    }
+
+    async function unarchiveLead(phone) {
+      showToast("Đang khôi phục học viên về bàn gọi...", "⚡", false);
+      try {
+        const res = await fetch('/api/leads/unarchive', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ phone: phone })
+        });
+        const data = await res.json();
+        if (data.success) {
+          showToast("Đã khôi phục về Bàn Gọi thành công!", "✅", false);
+          const target = allLeads.find(l => l.phone === phone);
+          if (target) target.is_archived = false;
+          renderUI();
+          updateStatsFromActive();
+        }
+      } catch (err) {
+        showToast("Lỗi khôi phục", "❌", false);
+      }
+    }
+
+    // Phím tắt bàn phím
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") {
+        closeFocusDrawer();
+        closeStuModal();
+      } else if ((e.metaKey || e.ctrlKey) && e.key === "Enter") {
+        const stuModal = document.getElementById("stuModal");
+        if (stuModal && !stuModal.classList.contains("hidden")) {
+          e.preventDefault();
+          confirmArchiveSTU();
+        } else {
+          const focusDrawer = document.getElementById("focusDrawer");
+          if (focusDrawer && !focusDrawer.classList.contains("translate-x-full")) {
+            e.preventDefault();
+            saveFocusDrawerNote();
+          }
+        }
+      }
+    });
+
+    // =============================================================
+    // SSE REALTIME LISTENER
+    // =============================================================
+    function initSSE() {
+      const evtSource = new EventSource('/api/events');
+      
+      evtSource.onopen = () => {
+        document.getElementById("liveStatusText").innerText = "Live 2-Way Connected";
+      };
+
+      evtSource.addEventListener("refresh", (e) => {
+        loadData(false);
+        showToast("Dữ liệu tự động cập nhật từ iPhone/Contacts!", "🔄", false);
+      });
+
+      evtSource.addEventListener("lead_updated", (e) => {
+        loadData(false);
+      });
+
+      evtSource.onerror = () => {
+        document.getElementById("liveStatusText").innerText = "Đang kết nối lại...";
+      };
+    }
+
+    // =============================================================
+    // CHỨC NĂNG TÌM KIẾM VÀ LỌC KHO STU OFFLINE THEO YÊU CẦU
+    // =============================================================
+    let stuSearchTimeout = null;
+
+    function handleSTUSearch(event) {
+      clearTimeout(stuSearchTimeout);
+      stuSearchTimeout = setTimeout(() => {
+        filterSTUCards(event.target.value);
+      }, 300);
+    }
+
+    function filterSTUCards(query) {
+      const q = query.toLowerCase().trim();
+      const lists = ['archive-list-paid', 'archive-list-unqualified', 'archive-list-postponed'];
+      
+      lists.forEach(listId => {
+        const listEl = document.getElementById(listId);
+        if (!listEl) return;
+        const cards = listEl.children;
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          if (card.classList.contains('text-center') && card.classList.contains('italic')) continue;
+          if (card.textContent.toLowerCase().includes(q)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    let stuColumnState = {
+      paid: true,
+      unqualified: true,
+      postponed: true
+    };
+
+    function toggleSTUColumn(category) {
+      stuColumnState[category] = !stuColumnState[category];
+      const listEl = document.getElementById('archive-list-' + category);
+      if (!listEl) return;
+      
+      const colEl = listEl.parentElement;
+      const chipEl = document.getElementById('chip-stu-' + category);
+      
+      if (stuColumnState[category]) {
+        colEl.style.display = '';
+        chipEl.classList.add('ring-2');
+        chipEl.style.opacity = '1';
+      } else {
+        colEl.style.display = 'none';
+        chipEl.classList.remove('ring-2');
+        chipEl.style.opacity = '0.5';
+      }
+    }
+
+    function resetSTUFilter() {
+      const input = document.getElementById('stuSearchInput');
+      if (input) {
+        input.value = '';
+        filterSTUCards('');
+      }
+      
+      ['paid', 'unqualified', 'postponed'].forEach(cat => {
+        if (!stuColumnState[cat]) {
+          toggleSTUColumn(cat);
+        }
+      });
+    }
+
+    if (document.readyState === "loading") {
+      window.addEventListener("DOMContentLoaded", () => {
+        loadData(false);
+        initSSE();
+      });
+    } else {
+      loadData(false);
+      initSSE();
+    }
+  </script>
+</body>
+</html>
