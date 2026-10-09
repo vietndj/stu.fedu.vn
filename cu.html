@@ -1720,7 +1720,7 @@
     "reference_channels": [],
     "videos": [],
     "consultations": [],
-    "notes": "[Ngành gốc: Kính Mắt]\n[Lớp gốc: Tư Vấn Fanpage]\n• [18/09/2026 08:27] Đăng ký khóa offline 4, chưa CK\nĐăng ký khóa offline 4 (sang tháng), chưa chuyển khoản",
+    "notes": "[Ngành gốc: Kính Mắt]\n[Lớp gốc: Tư Vấn Fanpage]\n• [18/09/2026 08:27] Đăng ký khóa offline 4, chưa CK\n• Zalo đã nhắn tin.",
     "contact_source": "facebook",
     "contact_source_label": "Facebook",
     "created_at": "2026-09-18T01:27:16.865Z",
@@ -9109,7 +9109,7 @@
         }
 
         return `
-          <div class="bg-white rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between" id="card-${s.id}">
+          <div onclick="if(!isEditMode && !event.target.closest('button') && !event.target.closest('a') && !event.target.closest('img')) openDrawer('${s.id}')" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm hover:shadow-md transition p-5 flex flex-col justify-between cursor-pointer hover:border-blue-300" id="card-${s.id}">
             <div>
               <!-- Header: Avatar + Info + Actions -->
               <div class="flex items-start justify-between gap-3 border-b border-slate-100 pb-3 mb-3">
@@ -9319,7 +9319,7 @@
         const videoCount = (s.videos || []).length;
 
         return `
-          <div class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between" id="compact-${s.id}">
+          <div onclick="if(!isEditMode && !event.target.closest('button') && !event.target.closest('a') && !event.target.closest('img')) openDrawer('${s.id}')" class="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm hover:shadow-md transition flex flex-col justify-between cursor-pointer hover:border-blue-300" id="compact-${s.id}">
             <div>
               <div class="flex items-center gap-3">
                 <img 
@@ -9404,7 +9404,7 @@
         const refCount = (s.reference_channels || []).length;
 
         return `
-          <tr class="hover:bg-slate-50/80 transition" id="row-${s.id}">
+          <tr onclick="if(!isEditMode && !event.target.closest('button') && !event.target.closest('a') && !event.target.closest('img')) openDrawer('${s.id}')" class="hover:bg-blue-50/50 transition cursor-pointer" id="row-${s.id}">
             <td class="py-2.5 px-4">
               <div class="flex items-center gap-2.5">
                 <img 
