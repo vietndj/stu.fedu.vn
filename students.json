@@ -7,7 +7,7 @@
     "sales_closer": "Thảo kimedia",
     "is_offline3_attended": true,
     "created_at": "2026-09-19T15:56:18.141805Z",
-    "updated_at": "2026-10-10T12:27:27.800Z",
+    "updated_at": "2026-10-10T12:35:59.513Z",
     "consultations": [],
     "videos": [
       {
@@ -60,9 +60,12 @@
       ]
     },
     "email": "tangxinhambassador@gmail.com",
-    "notes": "[PHẢN HỒI TRÀ ĐÁ]\n- Hành trình: Không có\n- Góp ý: Điểm tuyệt vời: Nhiều kiến thức hay, cần thiết ; Thầy giáo nhiệt huyết\n\nĐiểm cần cải thiện\n\n1- Cần phân loại học viên\n2- Nội dung cần làm rõ trước mỗi phần theo cấu trúc\n\nWhy What How\n\nCách trình bày hiện tại không rõ Why nên hơi khó hiểu, bị rối.\n\n2- Màn chiếu bị mờ\n• [10/10/2026 19:27] Đã chuyển khoản 3tr",
-    "last_updated_vn": "10/10/2026 19:27",
-    "completeness_score": 60
+    "notes": "[PHẢN HỒI TRÀ ĐÁ]\n- Hành trình: Không có\n- Góp ý: Điểm tuyệt vời: Nhiều kiến thức hay, cần thiết ; Thầy giáo nhiệt huyết\n\nĐiểm cần cải thiện\n\n1- Cần phân loại học viên\n2- Nội dung cần làm rõ trước mỗi phần theo cấu trúc\n\nWhy What How\n\nCách trình bày hiện tại không rõ Why nên hơi khó hiểu, bị rối.\n\n2- Màn chiếu bị mờ\n• [10/10/2026 19:27] Đã chuyển khoản 3tr\n• [10/10/2026 19:35] Đã chuyển khoản 3tr (SĐT mới: 0934621892)",
+    "last_updated_vn": "10/10/2026 19:35",
+    "completeness_score": 60,
+    "industry": "Chưa phân loại",
+    "industry_slug": "chua_phan_loai",
+    "facebook_url": ""
   },
   {
     "id": "luu_tuan_minh_offline",
